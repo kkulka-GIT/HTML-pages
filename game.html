@@ -19,6 +19,11 @@
 </head>
 <body>
   <script>
+    // Sprawdzamy, czy WebGL jest dostępny
+    if ( !window.WebGLRenderingContext ) {
+      alert("Twoje urządzenie nie obsługuje WebGL.");
+    }
+
     // Główne zmienne sceny, kamery i renderera
     let scene, camera, renderer;
     // Obiekt gracza – czerwony sześcian
@@ -45,7 +50,7 @@
       scene = new THREE.Scene();
       scene.background = new THREE.Color(0x87ceeb);
 
-      // Ustawienie kamery – parametr FOV pozostaje 75°, można go zmienić według potrzeb
+      // Ustawienie kamery – parametr FOV pozostaje 75°
       camera = new THREE.PerspectiveCamera(
         75,
         window.innerWidth / window.innerHeight,
@@ -53,9 +58,11 @@
         1000
       );
 
-      // Renderer – tworzymy i dodajemy do dokumentu
+      // Renderer – tworzymy, ustawiamy pixelRatio i clearColor
       renderer = new THREE.WebGLRenderer({ antialias: true });
+      renderer.setPixelRatio(window.devicePixelRatio);
       renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setClearColor(0x87ceeb, 1);
       document.body.appendChild(renderer.domElement);
 
       // Dodanie oświetlenia – ambient i directional
@@ -65,7 +72,7 @@
       directionalLight.position.set(5, 10, 7.5);
       scene.add(directionalLight);
 
-      // Tworzymy gracza – czerwony sześcian o wymiarach 1×1×1
+      // Tworzymy gracza – czerwony sześcian o wymiarach 1x1x1
       const playerGeometry = new THREE.BoxGeometry(1, 1, 1);
       const playerMaterial = new THREE.MeshPhongMaterial({ color: 0xff0000 });
       player = new THREE.Mesh(playerGeometry, playerMaterial);
@@ -74,13 +81,13 @@
       scene.add(player);
 
       // Tworzymy platformy – zielone bloki
-      // Każda platforma ma rozmiar 6×0.5×6; liczbę platform ustawiamy na 10
+      // Każda platforma ma rozmiar 6x0.5x6; liczba platform ustawiona na 10
       const platformGeometry = new THREE.BoxGeometry(6, 0.5, 6);
       const platformMaterial = new THREE.MeshPhongMaterial({ color: 0x00ff00 });
       const numPlatforms = 10;
       for (let i = 0; i < numPlatforms; i++) {
         let platform = new THREE.Mesh(platformGeometry, platformMaterial.clone());
-        // Platformy rozmieszczone są wzdłuż osi Z (co 8 jednostek), pozycja X jest losowo zmieniana
+        // Platformy rozmieszczone są wzdłuż osi Z (co 8 jednostek), pozycja X jest losowa
         platform.position.set((Math.random() - 0.5) * 4, 0, -i * 8);
         // W userData zapisujemy parametry oscylacji: amplitudę, prędkość i przesunięcie fazowe
         platform.userData = {
@@ -118,14 +125,14 @@
     function isPlayerOnPlatform() {
       const tolerance = 0.2;
       for (let platform of platforms) {
-        // Górna krawędź platformy = platform.position.y + (0.5/2) = platform.position.y + 0.25
+        // Górna krawędź platformy: platform.position.y + (0.5 / 2) = platform.position.y + 0.25
         let platformTop = platform.position.y + 0.25;
         // Obliczamy odległość poziomą między graczem a platformą
         let dx = player.position.x - platform.position.x;
         let dz = player.position.z - platform.position.z;
         let horizontalDist = Math.sqrt(dx * dx + dz * dz);
-        // Przyjmujemy, że gracz stoi na platformie, jeśli:
-        // - jego dolna krawędź (player.position.y - 0.5) jest blisko górnej krawędzi platformy (różnica < tolerance)
+        // Gracz "stoi" na platformie, jeśli:
+        // - jego dolna krawędź (player.position.y - 0.5) jest blisko platformTop (różnica < tolerance)
         // - odległość pozioma jest mniejsza niż około 3.5 jednostki
         if (horizontalDist < 3.5 && Math.abs((player.position.y - 0.5) - platformTop) < tolerance) {
           return true;
@@ -143,13 +150,13 @@
       let delta = (currentTime - lastTime) / 1000;
       lastTime = currentTime;
 
-      // Aktualizacja ruchu platform – oscylują poziomo według funkcji sinus
+      // Aktualizacja ruchu platform – oscylują poziomo wg funkcji sinus
       platforms.forEach(platform => {
         const data = platform.userData;
         platform.position.x = data.amplitude * Math.sin(data.speed * currentTime / 1000 + data.offset);
       });
 
-      // Gracz automatycznie biegnie do przodu (zmiana pozycji w osi Z)
+      // Gracz biegnie automatycznie do przodu (w dół osi Z)
       player.position.z -= FORWARD_SPEED * delta;
 
       // Ruch boczny gracza – sterowanie lewo/prawo
@@ -164,14 +171,13 @@
       playerVelocity.y += GRAVITY * delta;
       player.position.y += playerVelocity.y * delta;
 
-      // Prosta detekcja "lądowania" – sprawdzamy, czy gracz zbliża się do platformy
+      // Detekcja "lądowania" – sprawdzamy, czy gracz zbliża się do platformy
       platforms.forEach(platform => {
         let dx = player.position.x - platform.position.x;
         let dz = player.position.z - platform.position.z;
         let horizontalDist = Math.sqrt(dx * dx + dz * dz);
         let platformTop = platform.position.y + 0.25;
-        // Jeśli gracz jest wystarczająco blisko platformy, a jego ruch pionowy powoduje przekroczenie górnej krawędzi platformy,
-        // ustawiamy gracza na platformie i zerujemy prędkość pionową
+        // Jeśli gracz jest wystarczająco blisko platformy i jego ruch pionowy spowoduje przejście przez górną krawędź platformy:
         if (
           horizontalDist < 3.5 &&
           player.position.y - 0.5 > platformTop &&
@@ -187,8 +193,7 @@
         resetGame();
       }
 
-      // Uaktualniamy pozycję kamery – efekt trzecioosobowy:
-      // Kamera powinna znajdować się za i nieco powyżej gracza
+      // Uaktualniamy pozycję kamery – efekt trzecioosobowy: kamera za i nieco powyżej gracza
       let desiredCameraPos = new THREE.Vector3(
         player.position.x,
         player.position.y + 5,
