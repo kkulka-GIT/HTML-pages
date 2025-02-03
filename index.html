@@ -3,25 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Testowy Projekt z Plikiem GROM</title>
+  <title>Moja Gra 3D</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+      padding: 50px;
+    }
+    h1 {
+      color: #333;
+    }
+    .game-link {
+      display: inline-block;
+      padding: 15px 25px;
+      font-size: 20px;
+      color: white;
+      background-color: #1e90ff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .game-link:hover {
+      background-color: #0f70d1;
+    }
+  </style>
 </head>
 <body>
-  <h1>Witaj w moim projekcie</h1>
-  <p>Plik <code>custom.grom</code> jest załadowany poniżej:</p>
-
-  <pre id="grom-content">Ładowanie...</pre>
-
-  <script>
-    // Pobieranie zawartości custom.grom i wyświetlanie w HTML
-    fetch('custom.grom')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('grom-content').textContent = data;
-      })
-      .catch(error => {
-        document.getElementById('grom-content').textContent = "Błąd ładowania pliku custom.grom";
-        console.error("Błąd ładowania:", error);
-      });
-  </script>
+  <h1>Witaj w mojej grze 3D!</h1>
+  <p>Kliknij poniższy przycisk, aby uruchomić grę.</p>
+  <a class="game-link" href="game.html">Uruchom grę</a>
 </body>
 </html>
