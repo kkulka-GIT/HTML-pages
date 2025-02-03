@@ -124,7 +124,8 @@
       // Ustawienia sterowania w zależności od urządzenia
       if (!isMobile) {
         // Komputer: PointerLockControls (sterowanie FPS)
-        controls = new THREE.PointerLockControls(camera, document.body);
+        // UWAGA: Używamy konstruktora PointerLockControls, a nie THREE.PointerLockControls
+        controls = new PointerLockControls(camera, document.body);
         document.addEventListener('click', function () {
           controls.lock();
         });
