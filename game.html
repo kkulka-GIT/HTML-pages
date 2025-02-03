@@ -2,86 +2,687 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gra 3D</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gra 3D o Pierwszej Pomocy</title>
+  <!-- Ładna czcionka z Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;900&display=swap" rel="stylesheet">
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- PointerLockControls z Three.js -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/PointerLockControls.js"></script>
   <style>
-    body {
+    /* Resetowanie stylów */
+    * {
       margin: 0;
-      overflow: hidden;
-      background-color: black;
+      padding: 0;
+      box-sizing: border-box;
     }
+    body {
+      font-family: 'Roboto', sans-serif;
+      overflow: hidden;
+      background-color: #000;
+    }
+    /* Kontrola głośności */
+    #volume-control {
+      position: fixed;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.95);
+      padding: 10px;
+      border-radius: 10px;
+      z-index: 200;
+      text-align: center;
+    }
+    #volume-control label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    #volume-control input[type="range"] {
+      width: 150px;
+      height: 8px;
+      background: #ddd;
+      border-radius: 5px;
+      outline: none;
+    }
+    #volume-control input[type="range"]::-webkit-slider-thumb,
+    #volume-control input[type="range"]::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #1e90ff;
+      cursor: pointer;
+    }
+    #mute-button {
+      margin-top: 10px;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #1e90ff;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    #mute-button:hover {
+      background-color: #0f70d1;
+    }
+    /* Okno sklepu */
+    #shop-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      color: #fff;
+      display: none;
+      z-index: 300;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    #shop-overlay button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #1e90ff;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    #shop-overlay button:hover {
+      background-color: #0f70d1;
+    }
+    /* Okno menu (otwierane klawiszem Z) */
+    #menu-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      color: #fff;
+      display: none;
+      z-index: 300;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+    #menu-overlay button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #1e90ff;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    #menu-overlay button:hover {
+      background-color: #0f70d1;
+    }
+    /* HUD – monety i przycisk sklepu */
+    #hud-container {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 20;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    #coin-count {
+      font-size: 20px;
+      color: #fff;
+      background: rgba(0,0,0,0.5);
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    #shop-btn {
+      font-size: 16px;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #1e90ff;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    #shop-btn:hover {
+      background-color: #0f70d1;
+    }
+    /* Styl dla coinów */
+    .coin {
+      background-color: gold;
+    }
+    /* Kontener gry – pełny ekran */
+    #game-container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    /* Canvas renderera */
     canvas {
       display: block;
     }
   </style>
 </head>
 <body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/PointerLockControls.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
-
+  <!-- Kontrola głośności -->
+  <div id="volume-control">
+    <label for="volume-slider">Głośność:</label>
+    <input type="range" id="volume-slider" min="0" max="100" value="100">
+    <button id="mute-button">Wyłącz dźwięk</button>
+  </div>
+  
+  <!-- Okno sklepu -->
+  <div id="shop-overlay">
+    <h2>Sklep</h2>
+    <p id="shop-info">Masz <span id="shop-coin-count">0</span> monet.</p>
+    <button id="buy-health-btn">Kup zdrowie (+20 HP) - 50 monet</button>
+    <button id="close-shop-btn">Zamknij sklep</button>
+  </div>
+  
+  <!-- Okno menu (otwierane klawiszem Z) -->
+  <div id="menu-overlay">
+    <h2>Menu</h2>
+    <p id="menu-info">
+      Zdrowie: <span id="menu-health">100</span> HP<br>
+      Monety: <span id="menu-coins">0</span><br>
+      Energia sprintu: <span id="menu-sprint">10.0</span> s
+    </p>
+    <button id="close-menu-btn">Zamknij menu</button>
+  </div>
+  
+  <!-- HUD – monety i przycisk sklepu -->
+  <div id="hud-container"></div>
+  
+  <!-- Kontener gry -->
+  <div id="game-container"></div>
+  
+  <!-- Skrypt z logiką gry -->
   <script>
-    let scene, camera, renderer, controls;
-    
-    function init() {
-      // Inicjalizacja sceny
-      scene = new THREE.Scene();
-      scene.background = new THREE.Color(0x111111);
-      
-      // Kamera
-      camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-      camera.position.set(0, 2, 5);
-      
-      // Renderer
-      renderer = new THREE.WebGLRenderer({ antialias: true });
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      document.body.appendChild(renderer.domElement);
-      
-      // Światło
-      const light = new THREE.DirectionalLight(0xffffff, 1);
-      light.position.set(5, 10, 5);
-      scene.add(light);
-
-      // OrbitControls (obracanie kamery myszką)
-      controls = new THREE.OrbitControls(camera, renderer.domElement);
-      controls.enableDamping = true;
-      controls.dampingFactor = 0.05;
-      
-      // Ładowanie modelu 3D (Kaczka z repozytorium Khronos Group)
-      const loader = new THREE.GLTFLoader();
-      const modelUrl = "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Duck/glTF/Duck.gltf";
-      loader.load(
-        modelUrl,
-        function (gltf) {
-          const model = gltf.scene;
-          model.scale.set(0.01, 0.01, 0.01);
-          scene.add(model);
-        },
-        undefined,
-        function (error) {
-          console.error("Błąd ładowania modelu:", error);
-        }
-      );
-
-      // Obsługa zmiany rozmiaru ekranu
-      window.addEventListener("resize", function () {
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth, window.innerHeight);
+    (function(){
+      // --- Ustawienia audio ---
+      let globalVolume = 1.0;
+      let previousVolume = globalVolume;
+      const volumeSlider = document.getElementById('volume-slider');
+      volumeSlider.addEventListener('input', function() {
+        globalVolume = this.value / 100;
       });
-
-      // Rozpoczęcie animacji
-      animate();
-    }
-
-    function animate() {
-      requestAnimationFrame(animate);
-      controls.update();
-      renderer.render(scene, camera);
-    }
-
-    init();
+      const muteButton = document.getElementById('mute-button');
+      let isMuted = false;
+      muteButton.addEventListener('click', function() {
+        if (!isMuted) {
+          speechSynthesis.cancel();
+          previousVolume = globalVolume;
+          globalVolume = 0;
+          volumeSlider.value = 0;
+          muteButton.textContent = "Włącz dźwięk";
+          isMuted = true;
+        } else {
+          globalVolume = previousVolume;
+          volumeSlider.value = previousVolume * 100;
+          muteButton.textContent = "Wyłącz dźwięk";
+          isMuted = false;
+        }
+      });
+      function readText(text) {
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'pl-PL';
+        utterance.volume = globalVolume;
+        utterance.rate = 1.1;
+        utterance.pitch = 1.2;
+        speechSynthesis.speak(utterance);
+      }
+      
+      // --- HUD: Monety i przycisk sklepu ---
+      const hudContainer = document.getElementById("hud-container");
+      hudContainer.style.position = "absolute";
+      hudContainer.style.top = "10px";
+      hudContainer.style.left = "10px";
+      hudContainer.style.zIndex = "20";
+      hudContainer.style.display = "flex";
+      hudContainer.style.gap = "10px";
+      hudContainer.style.alignItems = "center";
+      
+      const coinCountDiv = document.createElement("div");
+      coinCountDiv.id = "coin-count";
+      coinCountDiv.textContent = "Monety: 0";
+      hudContainer.appendChild(coinCountDiv);
+      
+      const shopBtn = document.createElement("button");
+      shopBtn.id = "shop-btn";
+      shopBtn.textContent = "Sklep";
+      hudContainer.appendChild(shopBtn);
+      
+      shopBtn.addEventListener("click", function(){
+        document.getElementById("shop-overlay").style.display = "flex";
+        document.getElementById("shop-coin-count").textContent = coins;
+      });
+      
+      document.getElementById("buy-health-btn").addEventListener("click", function(){
+        if(coins >= 50){
+          coins -= 50;
+          playerHealth += 20;
+          if(playerHealth > 100) playerHealth = 100;
+          healthBar.style.width = playerHealth + "%";
+          alert("Zakupiono zdrowie! Twoje zdrowie wynosi teraz " + playerHealth);
+          coinCountDiv.textContent = "Monety: " + coins;
+          document.getElementById("shop-coin-count").textContent = coins;
+        } else {
+          alert("Nie masz wystarczającej liczby monet!");
+        }
+      });
+      document.getElementById("close-shop-btn").addEventListener("click", function(){
+        document.getElementById("shop-overlay").style.display = "none";
+      });
+      
+      // --- Menu otwierane klawiszem Z ---
+      const menuOverlay = document.getElementById("menu-overlay");
+      document.addEventListener("keydown", function(e){
+        if(e.code === "KeyZ"){
+          if(menuOverlay.style.display === "flex"){
+            menuOverlay.style.display = "none";
+          } else {
+            document.getElementById("menu-health").textContent = playerHealth;
+            document.getElementById("menu-coins").textContent = coins;
+            document.getElementById("menu-sprint").textContent = sprintEnergy.toFixed(1);
+            menuOverlay.style.display = "flex";
+          }
+        }
+      });
+      document.getElementById("close-menu-btn").addEventListener("click", function(){
+        menuOverlay.style.display = "none";
+      });
+      
+      // --- Inicjalizacja zmiennych gry ---
+      let coins = 0;
+      let playerHealth = 100;
+      let sprintEnergy = 10;   // 10 sekund sprintu dostępnych
+      let sprintOnCooldown = false;
+      
+      // --- Dodajemy monety (żółte sześciany) ---
+      const coinsArr = [];
+      function spawnCoin() {
+        const coinGeometry = new THREE.BoxGeometry(0.5, 0.5, 0.5);
+        const coinMaterial = new THREE.MeshPhongMaterial({ color: 0xffff00 });
+        const coin = new THREE.Mesh(coinGeometry, coinMaterial);
+        coin.position.set(Math.random() * 30 - 15, 0.5, Math.random() * 30 - 15);
+        scene.add(coin);
+        coinsArr.push(coin);
+      }
+      for(let i = 0; i < 5; i++){
+        spawnCoin();
+      }
+      
+      // --- Globalne zmienne gry ---
+      let scene, camera, renderer, controls, exitObj;
+      let mazeWalls = [];
+      let currentLevel = 1;
+      const move = { forward: false, backward: false, left: false, right: false };
+      const velocity = new THREE.Vector3();
+      const direction = new THREE.Vector3();
+      let prevTime = performance.now();
+      
+      // Bezpieczny punkt respawnu
+      const playerSpawnPoint = new THREE.Vector3(-18, 1.6, 18);
+      
+      // --- Inicjalizacja gry ---
+      let gameInitialized = false;
+      function init3DGame() {
+        if (gameInitialized) return;
+        gameInitialized = true;
+        
+        const container = document.getElementById("game-container");
+        renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        container.appendChild(renderer.domElement);
+        
+        scene = new THREE.Scene();
+        scene.background = new THREE.Color(0x87ceeb);
+        
+        camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.copy(playerSpawnPoint);
+        
+        controls = new THREE.PointerLockControls(camera, document.body);
+        scene.add(controls.getObject());
+        container.addEventListener('click', function () {
+          controls.lock();
+        }, false);
+        
+        // Światła
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+        scene.add(ambientLight);
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+        directionalLight.position.set(5, 10, 7.5);
+        scene.add(directionalLight);
+        
+        // Podłoże i siatka
+        const planeGeometry = new THREE.PlaneGeometry(40, 40);
+        const planeMaterial = new THREE.MeshPhongMaterial({ color: 0xaaaaaa });
+        const plane = new THREE.Mesh(planeGeometry, planeMaterial);
+        plane.rotation.x = -Math.PI / 2;
+        scene.add(plane);
+        
+        const gridHelper = new THREE.GridHelper(40, 40);
+        scene.add(gridHelper);
+        
+        // Beacon – obiekt wyjścia
+        exitObj = new THREE.Mesh(
+          new THREE.BoxGeometry(1, 1, 1),
+          new THREE.MeshPhongMaterial({ color: 0x00ff00 })
+        );
+        exitObj.position.set(15, 0.5, -15);
+        scene.add(exitObj);
+        
+        // Generacja labiryntu
+        generateMaze(currentLevel);
+        
+        // Apteczka
+        let medkit = null;
+        function spawnMedkit() {
+          const medkitGeometry = new THREE.BoxGeometry(0.7, 0.7, 0.7);
+          const medkitMaterial = new THREE.MeshPhongMaterial({ color: 0xff0000 });
+          medkit = new THREE.Mesh(medkitGeometry, medkitMaterial);
+          medkit.position.set(Math.random() * 30 - 15, 0.35, Math.random() * 30 - 15);
+          scene.add(medkit);
+        }
+        spawnMedkit();
+        
+        function checkMedkitCollision() {
+          if (medkit) {
+            const pos = controls.getObject().position;
+            const dx = pos.x - medkit.position.x;
+            const dz = pos.z - medkit.position.z;
+            const distance = Math.sqrt(dx * dx + dz * dz);
+            if (distance < 1.0) {
+              playerHealth += 20;
+              if(playerHealth > 100) playerHealth = 100;
+              healthBar.style.width = playerHealth + "%";
+              readText("Zebrałeś apteczkę! Twoje zdrowie wzrosło do " + playerHealth + ".");
+              scene.remove(medkit);
+              medkit = null;
+              setTimeout(spawnMedkit, 3000);
+            }
+          }
+        }
+        
+        // HUD – pasek zdrowia
+        const healthContainer = document.createElement("div");
+        healthContainer.id = "health-container";
+        healthContainer.style.position = "absolute";
+        healthContainer.style.top = "10px";
+        healthContainer.style.right = "10px";
+        healthContainer.style.width = "200px";
+        healthContainer.style.height = "25px";
+        healthContainer.style.backgroundColor = "#444";
+        healthContainer.style.border = "2px solid #fff";
+        healthContainer.style.borderRadius = "5px";
+        healthContainer.style.zIndex = "20";
+        
+        const healthBar = document.createElement("div");
+        healthBar.id = "health-bar";
+        healthBar.style.width = "100%";
+        healthBar.style.height = "100%";
+        healthBar.style.backgroundColor = "#0f0";
+        healthBar.style.borderRadius = "3px";
+        
+        healthContainer.appendChild(healthBar);
+        document.getElementById("game-container").appendChild(healthContainer);
+        
+        // Przeciwnicy
+        const enemies = [];
+        function spawnEnemy() {
+          const enemyGeometry = new THREE.SphereGeometry(0.5, 16, 16);
+          const enemyMaterial = new THREE.MeshPhongMaterial({ color: 0xff00ff });
+          const enemy = new THREE.Mesh(enemyGeometry, enemyMaterial);
+          enemy.position.set(Math.random() * 30 - 15, 0.5, Math.random() * 30 - 15);
+          scene.add(enemy);
+          enemies.push(enemy);
+        }
+        for (let i = 0; i < 3; i++) {
+          spawnEnemy();
+        }
+        
+        function updateEnemies(delta) {
+          const playerPos = controls.getObject().position;
+          enemies.forEach(enemy => {
+            const dir = new THREE.Vector3();
+            dir.subVectors(playerPos, enemy.position).normalize();
+            enemy.position.addScaledVector(dir, 1.5 * delta);
+          });
+        }
+        
+        function checkEnemyCollision() {
+          const playerPos = controls.getObject().position;
+          enemies.forEach(enemy => {
+            const dx = playerPos.x - enemy.position.x;
+            const dz = playerPos.z - enemy.position.z;
+            const distance = Math.sqrt(dx * dx + dz * dz);
+            if (distance < 1.0) {
+              playerHealth -= 10;
+              if (playerHealth < 0) playerHealth = 0;
+              healthBar.style.width = playerHealth + "%";
+              readText("Uważaj! Trafiony przez przeciwnika!");
+              enemy.position.set(Math.random() * 30 - 15, 0.5, Math.random() * 30 - 15);
+            }
+          });
+        }
+        
+        // Pułapki
+        const traps = [];
+        function spawnTrap() {
+          const trapGeometry = new THREE.BoxGeometry(0.8, 0.2, 0.8);
+          const trapMaterial = new THREE.MeshPhongMaterial({ color: 0x000000 });
+          const trap = new THREE.Mesh(trapGeometry, trapMaterial);
+          trap.position.set(Math.random() * 30 - 15, 0.1, Math.random() * 30 - 15);
+          scene.add(trap);
+          traps.push(trap);
+        }
+        for (let i = 0; i < 3; i++) {
+          spawnTrap();
+        }
+        
+        function checkTrapCollision() {
+          const playerPos = controls.getObject().position;
+          traps.forEach((trap, index) => {
+            const dx = playerPos.x - trap.position.x;
+            const dz = playerPos.z - trap.position.z;
+            const distance = Math.sqrt(dx * dx + dz * dz);
+            if (distance < 1.0) {
+              playerHealth -= 15;
+              if (playerHealth < 0) playerHealth = 0;
+              healthBar.style.width = playerHealth + "%";
+              readText("Pułapka! Straciłeś zdrowie!");
+              scene.remove(trap);
+              traps.splice(index, 1);
+              setTimeout(spawnTrap, 4000);
+            }
+          });
+        }
+        
+        function checkGameOver() {
+          if (playerHealth <= 0) {
+            readText("Game Over! Twoje zdrowie się wyczerpało.");
+            alert("Game Over! Spróbuj ponownie.");
+            playerHealth = 100;
+            healthBar.style.width = "100%";
+            controls.getObject().position.copy(playerSpawnPoint);
+          }
+        }
+        
+        // Kolizja z beaconem
+        function checkExitCollision() {
+          const pos = controls.getObject().position;
+          const dx = pos.x - exitObj.position.x;
+          const dz = pos.z - exitObj.position.z;
+          const distance = Math.sqrt(dx * dx + dz * dz);
+          if (distance < 1.5) {
+            nextLevel();
+          }
+        }
+        
+        function nextLevel() {
+          if (currentLevel >= 10) {
+            readText("Gratulacje! Ukończyłeś grę o pierwszej pomocy!");
+            alert("Gratulacje! Ukończyłeś grę o pierwszej pomocy!");
+            return;
+          }
+          currentLevel++;
+          readText("Przechodzisz do poziomu " + currentLevel);
+          controls.getObject().position.set(-18, 1.6, 18);
+          exitObj.position.set(15, 0.5, -15);
+          generateMaze(currentLevel);
+        }
+        
+        // Generowanie labiryntu (ściany)
+        function generateMaze(level) {
+          mazeWalls.forEach(wall => scene.remove(wall));
+          mazeWalls = [];
+          const wallMaterial = new THREE.MeshPhongMaterial({ color: 0x333333 });
+          const thickness = 0.5, height = 2;
+          const leftWall = new THREE.Mesh(new THREE.BoxGeometry(thickness, height, 40), wallMaterial);
+          leftWall.position.set(-20, height/2, 0);
+          scene.add(leftWall);
+          mazeWalls.push(leftWall);
+          const rightWall = new THREE.Mesh(new THREE.BoxGeometry(thickness, height, 40), wallMaterial);
+          rightWall.position.set(20, height/2, 0);
+          scene.add(rightWall);
+          mazeWalls.push(rightWall);
+          const topWall = new THREE.Mesh(new THREE.BoxGeometry(40, height, thickness), wallMaterial);
+          topWall.position.set(0, height/2, 20);
+          scene.add(topWall);
+          mazeWalls.push(topWall);
+          const bottomWall = new THREE.Mesh(new THREE.BoxGeometry(40, height, thickness), wallMaterial);
+          bottomWall.position.set(0, height/2, -20);
+          scene.add(bottomWall);
+          mazeWalls.push(bottomWall);
+          const numWalls = level * 3;
+          for (let i = 0; i < numWalls; i++) {
+            const wallWidth = Math.random() * 3 + 1;
+            const wallDepth = Math.random() * 1.5 + 0.5;
+            const wallGeom = new THREE.BoxGeometry(wallWidth, height, wallDepth);
+            const wall = new THREE.Mesh(wallGeom, wallMaterial);
+            wall.position.set(Math.random() * 36 - 18, height/2, Math.random() * 36 - 18);
+            wall.rotation.y = Math.random() * Math.PI;
+            scene.add(wall);
+            mazeWalls.push(wall);
+          }
+        }
+        
+        // Główna pętla animacji
+        function animate() {
+          requestAnimationFrame(animate);
+          const time = performance.now();
+          const delta = (time - prevTime) / 1000;
+          
+          // Zapamiętujemy starą pozycję gracza (do kolizji)
+          const player = controls.getObject();
+          const oldPos = player.position.clone();
+          
+          velocity.x -= velocity.x * 10.0 * delta;
+          velocity.z -= velocity.z * 10.0 * delta;
+          direction.z = Number(move.forward) - Number(move.backward);
+          direction.x = Number(move.right) - Number(move.left);
+          direction.normalize();
+          
+          // Obsługa sprintu z energią i cooldownem:
+          let baseSpeed = 20;
+          let sprintMultiplier = 1;
+          if ((keysPressed["ShiftLeft"] || keysPressed["ShiftRight"]) && sprintEnergy > 0 && !sprintOnCooldown) {
+            sprintMultiplier = 2;
+            sprintEnergy -= delta;
+            if (sprintEnergy <= 0) {
+              sprintEnergy = 0;
+              sprintOnCooldown = true;
+              setTimeout(function(){
+                sprintEnergy = 10;
+                sprintOnCooldown = false;
+              }, 20000);
+            }
+          }
+          baseSpeed *= sprintMultiplier;
+          const effectiveSpeed = baseSpeed;
+          
+          if (move.forward || move.backward) velocity.z -= direction.z * effectiveSpeed * delta;
+          if (move.left || move.right) velocity.x -= direction.x * effectiveSpeed * delta;
+          
+          controls.moveRight(-velocity.x * delta);
+          controls.moveForward(-velocity.z * delta);
+          
+          // Sprawdzanie kolizji z labiryntowymi ścianami
+          const newPos = player.position.clone();
+          for (let wall of mazeWalls) {
+            let wallBox = new THREE.Box3().setFromObject(wall);
+            let playerSphere = new THREE.Sphere(newPos, 0.5);
+            if (wallBox.intersectsSphere(playerSphere)) {
+              player.position.copy(oldPos);
+              break;
+            }
+          }
+          
+          prevTime = time;
+          
+          checkExitCollision();
+          checkMedkitCollision();
+          updateEnemies(delta);
+          checkEnemyCollision();
+          checkTrapCollision();
+          updateCoinCollision();
+          checkGameOver();
+          
+          // Aktualizacja danych w menu, jeśli otwarte
+          if(menuOverlay.style.display === "flex"){
+            document.getElementById("menu-health").textContent = playerHealth;
+            document.getElementById("menu-coins").textContent = coins;
+            document.getElementById("menu-sprint").textContent = sprintEnergy.toFixed(1);
+          }
+          
+          renderer.render(scene, camera);
+        }
+        animate();
+        
+        window.addEventListener("resize", function() {
+          camera.aspect = window.innerWidth / window.innerHeight;
+          camera.updateProjectionMatrix();
+          renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+      }
+      
+      // Obiekt przechowujący aktualnie wciśnięte klawisze
+      const keysPressed = {};
+      document.addEventListener("keydown", function(e) {
+        keysPressed[e.code] = true;
+        if (!controls || !controls.isLocked) return;
+        switch (e.code) {
+          case "KeyW": move.forward = true; break;
+          case "KeyS": move.backward = true; break;
+          case "KeyA": move.left = true; break;
+          case "KeyD": move.right = true; break;
+          case "KeyQ":
+            readText("Rozpoczynam udzielanie pierwszej pomocy!");
+            exitObj.material.color.set(0x0000ff);
+            break;
+        }
+      });
+      document.addEventListener("keyup", function(e) {
+        keysPressed[e.code] = false;
+        switch (e.code) {
+          case "KeyW": move.forward = false; break;
+          case "KeyS": move.backward = false; break;
+          case "KeyA": move.left = false; break;
+          case "KeyD": move.right = false; break;
+        }
+      });
+      
+      // Uruchomienie gry
+      init3DGame();
+    })();
   </script>
 </body>
 </html>
