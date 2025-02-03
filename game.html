@@ -147,7 +147,6 @@
       document.getElementById('buySpeed').addEventListener('click', buySpeedUpgrade);
     }
 
-    // Funkcja tworząca monetę – CylinderGeometry z 64 segmentami, MeshStandardMaterial
     function createCoin() {
       const geometry = new THREE.CylinderGeometry(0.5, 0.5, 0.1, 64);
       const material = new THREE.MeshStandardMaterial({
