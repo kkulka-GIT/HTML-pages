@@ -65,10 +65,10 @@
 
   <!-- Używamy modułów ES6 -->
   <script type="module">
-    // Import modułowy Three.js oraz kontrolki z oficjalnych źródeł:
-    import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.js';
-    import { PointerLockControls } from 'https://threejs.org/examples/jsm/controls/PointerLockControls.js';
-    import { OrbitControls } from 'https://threejs.org/examples/jsm/controls/OrbitControls.js';
+    // Importujemy Three.js oraz kontrolki PointerLockControls i OrbitControls z unpkg (wersja r128)
+    import * as THREE from 'https://unpkg.com/three@0.128.0/build/three.module.js';
+    import { PointerLockControls } from 'https://unpkg.com/three@0.128.0/examples/jsm/controls/PointerLockControls.js';
+    import { OrbitControls } from 'https://unpkg.com/three@0.128.0/examples/jsm/controls/OrbitControls.js';
 
     let scene, camera, renderer;
     let controls, orbitControls;
@@ -216,7 +216,7 @@
       renderer.render(scene, camera);
     }
 
-    // Rozpoczęcie gry: ukrycie menu, aktywacja sterowania
+    // Rozpoczęcie gry: ukrycie menu i aktywacja sterowania
     function startGame() {
       document.getElementById('menu').style.display = 'none';
       gameStarted = true;
