@@ -63,12 +63,11 @@
     <button id="backButton" class="menu-button">Powrót</button>
   </div>
 
-  <!-- Używamy modułów ES6 -->
+  <!-- Importujemy Three.js oraz kontrolki z lokalnych plików -->
   <script type="module">
-    // Importuj Three.js oraz kontrolki PointerLockControls i OrbitControls z unpkg:
-    import * as THREE from 'https://unpkg.com/three@0.128.0/build/three.module.js';
-    import { PointerLockControls } from 'https://unpkg.com/three@0.128.0/examples/jsm/controls/PointerLockControls.js';
-    import { OrbitControls } from 'https://unpkg.com/three@0.128.0/examples/jsm/controls/OrbitControls.js';
+    import * as THREE from './js/three.module.js';
+    import { PointerLockControls } from './js/controls/PointerLockControls.js';
+    import { OrbitControls } from './js/controls/OrbitControls.js';
 
     let scene, camera, renderer;
     let controls, orbitControls;
@@ -175,48 +174,9 @@
 
     function animate() {
       requestAnimationFrame(animate);
-
-      if (gameStarted) {
-        // Ruch gracza (tylko na komputerze, gdy PointerLockControls jest aktywne)
-        if (!isMobile && controls.isLocked === true) {
-          const direction = new THREE.Vector3();
-          if (keys['KeyW']) direction.z -= 1;
-          if (keys['KeyS']) direction.z += 1;
-          if (keys['KeyA']) direction.x -= 1;
-          if (keys['KeyD']) direction.x += 1;
-          direction.normalize();
-
-          const moveX = direction.x * moveSpeed;
-          const moveZ = direction.z * moveSpeed;
-          const angle = camera.rotation.y;
-          // Przemieszczamy gracza korzystając z pozycji kontrolki
-          controls.getObject().position.x += moveX * Math.cos(angle) - moveZ * Math.sin(angle);
-          controls.getObject().position.z += moveZ * Math.cos(angle) + moveX * Math.sin(angle);
-        }
-
-        // Animacja monet – obracanie i sprawdzanie kolizji
-        for (let i = coins.length - 1; i >= 0; i--) {
-          coins[i].rotation.z += 0.05;
-          const coinPos = coins[i].position;
-          const camPos = !isMobile ? controls.getObject().position : camera.position;
-          if (camPos.distanceTo(coinPos) < 1.0) {
-            scene.remove(coins[i]);
-            coins.splice(i, 1);
-            coinCount++;
-            updateHUD();
-          }
-        }
-      }
-
-      // Aktualizacja OrbitControls dla urządzeń mobilnych
-      if (isMobile && orbitControls) {
-        orbitControls.update();
-      }
-
       renderer.render(scene, camera);
     }
 
-    // Rozpoczęcie gry: ukrycie menu i aktywacja sterowania
     function startGame() {
       document.getElementById('menu').style.display = 'none';
       gameStarted = true;
@@ -225,12 +185,10 @@
       }
     }
 
-    // Aktualizacja HUD
     function updateHUD() {
       document.getElementById('hud').innerText = 'Monety: ' + coinCount;
     }
 
-    // Obsługa sklepu
     function openShop() {
       document.getElementById('menu').style.display = 'none';
       document.getElementById('shop').style.display = 'flex';
@@ -242,7 +200,7 @@
     function buySpeedUpgrade() {
       if (coinCount >= 5) {
         coinCount -= 5;
-        moveSpeed += 0.05; // Zwiększenie prędkości ruchu
+        moveSpeed += 0.05;
         updateHUD();
         document.getElementById('shopMessage').innerText = 'Ulepszono prędkość!';
       } else {
