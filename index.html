@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Testowy Projekt z Plikiem GROM</title>
+</head>
+<body>
+  <h1>Witaj w moim projekcie</h1>
+  <p>Plik <code>custom.grom</code> jest załadowany poniżej:</p>
+
+  <pre id="grom-content">Ładowanie...</pre>
+
+  <script>
+    // Pobieranie zawartości custom.grom i wyświetlanie w HTML
+    fetch('custom.grom')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('grom-content').textContent = data;
+      })
+      .catch(error => {
+        document.getElementById('grom-content').textContent = "Błąd ładowania pliku custom.grom";
+        console.error("Błąd ładowania:", error);
+      });
+  </script>
+</body>
+</html>
