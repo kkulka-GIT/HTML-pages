@@ -6,6 +6,7 @@
   <!-- Dołączamy Three.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <style>
+    /* Ustawienia ogólne – pełny ekran, brak marginesów */
     body {
       margin: 0;
       overflow: hidden;
@@ -26,57 +27,62 @@
     let platforms = [];
     // Sterowanie – przechowujemy stan klawiszy (lewo, prawo)
     let keys = { left: false, right: false };
-    // Wektor prędkości gracza (w tym pionowa składowa)
+    // Wektor prędkości gracza (z uwzględnieniem prędkości pionowej)
     let playerVelocity = new THREE.Vector3(0, 0, 0);
 
-    // Stałe fizyczne i parametry rozgrywki
+    // Parametry gry
     const GRAVITY = -30;        // przyspieszenie grawitacyjne
     const JUMP_VELOCITY = 12;    // początkowa prędkość skoku
     const FORWARD_SPEED = 10;    // automatyczna prędkość biegu (wzdłuż osi Z)
     const LATERAL_SPEED = 10;    // prędkość ruchu w lewo/prawo
 
-    // Inicjalizacja sceny i uruchomienie animacji
+    // Inicjalizacja i uruchomienie gry
     init();
     animate();
 
     function init() {
-      // Tworzymy scenę i ustawiamy tło
+      // Utworzenie sceny i ustawienie tła
       scene = new THREE.Scene();
       scene.background = new THREE.Color(0x87ceeb);
 
-      // Ustawiamy kamerę
-      camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+      // Ustawienie kamery – parametr FOV pozostaje 75°, można go zmienić według potrzeb
+      camera = new THREE.PerspectiveCamera(
+        75,
+        window.innerWidth / window.innerHeight,
+        0.1,
+        1000
+      );
 
       // Renderer – tworzymy i dodajemy do dokumentu
       renderer = new THREE.WebGLRenderer({ antialias: true });
       renderer.setSize(window.innerWidth, window.innerHeight);
       document.body.appendChild(renderer.domElement);
 
-      // Dodajemy oświetlenie
+      // Dodanie oświetlenia – ambient i directional
       const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
       scene.add(ambientLight);
       const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
       directionalLight.position.set(5, 10, 7.5);
       scene.add(directionalLight);
 
-      // Tworzymy gracza – czerwony sześcian o wymiarach 1x1x1
+      // Tworzymy gracza – czerwony sześcian o wymiarach 1×1×1
       const playerGeometry = new THREE.BoxGeometry(1, 1, 1);
       const playerMaterial = new THREE.MeshPhongMaterial({ color: 0xff0000 });
       player = new THREE.Mesh(playerGeometry, playerMaterial);
-      // Ustawiamy gracza tak, aby "stał" na platformie (dolna krawędź na poziomie y=0)
+      // Ustawiamy gracza tak, aby jego dolna krawędź była na poziomie y = 0 (startujemy z y = 1)
       player.position.set(0, 1, 0);
       scene.add(player);
 
       // Tworzymy platformy – zielone bloki
-      // Każda platforma ma rozmiar 6x0.5x6, a ich liczba wynosi 10
+      // Każda platforma ma rozmiar 6×0.5×6; liczbę platform ustawiamy na 10
       const platformGeometry = new THREE.BoxGeometry(6, 0.5, 6);
       const platformMaterial = new THREE.MeshPhongMaterial({ color: 0x00ff00 });
       const numPlatforms = 10;
       for (let i = 0; i < numPlatforms; i++) {
         let platform = new THREE.Mesh(platformGeometry, platformMaterial.clone());
-        // Platformy rozmieszczone są wzdłuż osi Z (odstęp 8 jednostek), a pozycja X jest lekko losowa
+        // Platformy rozmieszczone są wzdłuż osi Z (co 8 jednostek), pozycja X jest losowo zmieniana
         platform.position.set((Math.random() - 0.5) * 4, 0, -i * 8);
-        // W userData zapisujemy parametry oscylacji – amplitudę, prędkość oraz przesunięcie fazowe
+        // W userData zapisujemy parametry oscylacji: amplitudę, prędkość i przesunięcie fazowe
         platform.userData = {
           amplitude: Math.random() * 2 + 1,
           speed: Math.random() * 2 + 1,
@@ -86,11 +92,11 @@
         platforms.push(platform);
       }
 
-      // Ustawiamy obsługę klawiatury
+      // Ustawienie obsługi klawiatury
       window.addEventListener('keydown', function(e) {
         if (e.code === "KeyA" || e.code === "ArrowLeft") keys.left = true;
         if (e.code === "KeyD" || e.code === "ArrowRight") keys.right = true;
-        // Skok – możliwy tylko, gdy gracz "stoi" na platformie
+        // Skok – możliwy tylko, gdy gracz stoi na platformie
         if (e.code === "Space" && isPlayerOnPlatform()) {
           playerVelocity.y = JUMP_VELOCITY;
         }
@@ -112,14 +118,15 @@
     function isPlayerOnPlatform() {
       const tolerance = 0.2;
       for (let platform of platforms) {
-        // Górna krawędź platformy (platforma ma wysokość 0.5, więc górna krawędź to platform.position.y + 0.25)
+        // Górna krawędź platformy = platform.position.y + (0.5/2) = platform.position.y + 0.25
         let platformTop = platform.position.y + 0.25;
         // Obliczamy odległość poziomą między graczem a platformą
         let dx = player.position.x - platform.position.x;
         let dz = player.position.z - platform.position.z;
         let horizontalDist = Math.sqrt(dx * dx + dz * dz);
-        // Przyjmujemy, że gracz stoi na platformie, jeśli jego dolna krawędź (player.position.y - 0.5)
-        // znajduje się blisko platformTop oraz odległość pozioma jest mniejsza niż około 3.5 jednostki
+        // Przyjmujemy, że gracz stoi na platformie, jeśli:
+        // - jego dolna krawędź (player.position.y - 0.5) jest blisko górnej krawędzi platformy (różnica < tolerance)
+        // - odległość pozioma jest mniejsza niż około 3.5 jednostki
         if (horizontalDist < 3.5 && Math.abs((player.position.y - 0.5) - platformTop) < tolerance) {
           return true;
         }
@@ -127,23 +134,25 @@
       return false;
     }
 
+    // Zmienna do śledzenia czasu poprzedniej klatki
     let lastTime = performance.now();
+
     function animate() {
       requestAnimationFrame(animate);
       let currentTime = performance.now();
       let delta = (currentTime - lastTime) / 1000;
       lastTime = currentTime;
 
-      // Aktualizacja ruchu platform – każda platforma oscyluje poziomo zgodnie z funkcją sinus
+      // Aktualizacja ruchu platform – oscylują poziomo według funkcji sinus
       platforms.forEach(platform => {
         const data = platform.userData;
         platform.position.x = data.amplitude * Math.sin(data.speed * currentTime / 1000 + data.offset);
       });
 
-      // Gracz biegnie automatycznie do przodu (w dół osi Z)
+      // Gracz automatycznie biegnie do przodu (zmiana pozycji w osi Z)
       player.position.z -= FORWARD_SPEED * delta;
 
-      // Obsługa ruchu bocznego – sterowanie klawiszami (ruch w lewo/prawo)
+      // Ruch boczny gracza – sterowanie lewo/prawo
       if (keys.left) {
         player.position.x -= LATERAL_SPEED * delta;
       }
@@ -155,27 +164,31 @@
       playerVelocity.y += GRAVITY * delta;
       player.position.y += playerVelocity.y * delta;
 
-      // Prosta detekcja "lądowania" – jeśli gracz zbliża się do platformy, korygujemy jego pozycję
+      // Prosta detekcja "lądowania" – sprawdzamy, czy gracz zbliża się do platformy
       platforms.forEach(platform => {
         let dx = player.position.x - platform.position.x;
         let dz = player.position.z - platform.position.z;
         let horizontalDist = Math.sqrt(dx * dx + dz * dz);
         let platformTop = platform.position.y + 0.25;
-        // Jeśli gracz jest wystarczająco blisko platformy i przechodzi przez jej górną krawędź, "lądujemy"
-        if (horizontalDist < 3.5 &&
-            player.position.y - 0.5 > platformTop &&
-            (player.position.y - 0.5 + playerVelocity.y * delta) <= platformTop + 0.1) {
+        // Jeśli gracz jest wystarczająco blisko platformy, a jego ruch pionowy powoduje przekroczenie górnej krawędzi platformy,
+        // ustawiamy gracza na platformie i zerujemy prędkość pionową
+        if (
+          horizontalDist < 3.5 &&
+          player.position.y - 0.5 > platformTop &&
+          (player.position.y - 0.5 + playerVelocity.y * delta) <= platformTop + 0.1
+        ) {
           player.position.y = platformTop + 0.5;
           playerVelocity.y = 0;
         }
       });
 
-      // Jeśli gracz spadnie poniżej pewnego poziomu, resetujemy grę
+      // Jeśli gracz spadnie poniżej określonego poziomu, resetujemy grę
       if (player.position.y < -10) {
         resetGame();
       }
 
-      // Uaktualniamy kamerę – ustawiamy ją za i nieco powyżej gracza (efekt trzecioosobowy)
+      // Uaktualniamy pozycję kamery – efekt trzecioosobowy:
+      // Kamera powinna znajdować się za i nieco powyżej gracza
       let desiredCameraPos = new THREE.Vector3(
         player.position.x,
         player.position.y + 5,
