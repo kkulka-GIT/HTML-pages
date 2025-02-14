@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kula w Pudełku</title>
+    <title>3D Gra – Steruj Kulką</title>
     <style>
       body {
         margin: 0;
@@ -13,68 +13,238 @@
   </head>
   <body>
     <script type="module">
-      // Import modułów
+      // Import modułów Three.js oraz cannon‑es
       import * as THREE from "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.js";
       import * as CANNON from "https://cdn.jsdelivr.net/npm/cannon-es@0.20.0/dist/cannon-es.js";
-      
-      // Scena Three.js
+
+      // --------------------
+      // Konfiguracja sceny Three.js
+      // --------------------
       const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-      const renderer = new THREE.WebGLRenderer();
+      scene.background = new THREE.Color(0xa0a0a0);
+      const camera = new THREE.PerspectiveCamera(
+        75,
+        window.innerWidth / window.innerHeight,
+        0.1,
+        1000
+      );
+      const renderer = new THREE.WebGLRenderer({ antialias: true });
       renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.shadowMap.enabled = true;
       document.body.appendChild(renderer.domElement);
-      
-      // Świat fizyczny Cannon.js
+
+      // --------------------
+      // Konfiguracja świata fizyki Cannon‑es
+      // --------------------
       const world = new CANNON.World();
       world.gravity.set(0, -9.82, 0);
-      
-      // Podłoga
-      const groundShape = new CANNON.Plane();
-      const groundBody = new CANNON.Body({
+      world.broadphase = new CANNON.NaiveBroadphase();
+      world.solver.iterations = 10;
+
+      // Materiały i parametry kontaktu
+      const defaultMaterial = new CANNON.Material("default");
+      const defaultContactMaterial = new CANNON.ContactMaterial(
+        defaultMaterial,
+        defaultMaterial,
+        {
+          friction: 0.4,
+          restitution: 0.3,
+        }
+      );
+      world.defaultContactMaterial = defaultContactMaterial;
+
+      // --------------------
+      // Tworzenie podłogi
+      // --------------------
+      const floorSize = 20;
+      // Mesh podłogi (Three.js)
+      const floorGeometry = new THREE.PlaneGeometry(floorSize, floorSize);
+      const floorMaterial = new THREE.MeshStandardMaterial({ color: 0x808080 });
+      const floorMesh = new THREE.Mesh(floorGeometry, floorMaterial);
+      floorMesh.rotation.x = -Math.PI / 2;
+      floorMesh.receiveShadow = true;
+      scene.add(floorMesh);
+
+      // Ciało fizyczne podłogi (Cannon‑es) – nieskończona płaszczyzna
+      const floorShape = new CANNON.Plane();
+      const floorBody = new CANNON.Body({
         mass: 0,
-        shape: groundShape,
-        position: new CANNON.Vec3(0, -5, 0)
+        shape: floorShape,
+        material: defaultMaterial,
       });
-      groundBody.quaternion.setFromEuler(-Math.PI / 2, 0, 0);
-      world.addBody(groundBody);
-      
-      // Kula
-      const ballShape = new CANNON.Sphere(0.5);
+      floorBody.quaternion.setFromEuler(-Math.PI / 2, 0, 0);
+      floorBody.position.set(0, 0, 0);
+      world.addBody(floorBody);
+
+      // --------------------
+      // Tworzenie ścian ograniczających (cztery ściany)
+      // --------------------
+      const wallThickness = 1;
+      const wallHeight = 5;
+      const halfSize = floorSize / 2;
+      const wallMaterialThree = new THREE.MeshStandardMaterial({ color: 0x303030 });
+
+      function createWall(position, size, rotationY = 0) {
+        // Three.js – wizualizacja ściany
+        const wallGeometry = new THREE.BoxGeometry(size.x, size.y, size.z);
+        const wallMesh = new THREE.Mesh(wallGeometry, wallMaterialThree);
+        wallMesh.position.copy(position);
+        wallMesh.rotation.y = rotationY;
+        wallMesh.castShadow = true;
+        wallMesh.receiveShadow = true;
+        scene.add(wallMesh);
+
+        // Cannon‑es – ciało fizyczne ściany
+        const wallShape = new CANNON.Box(
+          new CANNON.Vec3(size.x / 2, size.y / 2, size.z / 2)
+        );
+        const wallBody = new CANNON.Body({
+          mass: 0,
+          shape: wallShape,
+          material: defaultMaterial,
+        });
+        wallBody.position.copy(position);
+        const q = new CANNON.Quaternion();
+        q.setFromAxisAngle(new CANNON.Vec3(0, 1, 0), rotationY);
+        wallBody.quaternion.copy(q);
+        world.addBody(wallBody);
+      }
+
+      // Ściana tylna (z tyłu, w kierunku ujemnego Z)
+      createWall(
+        new THREE.Vector3(0, wallHeight / 2, -halfSize - wallThickness / 2),
+        new THREE.Vector3(floorSize, wallHeight, wallThickness)
+      );
+      // Ściana przednia (w kierunku dodatniego Z)
+      createWall(
+        new THREE.Vector3(0, wallHeight / 2, halfSize + wallThickness / 2),
+        new THREE.Vector3(floorSize, wallHeight, wallThickness)
+      );
+      // Ściana lewa (w kierunku ujemnego X)
+      createWall(
+        new THREE.Vector3(-halfSize - wallThickness / 2, wallHeight / 2, 0),
+        new THREE.Vector3(wallThickness, wallHeight, floorSize)
+      );
+      // Ściana prawa (w kierunku dodatniego X)
+      createWall(
+        new THREE.Vector3(halfSize + wallThickness / 2, wallHeight / 2, 0),
+        new THREE.Vector3(wallThickness, wallHeight, floorSize)
+      );
+
+      // --------------------
+      // Gracz – czerwona kula
+      // --------------------
+      const ballRadius = 0.5;
+      const ballGeometry = new THREE.SphereGeometry(ballRadius, 32, 32);
+      const ballMaterial = new THREE.MeshStandardMaterial({ color: 0xff0000 });
+      const ballMesh = new THREE.Mesh(ballGeometry, ballMaterial);
+      ballMesh.castShadow = true;
+      scene.add(ballMesh);
+
+      const ballShape = new CANNON.Sphere(ballRadius);
       const ballBody = new CANNON.Body({
         mass: 1,
         shape: ballShape,
-        position: new CANNON.Vec3(0, 2, 0),
-        restitution: 0.9
+        material: defaultMaterial,
+        position: new CANNON.Vec3(0, ballRadius + 1, 0),
       });
       world.addBody(ballBody);
-      
-      const ballGeometry = new THREE.SphereGeometry(0.5, 32, 32);
-      const ballMaterial = new THREE.MeshStandardMaterial({ color: 0xff0000 });
-      const ballMesh = new THREE.Mesh(ballGeometry, ballMaterial);
-      scene.add(ballMesh);
-      
+
+      // --------------------
       // Oświetlenie
-      const light = new THREE.DirectionalLight(0xffffff, 1);
-      light.position.set(5, 10, 5);
-      scene.add(light);
-      
+      // --------------------
       const ambientLight = new THREE.AmbientLight(0x404040);
       scene.add(ambientLight);
-      
-      // Pozycja kamery
-      camera.position.set(0, 0, 10);
-      camera.lookAt(new THREE.Vector3(0, 0, 0));
-      
-      // Animacja
+      const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+      directionalLight.position.set(10, 10, 5);
+      directionalLight.castShadow = true;
+      scene.add(directionalLight);
+
+      // --------------------
+      // Kamera – ustawiona, by podążała za kulą
+      // --------------------
+      const cameraOffset = new THREE.Vector3(0, 5, 10);
+
+      // --------------------
+      // Sterowanie – reagowanie na klawiaturę (strzałki lub WASD)
+      // --------------------
+      const keys = {
+        ArrowUp: false,
+        ArrowDown: false,
+        ArrowLeft: false,
+        ArrowRight: false,
+        KeyW: false,
+        KeyA: false,
+        KeyS: false,
+        KeyD: false,
+      };
+
+      window.addEventListener("keydown", (event) => {
+        if (event.code in keys) keys[event.code] = true;
+      });
+      window.addEventListener("keyup", (event) => {
+        if (event.code in keys) keys[event.code] = false;
+      });
+
+      function applyPlayerControls() {
+        const forceMagnitude = 5;
+        const force = new CANNON.Vec3(0, 0, 0);
+        // Ustalamy kierunki: do przodu = -Z, do tyłu = +Z, lewo = -X, prawo = +X.
+        if (keys.ArrowUp || keys.KeyW) {
+          force.z -= forceMagnitude;
+        }
+        if (keys.ArrowDown || keys.KeyS) {
+          force.z += forceMagnitude;
+        }
+        if (keys.ArrowLeft || keys.KeyA) {
+          force.x -= forceMagnitude;
+        }
+        if (keys.ArrowRight || keys.KeyD) {
+          force.x += forceMagnitude;
+        }
+        // Jeśli któryś przycisk jest wciśnięty, przyłóż siłę do kuli.
+        if (!force.almostZero()) {
+          ballBody.applyForce(force, ballBody.position);
+        }
+      }
+
+      // --------------------
+      // Główna pętla animacji
+      // --------------------
+      const timeStep = 1 / 60;
+      let lastCallTime = performance.now() / 1000;
       function animate() {
         requestAnimationFrame(animate);
-        world.step(1 / 60);
+
+        // Obliczanie różnicy czasu
+        const time = performance.now() / 1000;
+        const deltaTime = time - lastCallTime;
+        lastCallTime = time;
+
+        // Aktualizacja sterowania gracza
+        applyPlayerControls();
+
+        // Krok symulacji fizycznej
+        world.step(timeStep, deltaTime);
+
+        // Synchronizacja pozycji i rotacji kuli
         ballMesh.position.copy(ballBody.position);
         ballMesh.quaternion.copy(ballBody.quaternion);
+
+        // Kamera podąża za kulą
+        camera.position.copy(ballMesh.position).add(cameraOffset);
+        camera.lookAt(ballMesh.position);
+
         renderer.render(scene, camera);
       }
-      
       animate();
+
+      // Obsługa zmiany rozmiaru okna
+      window.addEventListener("resize", () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      });
     </script>
   </body>
 </html>
