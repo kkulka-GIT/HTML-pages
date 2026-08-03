@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Korytarz 3D</title>
+  <style>
+    html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#111}
+    canvas{display:block;width:100%;height:100%;touch-action:none}
+    #move-zone{position:fixed;z-index:2;left:0;right:0;bottom:0;height:28%;pointer-events:none;background:rgba(120,180,220,.08);border-top:1px solid rgba(190,225,255,.16);transition:background .12s,border-color .12s}
+    #move-zone.active{background:rgba(150,215,255,.2);border-color:rgba(220,245,255,.42)}
+    #geiger-dot{position:fixed;z-index:3;left:50%;top:50%;width:20px;height:20px;margin:-10px;border-radius:50%;pointer-events:none;background:rgba(190,225,255,.42);box-shadow:0 0 8px rgba(190,225,255,.25);transition:background .12s,box-shadow .12s}
+    #geiger-dot.pulse{background:rgba(245,252,255,.98);box-shadow:0 0 15px rgba(210,240,255,.95);animation:geiger-pulse .12s ease-out}@keyframes geiger-pulse{0%{transform:scale(.8)}45%{transform:scale(1.45)}100%{transform:scale(1)}}
+  </style>
+</head>
+<body>
+<div id="move-zone"></div>
+<div id="geiger-dot"></div>
+<script type="module">
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js';
+
+const scene=new THREE.Scene();
+scene.background=new THREE.Color(0x10151d); scene.fog=new THREE.Fog(0x10151d,12,75);
+const camera=new THREE.PerspectiveCamera(75,innerWidth/innerHeight,.1,120); camera.position.set(0,1.7,6);
+const renderer=new THREE.WebGLRenderer({antialias:true,powerPreference:'high-performance'});
+renderer.setPixelRatio(Math.min(devicePixelRatio,2)); renderer.setSize(innerWidth,innerHeight); renderer.outputColorSpace=THREE.SRGBColorSpace;
+document.body.appendChild(renderer.domElement);
+
+scene.add(new THREE.HemisphereLight(0xb8d7ff,0x30261c,1.5));
+const lamp=new THREE.PointLight(0xffd9a0,2.4,24); lamp.position.set(0,4.2,0); scene.add(lamp);
+const floor=new THREE.Mesh(new THREE.PlaneGeometry(12,120),new THREE.MeshStandardMaterial({color:0x4a5058,roughness:.9}));
+floor.rotation.x=-Math.PI/2; floor.position.z=-45; scene.add(floor);
+const wallMaterial=new THREE.MeshStandardMaterial({color:0x8b929b,roughness:.82});
+const walls=[];
+for(const x of [-6,6]){const wall=new THREE.Mesh(new THREE.BoxGeometry(.35,6,120),wallMaterial);wall.position.set(x,3,-45);scene.add(wall);walls.push(wall)}
+const endWall=new THREE.Mesh(new THREE.BoxGeometry(12,6,.35),wallMaterial);endWall.position.set(0,3,-105);scene.add(endWall);walls.push(endWall)
+const startWall=new THREE.Mesh(new THREE.BoxGeometry(12,6,.35),wallMaterial);startWall.position.set(0,3,15);scene.add(startWall);walls.push(startWall)
+const ceiling=new THREE.Mesh(new THREE.PlaneGeometry(12,120),new THREE.MeshStandardMaterial({color:0x343a43,roughness:1}));
+ceiling.rotation.x=Math.PI/2; ceiling.position.set(0,6,-45); scene.add(ceiling);
+const sensorObjects=[...walls,floor,ceiling]
+for(let z=0;z>-115;z-=10){const light=new THREE.PointLight(0xffc77b,1.3,11);light.position.set(0,5.1,z);scene.add(light)}
+
+let yaw=0,pitch=0,moving=false,pointerId=null,lastX=0,lastY=0,controlMode=null;
+const lookSpeed=.0105,moveSpeed=.075,moveZoneTop=.72,moveZone=document.getElementById('move-zone'),geigerDot=document.getElementById('geiger-dot');
+function updateCamera(){camera.rotation.set(pitch,yaw,0,'YXZ')}
+
+// Jedyny zmysł: promień z centrum kamery mierzący najbliższą ścianę przed użytkownikiem.
+const raycaster=new THREE.Raycaster(),forward=new THREE.Vector3();
+let obstacleDistance=Infinity,blockedByObstacle=false;
+const collisionThreshold=.45
+function updateObstacleDistance(){
+  camera.getWorldDirection(forward); raycaster.set(camera.position,forward);
+  const hits=raycaster.intersectObjects(sensorObjects,false); obstacleDistance=hits.length?hits[0].distance:Infinity;
+}
+
+// Dźwięki są generowane syntetycznie, bez plików audio.
+let audioContext=null,masterGain=null,geigerGain=null,stepGain=null,nextGeigerTime=0,nextStepTime=0,impactUntil=0;
+function unlockAudio(){
+  if(!audioContext){audioContext=new AudioContext();masterGain=audioContext.createGain();masterGain.gain.value=.32;masterGain.connect(audioContext.destination);geigerGain=audioContext.createGain();geigerGain.gain.value=1;geigerGain.connect(masterGain);stepGain=audioContext.createGain();stepGain.gain.value=.85;stepGain.connect(masterGain)}
+  if(audioContext.state==='suspended')audioContext.resume();
+}
+function shortTone(time,frequency,duration,gainValue,type,output=masterGain){
+  if(!audioContext)return;
+  const oscillator=audioContext.createOscillator(),gain=audioContext.createGain();
+  oscillator.type=type; oscillator.frequency.setValueAtTime(frequency,time);
+  gain.gain.setValueAtTime(.0001,time); gain.gain.exponentialRampToValueAtTime(gainValue,time+.004); gain.gain.exponentialRampToValueAtTime(.0001,time+duration);
+  oscillator.connect(gain);gain.connect(output);oscillator.start(time);oscillator.stop(time+duration+.01);
+}
+function playImpact(){
+  if(!audioContext||audioContext.state!=='running')return;
+  const time=audioContext.currentTime,impactDuration=.13,oscillator=audioContext.createOscillator(),gain=audioContext.createGain();
+  impactUntil=time+impactDuration;
+  geigerGain.gain.cancelScheduledValues(time);geigerGain.gain.setValueAtTime(0,time);geigerGain.gain.linearRampToValueAtTime(1,impactUntil);
+  stepGain.gain.cancelScheduledValues(time);stepGain.gain.setValueAtTime(0,time);stepGain.gain.linearRampToValueAtTime(.85,impactUntil);
+  nextGeigerTime=Math.max(nextGeigerTime,impactUntil);nextStepTime=Math.max(nextStepTime,impactUntil);
+  oscillator.type='sine';oscillator.frequency.setValueAtTime(140,time);oscillator.frequency.exponentialRampToValueAtTime(55,time+.07);
+  gain.gain.setValueAtTime(.0001,time);gain.gain.exponentialRampToValueAtTime(.22,time+.004);gain.gain.exponentialRampToValueAtTime(.0001,time+.09);
+  oscillator.connect(gain);gain.connect(masterGain);oscillator.start(time);oscillator.stop(time+.11);
+  const click=audioContext.createOscillator(),clickGain=audioContext.createGain();
+  click.type='square';click.frequency.setValueAtTime(900,time);
+  clickGain.gain.setValueAtTime(.0001,time);clickGain.gain.exponentialRampToValueAtTime(.16,time+.001);clickGain.gain.exponentialRampToValueAtTime(.0001,time+.018);
+  click.connect(clickGain);clickGain.connect(masterGain);click.start(time);click.stop(time+.025);
+}
+function scheduleDotPulse(time){
+  const delay=Math.max(0,(time-audioContext.currentTime)*1000);
+  setTimeout(()=>{geigerDot.classList.remove('pulse');void geigerDot.offsetWidth;geigerDot.classList.add('pulse')},delay);
+}
+function scheduleSounds(now){
+  if(!audioContext||audioContext.state!=='running')return;
+  if(now<impactUntil){nextGeigerTime=Math.max(nextGeigerTime,impactUntil);nextStepTime=Math.max(nextStepTime,impactUntil);return}
+  const distance=Math.min(obstacleDistance,60);
+  const interval=distance===60?1.35:THREE.MathUtils.lerp(.09,1.25,THREE.MathUtils.clamp((distance-1)/35,0,1));
+  const lookAhead=now+.12;
+  while(nextGeigerTime<lookAhead){
+    if(nextGeigerTime<now)nextGeigerTime=now+.01;
+    shortTone(nextGeigerTime,1250,.035,.16,'square',geigerGain); scheduleDotPulse(nextGeigerTime); nextGeigerTime+=interval;
+  }
+  if(moving&&!blockedByObstacle){
+    while(nextStepTime<lookAhead){
+      if(nextStepTime<now)nextStepTime=now+.01;
+      shortTone(nextStepTime,105,.055,.12,'triangle',stepGain); nextStepTime+=.34;
+    }
+  }else nextStepTime=now+.34;
+}
+
+renderer.domElement.addEventListener('pointerdown',event=>{
+  unlockAudio();
+  pointerId=event.pointerId; lastX=event.clientX; lastY=event.clientY;
+  controlMode=event.clientY>=innerHeight*moveZoneTop?'move':'look'; moving=controlMode==='move';
+  moveZone.classList.toggle('active',moving); renderer.domElement.setPointerCapture(pointerId);
+  if(nextGeigerTime<audioContext.currentTime)nextGeigerTime=audioContext.currentTime+.02;
+});
+renderer.domElement.addEventListener('pointermove',event=>{
+  if(event.pointerId!==pointerId)return;
+  yaw-=(event.clientX-lastX)*lookSpeed;
+  if(controlMode==='look')pitch-= (event.clientY-lastY)*lookSpeed;
+  pitch=THREE.MathUtils.clamp(pitch,-Math.PI/2+.05,Math.PI/2-.05);
+  lastX=event.clientX;lastY=event.clientY;updateCamera();
+});
+function stopPointer(event){
+  if(event.pointerId!==pointerId)return;
+  moving=false;controlMode=null;pointerId=null;moveZone.classList.remove('active');
+  if(renderer.domElement.hasPointerCapture(event.pointerId))renderer.domElement.releasePointerCapture(event.pointerId);
+}
+renderer.domElement.addEventListener('pointerup',stopPointer);renderer.domElement.addEventListener('pointercancel',stopPointer);renderer.domElement.addEventListener('contextmenu',e=>e.preventDefault());
+
+const clock=new THREE.Clock();
+function animate(){
+  requestAnimationFrame(animate); const delta=Math.min(clock.getDelta(),.05);
+  if(moving){
+    updateObstacleDistance();
+    if(obstacleDistance>collisionThreshold){
+      camera.position.x-=Math.sin(yaw)*moveSpeed*delta*60;camera.position.z-=Math.cos(yaw)*moveSpeed*delta*60;camera.position.y=1.7;blockedByObstacle=false;
+    }else if(!blockedByObstacle){playImpact();blockedByObstacle=true}
+  }else blockedByObstacle=false
+  // Pomiar jest wykonywany po zmianie pozycji, w każdej klatce — także bez wejścia.
+  updateObstacleDistance();
+  scheduleSounds(audioContext?audioContext.currentTime:0); renderer.render(scene,camera);
+}
+addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)});
+updateCamera();animate();
+</script>
+</body>
+</html>
