@@ -43,17 +43,21 @@ const sensorObjects=[...walls,floor,ceiling]
 for(let z=0;z>-115;z-=10){const light=new THREE.PointLight(0xffc77b,1.3,11);light.position.set(0,5.1,z);scene.add(light)}
 
 let yaw=0,pitch=0,moving=false,pointerId=null,controlMode=null;
-let orientationListening=false,calibrationPending=true,hasOrientationTarget=false;
-let calibrationYaw=0,calibrationPitch=0,targetYaw=0,targetPitch=0,smoothedYaw=0,smoothedPitch=0;
+let orientationListening=false,calibrationPending=true,hasOrientationTarget=false,hasSmoothedOrientation=false;
+const orientationEuler=new THREE.Euler(),orientationQuaternion=new THREE.Quaternion(),calibrationQuaternion=new THREE.Quaternion(),calibrationInverse=new THREE.Quaternion(),relativeQuaternion=new THREE.Quaternion(),smoothedRelativeQuaternion=new THREE.Quaternion(),screenQuaternion=new THREE.Quaternion(),pilotVector=new THREE.Vector3(),deviceZ=new THREE.Vector3(0,0,1),pilotReference=new THREE.Vector3(0,0,-1);
 const moveSpeed=.075,moveZoneTop=.72,moveZone=document.getElementById("move-zone"),geigerDot=document.getElementById("geiger-dot"),miniMap=document.getElementById("mini-map"),mapContext=miniMap.getContext("2d");
 function updateCamera(){camera.rotation.set(pitch,yaw,0,"YXZ")}
-function wrapAngle(angle){return THREE.MathUtils.euclideanModulo(angle+Math.PI,Math.PI*2)-Math.PI}
 function handleOrientation(event){
-  if(event.alpha===null){return} if(event.beta===null){return}
-  const currentYaw=THREE.MathUtils.degToRad(event.alpha),currentPitch=THREE.MathUtils.degToRad(event.beta)-Math.PI/2;
-  if(calibrationPending){calibrationYaw=currentYaw;calibrationPitch=currentPitch;targetYaw=0;targetPitch=0;smoothedYaw=0;smoothedPitch=0;calibrationPending=false}
-  targetYaw=wrapAngle(calibrationYaw-currentYaw);
-  targetPitch=THREE.MathUtils.clamp(calibrationPitch-currentPitch,-Math.PI/2+.05,Math.PI/2-.05);
+  if(event.alpha===null){return} if(event.beta===null){return} if(event.gamma===null){return}
+  const alpha=THREE.MathUtils.degToRad(event.alpha),beta=THREE.MathUtils.degToRad(event.beta),gamma=THREE.MathUtils.degToRad(event.gamma);
+  orientationEuler.set(beta,alpha,-gamma,"YXZ");
+  orientationQuaternion.setFromEuler(orientationEuler);
+  const screenAngle=screen.orientation?screen.orientation.angle:0;
+  screenQuaternion.setFromAxisAngle(deviceZ,-THREE.MathUtils.degToRad(screenAngle));
+  orientationQuaternion.multiply(screenQuaternion);
+  if(calibrationPending){calibrationQuaternion.copy(orientationQuaternion);calibrationPending=false;hasSmoothedOrientation=false}
+  calibrationInverse.copy(calibrationQuaternion).invert();
+  relativeQuaternion.copy(orientationQuaternion).multiply(calibrationInverse);
   hasOrientationTarget=true;
 }
 function activateOrientation(){
@@ -155,10 +159,13 @@ function drawMiniMap(){
 }
 function updatePilotDirection(){
   if(!hasOrientationTarget)return;
-  const yawDelta=wrapAngle(targetYaw-smoothedYaw),pitchDelta=targetPitch-smoothedPitch;
-  if(Math.abs(yawDelta)>.0005)smoothedYaw+=yawDelta*.18;
-  if(Math.abs(pitchDelta)>.0005)smoothedPitch+=pitchDelta*.18;
-  yaw=smoothedYaw;pitch=smoothedPitch;updateCamera();
+  if(!hasSmoothedOrientation){smoothedRelativeQuaternion.copy(relativeQuaternion);hasSmoothedOrientation=true}
+  else if(1-Math.abs(smoothedRelativeQuaternion.dot(relativeQuaternion))>.00005)smoothedRelativeQuaternion.slerp(relativeQuaternion,.18);
+  pilotVector.copy(pilotReference).applyQuaternion(smoothedRelativeQuaternion).normalize();
+  const horizontal=Math.hypot(pilotVector.x,pilotVector.z),heading=Math.atan2(-pilotVector.x,-pilotVector.z);
+  if(horizontal>.001)yaw=THREE.MathUtils.euclideanModulo(heading+Math.PI,Math.PI*2)-Math.PI
+  pitch=THREE.MathUtils.clamp(Math.atan2(pilotVector.y,horizontal),-Math.PI/2+.05,Math.PI/2-.05);
+  camera.lookAt(camera.position.x+pilotVector.x,camera.position.y+pilotVector.y,camera.position.z+pilotVector.z);
 }
 const clock=new THREE.Clock();
 function animate(){
