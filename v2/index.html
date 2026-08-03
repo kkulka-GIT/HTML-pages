@@ -44,7 +44,7 @@ for(let z=0;z>-115;z-=10){const light=new THREE.PointLight(0xffc77b,1.3,11);ligh
 
 let yaw=0,pitch=0,moving=false,pointerId=null,controlMode=null;
 let orientationListening=false,calibrationPending=true,hasOrientationTarget=false,hasSmoothedOrientation=false;
-const orientationEuler=new THREE.Euler(),orientationQuaternion=new THREE.Quaternion(),calibrationQuaternion=new THREE.Quaternion(),calibrationInverse=new THREE.Quaternion(),relativeQuaternion=new THREE.Quaternion(),smoothedRelativeQuaternion=new THREE.Quaternion(),screenQuaternion=new THREE.Quaternion(),pilotVector=new THREE.Vector3(),deviceZ=new THREE.Vector3(0,0,1),pilotReference=new THREE.Vector3(0,0,-1);
+const orientationEuler=new THREE.Euler(),orientationQuaternion=new THREE.Quaternion(),calibrationQuaternion=new THREE.Quaternion(),calibrationInverse=new THREE.Quaternion(),relativeQuaternion=new THREE.Quaternion(),smoothedRelativeQuaternion=new THREE.Quaternion(),screenQuaternion=new THREE.Quaternion(),pilotVector=new THREE.Vector3(),deviceZ=new THREE.Vector3(0,0,1),deviceY=new THREE.Vector3(0,1,0),pilotReference=new THREE.Vector3(0,0,-1),calibrationPilot=new THREE.Vector3(),calibrationAlignment=new THREE.Quaternion();
 const moveSpeed=.075,moveZoneTop=.72,moveZone=document.getElementById("move-zone"),geigerDot=document.getElementById("geiger-dot"),miniMap=document.getElementById("mini-map"),mapContext=miniMap.getContext("2d");
 function updateCamera(){camera.rotation.set(pitch,yaw,0,"YXZ")}
 function handleOrientation(event){
@@ -55,7 +55,7 @@ function handleOrientation(event){
   const screenAngle=screen.orientation?screen.orientation.angle:0;
   screenQuaternion.setFromAxisAngle(deviceZ,-THREE.MathUtils.degToRad(screenAngle));
   orientationQuaternion.multiply(screenQuaternion);
-  if(calibrationPending){calibrationQuaternion.copy(orientationQuaternion);calibrationPending=false;hasSmoothedOrientation=false}
+  if(calibrationPending){calibrationQuaternion.copy(orientationQuaternion);calibrationPilot.copy(deviceY).applyQuaternion(orientationQuaternion).normalize();calibrationAlignment.setFromUnitVectors(calibrationPilot,pilotReference);calibrationPending=false;hasSmoothedOrientation=false}
   calibrationInverse.copy(calibrationQuaternion).invert();
   relativeQuaternion.copy(orientationQuaternion).multiply(calibrationInverse);
   hasOrientationTarget=true;
@@ -71,14 +71,15 @@ function activateOrientation(){
 // Jedyny zmysł: promień z centrum kamery mierzący najbliższą ścianę przed użytkownikiem.
 const raycaster=new THREE.Raycaster(),forward=new THREE.Vector3();
 let obstacleDistance=Infinity,previousObstacleDistance=Infinity,blockedByObstacle=false;
-const collisionThreshold=.45,geigerResetDrop=.75
+const collisionThreshold=.45,geigerResetDrop=.75,geigerUrgentDistance=8
 function updateObstacleDistance(){
   camera.getWorldDirection(forward); raycaster.set(camera.position,forward);
   const hits=raycaster.intersectObjects(sensorObjects,false),nextDistance=hits.length?hits[0].distance:Infinity;
   const hadPrevious=Number.isFinite(previousObstacleDistance),distanceDrop=previousObstacleDistance-nextDistance;
   obstacleDistance=nextDistance;
   if(audioContext && audioContext.state==="running" && audioContext.currentTime>=impactUntil && Number.isFinite(nextDistance)){
-    if(!hadPrevious || distanceDrop>geigerResetDrop)nextGeigerTime=audioContext.currentTime+.01;
+    if(distanceDrop>geigerResetDrop)nextGeigerTime=audioContext.currentTime+.01;
+    else if(!hadPrevious && nextDistance<geigerUrgentDistance)nextGeigerTime=audioContext.currentTime+.01;
   }
   previousObstacleDistance=nextDistance;
 }
@@ -160,7 +161,7 @@ function updatePilotDirection(){
   if(!hasOrientationTarget)return;
   if(!hasSmoothedOrientation){smoothedRelativeQuaternion.copy(relativeQuaternion);hasSmoothedOrientation=true}
   else if(1-Math.abs(smoothedRelativeQuaternion.dot(relativeQuaternion))>.00005)smoothedRelativeQuaternion.slerp(relativeQuaternion,.18);
-  pilotVector.copy(pilotReference).applyQuaternion(smoothedRelativeQuaternion).normalize();
+  pilotVector.copy(calibrationPilot).applyQuaternion(smoothedRelativeQuaternion).applyQuaternion(calibrationAlignment).normalize();
   const horizontal=Math.hypot(pilotVector.x,pilotVector.z),heading=Math.atan2(-pilotVector.x,-pilotVector.z);
   if(horizontal>.001)yaw=THREE.MathUtils.euclideanModulo(heading+Math.PI,Math.PI*2)-Math.PI
   pitch=THREE.MathUtils.clamp(Math.atan2(pilotVector.y,horizontal),-Math.PI/2+.05,Math.PI/2-.05);
