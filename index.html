@@ -54,9 +54,9 @@ function updateObstacleDistance(){
 }
 
 // Dźwięki są generowane syntetycznie, bez plików audio.
-let audioContext=null,masterGain=null,geigerGain=null,nextGeigerTime=0,nextStepTime=0;
+let audioContext=null,masterGain=null,geigerGain=null,stepGain=null,nextGeigerTime=0,nextStepTime=0,impactUntil=0;
 function unlockAudio(){
-  if(!audioContext){audioContext=new AudioContext();masterGain=audioContext.createGain();masterGain.gain.value=.32;masterGain.connect(audioContext.destination);geigerGain=audioContext.createGain();geigerGain.gain.value=1;geigerGain.connect(masterGain)}
+  if(!audioContext){audioContext=new AudioContext();masterGain=audioContext.createGain();masterGain.gain.value=.32;masterGain.connect(audioContext.destination);geigerGain=audioContext.createGain();geigerGain.gain.value=1;geigerGain.connect(masterGain);stepGain=audioContext.createGain();stepGain.gain.value=.85;stepGain.connect(masterGain)}
   if(audioContext.state==='suspended')audioContext.resume();
 }
 function shortTone(time,frequency,duration,gainValue,type,output=masterGain){
@@ -68,11 +68,18 @@ function shortTone(time,frequency,duration,gainValue,type,output=masterGain){
 }
 function playImpact(){
   if(!audioContext||audioContext.state!=='running')return;
-  const time=audioContext.currentTime,oscillator=audioContext.createOscillator(),gain=audioContext.createGain();
-  geigerGain.gain.cancelScheduledValues(time); geigerGain.gain.setValueAtTime(0,time); geigerGain.gain.linearRampToValueAtTime(1,time+.07); nextGeigerTime=Math.max(nextGeigerTime,time+.07);
-  oscillator.type='sine'; oscillator.frequency.setValueAtTime(140,time); oscillator.frequency.exponentialRampToValueAtTime(55,time+.07);
-  gain.gain.setValueAtTime(.0001,time); gain.gain.exponentialRampToValueAtTime(.22,time+.006); gain.gain.exponentialRampToValueAtTime(.0001,time+.09);
+  const time=audioContext.currentTime,impactDuration=.13,oscillator=audioContext.createOscillator(),gain=audioContext.createGain();
+  impactUntil=time+impactDuration;
+  geigerGain.gain.cancelScheduledValues(time);geigerGain.gain.setValueAtTime(0,time);geigerGain.gain.linearRampToValueAtTime(1,impactUntil);
+  stepGain.gain.cancelScheduledValues(time);stepGain.gain.setValueAtTime(0,time);stepGain.gain.linearRampToValueAtTime(.85,impactUntil);
+  nextGeigerTime=Math.max(nextGeigerTime,impactUntil);nextStepTime=Math.max(nextStepTime,impactUntil);
+  oscillator.type='sine';oscillator.frequency.setValueAtTime(140,time);oscillator.frequency.exponentialRampToValueAtTime(55,time+.07);
+  gain.gain.setValueAtTime(.0001,time);gain.gain.exponentialRampToValueAtTime(.22,time+.004);gain.gain.exponentialRampToValueAtTime(.0001,time+.09);
   oscillator.connect(gain);gain.connect(masterGain);oscillator.start(time);oscillator.stop(time+.11);
+  const click=audioContext.createOscillator(),clickGain=audioContext.createGain();
+  click.type='square';click.frequency.setValueAtTime(900,time);
+  clickGain.gain.setValueAtTime(.0001,time);clickGain.gain.exponentialRampToValueAtTime(.16,time+.001);clickGain.gain.exponentialRampToValueAtTime(.0001,time+.018);
+  click.connect(clickGain);clickGain.connect(masterGain);click.start(time);click.stop(time+.025);
 }
 function scheduleDotPulse(time){
   const delay=Math.max(0,(time-audioContext.currentTime)*1000);
@@ -80,6 +87,7 @@ function scheduleDotPulse(time){
 }
 function scheduleSounds(now){
   if(!audioContext||audioContext.state!=='running')return;
+  if(now<impactUntil){nextGeigerTime=Math.max(nextGeigerTime,impactUntil);nextStepTime=Math.max(nextStepTime,impactUntil);return}
   const distance=Math.min(obstacleDistance,60);
   const interval=distance===60?1.35:THREE.MathUtils.lerp(.09,1.25,THREE.MathUtils.clamp((distance-1)/35,0,1));
   const lookAhead=now+.12;
@@ -87,10 +95,10 @@ function scheduleSounds(now){
     if(nextGeigerTime<now)nextGeigerTime=now+.01;
     shortTone(nextGeigerTime,1250,.035,.16,'square',geigerGain); scheduleDotPulse(nextGeigerTime); nextGeigerTime+=interval;
   }
-  if(moving){
+  if(moving&&!blockedByObstacle){
     while(nextStepTime<lookAhead){
       if(nextStepTime<now)nextStepTime=now+.01;
-      shortTone(nextStepTime,105,.075,.055,'sine'); nextStepTime+=.34;
+      shortTone(nextStepTime,105,.055,.12,'triangle',stepGain); nextStepTime+=.34;
     }
   }else nextStepTime=now+.34;
 }
