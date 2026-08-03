@@ -70,16 +70,22 @@ function activateOrientation(){
 
 // Jedyny zmysł: promień z centrum kamery mierzący najbliższą ścianę przed użytkownikiem.
 const raycaster=new THREE.Raycaster(),forward=new THREE.Vector3();
-let obstacleDistance=Infinity,previousObstacleDistance=Infinity,blockedByObstacle=false;
-const collisionThreshold=.45,geigerResetDrop=.75,geigerUrgentDistance=8
+let obstacleDistance=Infinity,previousObstacleDistance=Infinity,blockedByObstacle=false,geigerPendingDistance=Infinity,geigerPendingSince=0;
+const collisionThreshold=.45,geigerResetDrop=.75,geigerUrgentDistance=8,geigerResetConfirm=.1,geigerDistanceTolerance=.4
 function updateObstacleDistance(){
   camera.getWorldDirection(forward); raycaster.set(camera.position,forward);
   const hits=raycaster.intersectObjects(sensorObjects,false),nextDistance=hits.length?hits[0].distance:Infinity;
   const hadPrevious=Number.isFinite(previousObstacleDistance),distanceDrop=previousObstacleDistance-nextDistance;
   obstacleDistance=nextDistance;
   if(audioContext && audioContext.state==="running" && audioContext.currentTime>=impactUntil && Number.isFinite(nextDistance)){
-    if(distanceDrop>geigerResetDrop)nextGeigerTime=audioContext.currentTime+.01;
-    else if(!hadPrevious && nextDistance<geigerUrgentDistance)nextGeigerTime=audioContext.currentTime+.01;
+    const closerEvent=distanceDrop>geigerResetDrop||(!hadPrevious&&nextDistance<geigerUrgentDistance),now=audioContext.currentTime;
+    if(closerEvent && (!Number.isFinite(geigerPendingDistance) || Math.abs(geigerPendingDistance-nextDistance)>geigerDistanceTolerance)){geigerPendingDistance=nextDistance;geigerPendingSince=now}
+    if(Number.isFinite(geigerPendingDistance)){
+      if(Math.abs(geigerPendingDistance-nextDistance)>geigerDistanceTolerance)geigerPendingDistance=Infinity;
+      else if(now-geigerPendingSince>=geigerResetConfirm){nextGeigerTime=now+.01;geigerPendingDistance=Infinity}
+    }
+  }else if(!Number.isFinite(nextDistance)){
+    geigerPendingDistance=Infinity;
   }
   previousObstacleDistance=nextDistance;
 }
@@ -161,7 +167,7 @@ function updatePilotDirection(){
   if(!hasOrientationTarget)return;
   if(!hasSmoothedOrientation){smoothedRelativeQuaternion.copy(relativeQuaternion);hasSmoothedOrientation=true}
   else if(1-Math.abs(smoothedRelativeQuaternion.dot(relativeQuaternion))>.00005)smoothedRelativeQuaternion.slerp(relativeQuaternion,.18);
-  pilotVector.copy(pilotReference).applyQuaternion(smoothedRelativeQuaternion).normalize();
+  pilotVector.copy(pilotReference).applyQuaternion(smoothedRelativeQuaternion);pilotVector.y*=-1;pilotVector.normalize();
   const horizontal=Math.hypot(pilotVector.x,pilotVector.z),heading=Math.atan2(-pilotVector.x,-pilotVector.z);
   if(horizontal>.001)yaw=THREE.MathUtils.euclideanModulo(heading+Math.PI,Math.PI*2)-Math.PI
   pitch=THREE.MathUtils.clamp(Math.atan2(pilotVector.y,horizontal),-Math.PI/2+.05,Math.PI/2-.05);
