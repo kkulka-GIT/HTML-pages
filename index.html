@@ -54,24 +54,25 @@ function updateObstacleDistance(){
 }
 
 // Dźwięki są generowane syntetycznie, bez plików audio.
-let audioContext=null,masterGain=null,nextGeigerTime=0,nextStepTime=0;
+let audioContext=null,masterGain=null,geigerGain=null,nextGeigerTime=0,nextStepTime=0;
 function unlockAudio(){
-  if(!audioContext){audioContext=new AudioContext();masterGain=audioContext.createGain();masterGain.gain.value=.32;masterGain.connect(audioContext.destination)}
+  if(!audioContext){audioContext=new AudioContext();masterGain=audioContext.createGain();masterGain.gain.value=.32;masterGain.connect(audioContext.destination);geigerGain=audioContext.createGain();geigerGain.gain.value=1;geigerGain.connect(masterGain)}
   if(audioContext.state==='suspended')audioContext.resume();
 }
-function shortTone(time,frequency,duration,gainValue,type){
+function shortTone(time,frequency,duration,gainValue,type,output=masterGain){
   if(!audioContext)return;
   const oscillator=audioContext.createOscillator(),gain=audioContext.createGain();
   oscillator.type=type; oscillator.frequency.setValueAtTime(frequency,time);
   gain.gain.setValueAtTime(.0001,time); gain.gain.exponentialRampToValueAtTime(gainValue,time+.004); gain.gain.exponentialRampToValueAtTime(.0001,time+duration);
-  oscillator.connect(gain);gain.connect(masterGain);oscillator.start(time);oscillator.stop(time+duration+.01);
+  oscillator.connect(gain);gain.connect(output);oscillator.start(time);oscillator.stop(time+duration+.01);
 }
 function playImpact(){
   if(!audioContext||audioContext.state!=='running')return;
   const time=audioContext.currentTime,oscillator=audioContext.createOscillator(),gain=audioContext.createGain();
-  oscillator.type='sine'; oscillator.frequency.setValueAtTime(95,time); oscillator.frequency.exponentialRampToValueAtTime(42,time+.12);
-  gain.gain.setValueAtTime(.0001,time); gain.gain.exponentialRampToValueAtTime(.22,time+.006); gain.gain.exponentialRampToValueAtTime(.0001,time+.13);
-  oscillator.connect(gain);gain.connect(masterGain);oscillator.start(time);oscillator.stop(time+.15);
+  geigerGain.gain.cancelScheduledValues(time); geigerGain.gain.setValueAtTime(0,time); geigerGain.gain.linearRampToValueAtTime(1,time+.07); nextGeigerTime=Math.max(nextGeigerTime,time+.07);
+  oscillator.type='sine'; oscillator.frequency.setValueAtTime(140,time); oscillator.frequency.exponentialRampToValueAtTime(55,time+.07);
+  gain.gain.setValueAtTime(.0001,time); gain.gain.exponentialRampToValueAtTime(.22,time+.006); gain.gain.exponentialRampToValueAtTime(.0001,time+.09);
+  oscillator.connect(gain);gain.connect(masterGain);oscillator.start(time);oscillator.stop(time+.11);
 }
 function scheduleDotPulse(time){
   const delay=Math.max(0,(time-audioContext.currentTime)*1000);
@@ -84,7 +85,7 @@ function scheduleSounds(now){
   const lookAhead=now+.12;
   while(nextGeigerTime<lookAhead){
     if(nextGeigerTime<now)nextGeigerTime=now+.01;
-    shortTone(nextGeigerTime,1250,.035,.16,'square'); scheduleDotPulse(nextGeigerTime); nextGeigerTime+=interval;
+    shortTone(nextGeigerTime,1250,.035,.16,'square',geigerGain); scheduleDotPulse(nextGeigerTime); nextGeigerTime+=interval;
   }
   if(moving){
     while(nextStepTime<lookAhead){
