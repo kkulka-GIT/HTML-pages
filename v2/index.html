@@ -43,8 +43,7 @@ const sensorObjects=[...walls,floor,ceiling]
 for(let z=0;z>-115;z-=10){const light=new THREE.PointLight(0xffc77b,1.3,11);light.position.set(0,5.1,z);scene.add(light)}
 
 let yaw=0,pitch=0,moving=false,pointerId=null,controlMode=null;
-let orientationListening=false,calibrationPending=true,hasOrientationTarget=false,hasSmoothedOrientation=false,initializationStarted=false,initializationPromise=null,audioReady=false,orientationReady=false,calibrationReady=false,appReady=false,resolveOrientationReady;
-const orientationReadyPromise=new Promise(resolve=>{resolveOrientationReady=resolve});
+let orientationListening=false,calibrationPending=true,hasOrientationTarget=false,hasSmoothedOrientation=false,initState="idle",initializationPromise=null,audioReady=false,orientationReady=false,calibrationReady=false,appReady=false,resolveOrientationReady=null;
 const orientationEuler=new THREE.Euler(),orientationQuaternion=new THREE.Quaternion(),calibrationQuaternion=new THREE.Quaternion(),calibrationInverse=new THREE.Quaternion(),relativeQuaternion=new THREE.Quaternion(),smoothedRelativeQuaternion=new THREE.Quaternion(),screenQuaternion=new THREE.Quaternion(),pilotVector=new THREE.Vector3(),deviceZ=new THREE.Vector3(0,0,1),pilotReference=new THREE.Vector3(0,0,-1);
 const moveSpeed=.075,moveZoneTop=.72,moveZone=document.getElementById("move-zone"),geigerDot=document.getElementById("geiger-dot"),miniMap=document.getElementById("mini-map"),mapContext=miniMap.getContext("2d");
 function updateCamera(){camera.rotation.set(pitch,yaw,0,"YXZ")}
@@ -59,7 +58,7 @@ function handleOrientation(event){
   if(calibrationPending){calibrationQuaternion.copy(orientationQuaternion);calibrationPending=false;hasSmoothedOrientation=false}
   calibrationInverse.copy(calibrationQuaternion).invert();
   relativeQuaternion.copy(orientationQuaternion).multiply(calibrationInverse);
-  hasOrientationTarget=true;orientationReady=true;calibrationReady=true;resolveOrientationReady();console.info("[v2 init] orientation ready; calibration ready");
+  hasOrientationTarget=true;orientationReady=true;calibrationReady=true;if(resolveOrientationReady){const resolve=resolveOrientationReady;resolveOrientationReady=null;resolve(true)}console.info("[v2 init] orientation ready; calibration ready");
 }
 async function activateOrientation(){
   if(orientationListening)return true;
@@ -72,20 +71,34 @@ async function activateOrientation(){
   console.info("[v2 init] orientation listener ready; waiting for first sample");
   return true;
 }
+function waitForOrientation(timeout=1500){
+  if(orientationReady)return Promise.resolve(true);
+  return new Promise(resolve=>{
+    const timer=setTimeout(()=>{if(resolveOrientationReady===finish)resolveOrientationReady=null;resolve(false)},timeout);
+    function finish(result){clearTimeout(timer);resolve(result)}
+    resolveOrientationReady=finish;
+  });
+}
 async function initializeOnce(){
-  if(initializationPromise)return initializationPromise;
-  initializationStarted=true;
+  if(initState==="ready")return true;
+  if(initState==="initializing"&&initializationPromise)return initializationPromise;
+  initState="initializing";appReady=false;
   initializationPromise=(async()=>{
-    audioReady=await unlockAudio();
-    console.info("[v2 init] audio "+(audioReady?"ready":"not ready"));
-    if(!audioReady)return false;
-    if(!await activateOrientation())return false;
-    await orientationReadyPromise;
-    if(!audioContext||audioContext.state!=="running"||!orientationReady||!calibrationReady)return false;
-    nextGeigerTime=audioContext.currentTime+.02;nextStepTime=audioContext.currentTime+.34;appReady=true;
-    console.info("[v2 init] application ready");
-    if(pointerId!==null){moving=controlMode==="move";moveZone.classList.toggle("active",moving)}
-    return true;
+    try{
+      audioReady=await unlockAudio();
+      console.info("[v2 init] audio "+(audioReady?"ready":"not ready"));
+      if(!audioReady)throw new Error("audio not running");
+      if(!await activateOrientation())throw new Error("orientation permission unavailable");
+      if(!await waitForOrientation())throw new Error("orientation sample timeout");
+      if(!audioContext||audioContext.state!=="running"||!orientationReady||!calibrationReady)throw new Error("initialization incomplete");
+      nextGeigerTime=audioContext.currentTime+.02;nextStepTime=audioContext.currentTime+.34;appReady=true;initState="ready";
+      console.info("[v2 init] application ready");
+      if(pointerId!==null){moving=controlMode==="move";moveZone.classList.toggle("active",moving)}
+      return true;
+    }catch(error){
+      appReady=false;initState="failed";console.warn("[v2 init] retryable failure: "+error.message);
+      return false;
+    }finally{initializationPromise=null}
   })();
   return initializationPromise;
 }
@@ -164,7 +177,7 @@ function scheduleSounds(now){
 }
 
 renderer.domElement.addEventListener("pointerdown",event=>{
-  if(!initializationStarted)initializeOnce();
+  if(initState!=="ready")initializeOnce();
   pointerId=event.pointerId;
   controlMode=event.clientY>=innerHeight*moveZoneTop?"move":"look"; moving=appReady&&controlMode==="move";
   moveZone.classList.toggle('active',moving); renderer.domElement.setPointerCapture(pointerId);
