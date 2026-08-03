@@ -70,11 +70,17 @@ function activateOrientation(){
 
 // Jedyny zmysł: promień z centrum kamery mierzący najbliższą ścianę przed użytkownikiem.
 const raycaster=new THREE.Raycaster(),forward=new THREE.Vector3();
-let obstacleDistance=Infinity,blockedByObstacle=false;
-const collisionThreshold=.45
+let obstacleDistance=Infinity,previousObstacleDistance=Infinity,blockedByObstacle=false;
+const collisionThreshold=.45,geigerResetDrop=.75
 function updateObstacleDistance(){
   camera.getWorldDirection(forward); raycaster.set(camera.position,forward);
-  const hits=raycaster.intersectObjects(sensorObjects,false); obstacleDistance=hits.length?hits[0].distance:Infinity;
+  const hits=raycaster.intersectObjects(sensorObjects,false),nextDistance=hits.length?hits[0].distance:Infinity;
+  const hadPrevious=Number.isFinite(previousObstacleDistance),distanceDrop=previousObstacleDistance-nextDistance;
+  obstacleDistance=nextDistance;
+  if(audioContext && audioContext.state==="running" && audioContext.currentTime>=impactUntil && Number.isFinite(nextDistance)){
+    if(!hadPrevious || distanceDrop>geigerResetDrop)nextGeigerTime=audioContext.currentTime+.01;
+  }
+  previousObstacleDistance=nextDistance;
 }
 
 // Dźwięki są generowane syntetycznie, bez plików audio.
