@@ -167,7 +167,7 @@ function updatePilotDirection(){
   if(!hasOrientationTarget)return;
   if(!hasSmoothedOrientation){smoothedRelativeQuaternion.copy(relativeQuaternion);hasSmoothedOrientation=true}
   else if(1-Math.abs(smoothedRelativeQuaternion.dot(relativeQuaternion))>.00005)smoothedRelativeQuaternion.slerp(relativeQuaternion,.18);
-  pilotVector.copy(pilotReference).applyQuaternion(smoothedRelativeQuaternion);pilotVector.y*=-1;pilotVector.normalize();
+  pilotVector.copy(pilotReference).applyQuaternion(smoothedRelativeQuaternion);pilotVector.normalize();
   const horizontal=Math.hypot(pilotVector.x,pilotVector.z),heading=Math.atan2(-pilotVector.x,-pilotVector.z);
   if(horizontal>.001)yaw=THREE.MathUtils.euclideanModulo(heading+Math.PI,Math.PI*2)-Math.PI
   pitch=THREE.MathUtils.clamp(Math.atan2(pilotVector.y,horizontal),-Math.PI/2+.05,Math.PI/2-.05);
