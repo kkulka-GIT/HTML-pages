@@ -9,7 +9,7 @@
     canvas{display:block;width:100%;height:100%;touch-action:none}
     #move-zone{position:fixed;z-index:2;left:0;right:0;bottom:0;height:28%;pointer-events:none;background:rgba(120,180,220,.08);border-top:1px solid rgba(190,225,255,.16);transition:background .12s,border-color .12s}
     #move-zone.active{background:rgba(150,215,255,.2);border-color:rgba(220,245,255,.42)}
-    #geiger-dot{position:fixed;z-index:3;left:50%;top:50%;width:8px;height:8px;margin:-4px;border-radius:50%;pointer-events:none;background:rgba(190,225,255,.42);box-shadow:0 0 8px rgba(190,225,255,.25);transition:background .12s,box-shadow .12s}
+    #geiger-dot{position:fixed;z-index:3;left:50%;top:50%;width:20px;height:20px;margin:-10px;border-radius:50%;pointer-events:none;background:rgba(190,225,255,.42);box-shadow:0 0 8px rgba(190,225,255,.25);transition:background .12s,box-shadow .12s}
     #geiger-dot.pulse{background:rgba(245,252,255,.98);box-shadow:0 0 15px rgba(210,240,255,.95);animation:geiger-pulse .12s ease-out}@keyframes geiger-pulse{0%{transform:scale(.8)}45%{transform:scale(1.45)}100%{transform:scale(1)}}
   </style>
 </head>
@@ -33,8 +33,10 @@ floor.rotation.x=-Math.PI/2; floor.position.z=-45; scene.add(floor);
 const wallMaterial=new THREE.MeshStandardMaterial({color:0x8b929b,roughness:.82});
 const walls=[];
 for(const x of [-6,6]){const wall=new THREE.Mesh(new THREE.BoxGeometry(.35,6,120),wallMaterial);wall.position.set(x,3,-45);scene.add(wall);walls.push(wall)}
+const endWall=new THREE.Mesh(new THREE.BoxGeometry(12,6,.35),wallMaterial);endWall.position.set(0,3,-105);scene.add(endWall);walls.push(endWall)
 const ceiling=new THREE.Mesh(new THREE.PlaneGeometry(12,120),new THREE.MeshStandardMaterial({color:0x343a43,roughness:1}));
 ceiling.rotation.x=Math.PI/2; ceiling.position.set(0,6,-45); scene.add(ceiling);
+const sensorObjects=[...walls,floor,ceiling]
 for(let z=0;z>-115;z-=10){const light=new THREE.PointLight(0xffc77b,1.3,11);light.position.set(0,5.1,z);scene.add(light)}
 
 let yaw=0,pitch=0,moving=false,pointerId=null,lastX=0,lastY=0,controlMode=null;
@@ -46,7 +48,7 @@ const raycaster=new THREE.Raycaster(),forward=new THREE.Vector3();
 let obstacleDistance=Infinity;
 function updateObstacleDistance(){
   camera.getWorldDirection(forward); raycaster.set(camera.position,forward);
-  const hits=raycaster.intersectObjects(walls,false); obstacleDistance=hits.length?hits[0].distance:Infinity;
+  const hits=raycaster.intersectObjects(sensorObjects,false); obstacleDistance=hits.length?hits[0].distance:Infinity;
 }
 
 // Dźwięki są generowane syntetycznie, bez plików audio.
