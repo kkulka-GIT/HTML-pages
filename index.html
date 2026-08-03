@@ -34,6 +34,7 @@ const wallMaterial=new THREE.MeshStandardMaterial({color:0x8b929b,roughness:.82}
 const walls=[];
 for(const x of [-6,6]){const wall=new THREE.Mesh(new THREE.BoxGeometry(.35,6,120),wallMaterial);wall.position.set(x,3,-45);scene.add(wall);walls.push(wall)}
 const endWall=new THREE.Mesh(new THREE.BoxGeometry(12,6,.35),wallMaterial);endWall.position.set(0,3,-105);scene.add(endWall);walls.push(endWall)
+const startWall=new THREE.Mesh(new THREE.BoxGeometry(12,6,.35),wallMaterial);startWall.position.set(0,3,15);scene.add(startWall);walls.push(startWall)
 const ceiling=new THREE.Mesh(new THREE.PlaneGeometry(12,120),new THREE.MeshStandardMaterial({color:0x343a43,roughness:1}));
 ceiling.rotation.x=Math.PI/2; ceiling.position.set(0,6,-45); scene.add(ceiling);
 const sensorObjects=[...walls,floor,ceiling]
@@ -45,7 +46,8 @@ function updateCamera(){camera.rotation.set(pitch,yaw,0,'YXZ')}
 
 // Jedyny zmysł: promień z centrum kamery mierzący najbliższą ścianę przed użytkownikiem.
 const raycaster=new THREE.Raycaster(),forward=new THREE.Vector3();
-let obstacleDistance=Infinity;
+let obstacleDistance=Infinity,blockedByObstacle=false;
+const collisionThreshold=.45
 function updateObstacleDistance(){
   camera.getWorldDirection(forward); raycaster.set(camera.position,forward);
   const hits=raycaster.intersectObjects(sensorObjects,false); obstacleDistance=hits.length?hits[0].distance:Infinity;
@@ -63,6 +65,13 @@ function shortTone(time,frequency,duration,gainValue,type){
   oscillator.type=type; oscillator.frequency.setValueAtTime(frequency,time);
   gain.gain.setValueAtTime(.0001,time); gain.gain.exponentialRampToValueAtTime(gainValue,time+.004); gain.gain.exponentialRampToValueAtTime(.0001,time+duration);
   oscillator.connect(gain);gain.connect(masterGain);oscillator.start(time);oscillator.stop(time+duration+.01);
+}
+function playImpact(){
+  if(!audioContext||audioContext.state!=='running')return;
+  const time=audioContext.currentTime,oscillator=audioContext.createOscillator(),gain=audioContext.createGain();
+  oscillator.type='sine'; oscillator.frequency.setValueAtTime(95,time); oscillator.frequency.exponentialRampToValueAtTime(42,time+.12);
+  gain.gain.setValueAtTime(.0001,time); gain.gain.exponentialRampToValueAtTime(.22,time+.006); gain.gain.exponentialRampToValueAtTime(.0001,time+.13);
+  oscillator.connect(gain);gain.connect(masterGain);oscillator.start(time);oscillator.stop(time+.15);
 }
 function scheduleDotPulse(time){
   const delay=Math.max(0,(time-audioContext.currentTime)*1000);
@@ -109,7 +118,12 @@ renderer.domElement.addEventListener('pointerup',stopPointer);renderer.domElemen
 const clock=new THREE.Clock();
 function animate(){
   requestAnimationFrame(animate); const delta=Math.min(clock.getDelta(),.05);
-  if(moving){camera.position.x-=Math.sin(yaw)*moveSpeed*delta*60;camera.position.z-=Math.cos(yaw)*moveSpeed*delta*60;camera.position.y=1.7}
+  if(moving){
+    updateObstacleDistance();
+    if(obstacleDistance>collisionThreshold){
+      camera.position.x-=Math.sin(yaw)*moveSpeed*delta*60;camera.position.z-=Math.cos(yaw)*moveSpeed*delta*60;camera.position.y=1.7;blockedByObstacle=false;
+    }else if(!blockedByObstacle){playImpact();blockedByObstacle=true}
+  }else blockedByObstacle=false
   // Pomiar jest wykonywany po zmianie pozycji, w każdej klatce — także bez wejścia.
   updateObstacleDistance();
   scheduleSounds(audioContext?audioContext.currentTime:0); renderer.render(scene,camera);
