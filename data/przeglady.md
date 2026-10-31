@@ -21,3 +21,11 @@ Przegląd wydarzeń z 30–31 października. Paweł Szefernaker zapowiedział po
 Uzupełniono skrót i istniejący wpis. Zapisana wersja Sites 9, commit 6a69bc2b9ea0ed2057662765dcf01f8e3315fd21. Wersja oczekuje na wdrożenie: wskazany w instrukcji serwis ma już dostęp publiczny, a procedura automatycznie zezwala jedynie na wdrożenie prywatne.
 
 31.10.2026 o godz. 12:58 czasu polskiego, po zgodzie właściciela, opublikowano wersję 9. Sites potwierdził pomyślne wdrożenie pod [publicznym adresem Monitora](https://monitor-tk-2026.kkulka.chatgpt.site).
+
+## 31 października 2026 — kolejny przegląd ręczny po wersji 9
+
+Sprawdzono doniesienia z 30–31 października i porównano je z dziennikiem wersji 9. Materiały Euronews, Rzeczpospolitej i OKO.press potwierdzają trwający spór o status sędziów, zarządzenia organizacyjne Anny Korwin-Piotrowskiej oraz zapowiedź spotkania sędziów skupionych wokół Bogdana Święczkowskiego. Nie potwierdzono wyniku konsultacji prezydenckich ani nowego prawomocnego rozstrzygnięcia sporu. Nie dodano duplikatów wiadomości.
+
+Źródła: https://pl.euronews.com/2026/10/31/konflikt-o-trybunal-konstytucyjny-o-co-chodzi-w-sporze ; https://www.rp.pl/sady-i-trybunaly/art45424861-chaos-wokol-trybunalu-konstytucyjnego-prezydent-zwoluje-konsultacje-relacja-na-zywo ; https://oko.press/na-zywo/na-zywo-relacja/trybunal-konstytucyjny-zawieszam-wykonywanie-obowiazkow-pracowniczych
+
+Nie udało się odczytać witryny Sites przez dostępne narzędzie internetowe (DisabledError); nie weryfikowano ani nie zmieniano wdrożenia. Stan opublikowanej wersji 9 wynika z poprzedniego dziennika, a nie z nowego testu witryny.
