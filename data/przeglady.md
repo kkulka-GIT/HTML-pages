@@ -29,3 +29,11 @@ Sprawdzono doniesienia z 30–31 października i porównano je z dziennikiem wer
 Źródła: https://pl.euronews.com/2026/10/31/konflikt-o-trybunal-konstytucyjny-o-co-chodzi-w-sporze ; https://www.rp.pl/sady-i-trybunaly/art45424861-chaos-wokol-trybunalu-konstytucyjnego-prezydent-zwoluje-konsultacje-relacja-na-zywo ; https://oko.press/na-zywo/na-zywo-relacja/trybunal-konstytucyjny-zawieszam-wykonywanie-obowiazkow-pracowniczych
 
 Nie udało się odczytać witryny Sites przez dostępne narzędzie internetowe (DisabledError); nie weryfikowano ani nie zmieniano wdrożenia. Stan opublikowanej wersji 9 wynika z poprzedniego dziennika, a nie z nowego testu witryny.
+
+## 31 października 2026, 14:35 czasu polskiego — weryfikacja produkcji
+
+Sites wskazuje dostęp publiczny i wersję 9. Dla źródeł `6a69bc2b9ea0ed2057662765dcf01f8e3315fd21` wdrożenie `appgdep_6ae5d7debb3881919125447f2f03551b` ma status `succeeded`. Ostatnia aktualizacja statusu nastąpiła o 12:59:16 czasu polskiego. [Adres produkcyjny](https://monitor-tk-2026.kkulka.chatgpt.site). Weryfikacja w rejestrze wdrożeń Sites.
+
+Przegląd wydarzeń 30–31 października. Według rzecznika PiS partia zapowiedziała udział Jarosława Kaczyńskiego i Mariusza Błaszczaka w konsultacjach. To deklaracja udziału. W sprawdzonych materiałach nie potwierdzono wyniku rozmów. [Relacja Rzeczpospolitej, aktualizacja 13:12](https://www.rp.pl/sady-i-trybunaly/art45424861-chaos-wokol-trybunalu-konstytucyjnego-prezydent-zwoluje-konsultacje-relacja-na-zywo). [Oficjalny kalendarz prezydenta](https://www.prezydent.pl/kalendarz).
+
+Uaktualniono dokumentację i dziennik. Bez nowego wdrożenia.
