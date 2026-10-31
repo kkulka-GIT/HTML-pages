@@ -13,3 +13,9 @@ Prywatne wdrożenie zakończone pomyślnie 31.10.2026 o 12:17 czasu polskiego. C
 ## 31 października 2026, 12:39 — poprawki przed udostępnieniem
 
 Dodano skrót wydarzeń od piątku i oba adresy skanów z [wykazu źródeł](https://trybunal.net/pazdziernik-2026/?poziom=2). Przy bezpośrednim odczycie obu plików uzyskano HTTP 503. Do godz. 12:38 nie potwierdzono nowego rozstrzygnięcia konsultacji w sprawdzonych źródłach. Zweryfikowano przejście od skrótu przez wpis do sekcji skanów w wąskim widoku przeglądarki, bez przewijania poziomego. Wdrożenie prywatne zakończone o 12:39, commit Sites aa163adcf6d538cccbde27cb18ff491485f9efbb.
+
+## 31 października 2026, 12:55 — plan konsultacji
+
+Przegląd wydarzeń z 30–31 października. Paweł Szefernaker zapowiedział początek serii spotkań w Pałacu Prezydenckim na godz. 13.00. Polska 2050 zadeklarowała udział. Według ustaleń prasowych udział planowali także przedstawiciele Razem. Na czas przeglądu brak potwierdzonego wyniku spotkań. Źródła: [PAP, 11:21](https://www.niedziela.pl/artykul/129409/Szefernaker-prezydent-rozpoczyna-serie-spotkan-z-liderami-srodowisk), [Rzeczpospolita, aktualizacja 11:02](https://www.rp.pl/polityka/art45425161-kryzys-w-trybunale-polska-2050-idzie-do-prezydenta-lewica-nie-co-zrobi-psl).
+
+Uzupełniono skrót i istniejący wpis. Zapisana wersja Sites 9, commit 6a69bc2b9ea0ed2057662765dcf01f8e3315fd21. Wersja oczekuje na wdrożenie: wskazany w instrukcji serwis ma już dostęp publiczny, a procedura automatycznie zezwala jedynie na wdrożenie prywatne.
