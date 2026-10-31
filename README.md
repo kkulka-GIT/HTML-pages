@@ -1,7 +1,7 @@
 # Monitor Trybunału Konstytucyjnego
 
-Publiczne zaplecze eksperymentalnego projektu monitoringu. Ta gałąź jest przygotowaniem do testu; nie jest jeszcze kompletnym szablonem ani działającym systemem automatycznej publikacji. Istniejąca demonstracja znajduje się w osobnym repozytorium Sites.
+W projekcie ChatGPT powiedz **„Zaktualizuj Monitor TK i powiedz, co się zmieniło”**. To jedno ręczne uruchomienie procesu z AGENTS.md. Krótsze polecenie **„Przeczytaj podsumowanie Monitora”** oznacza odczyt ostatniego zapisanego stanu.
 
-`AGENTS.md` opisuje planowany proces, `data/` przechowuje stan próby. Dane w tym repozytorium są publiczne. Nie umieszczaj tu haseł, tokenów ani prywatnych notatek. Poprzedni projekt pozostaje na gałęzi `main`.
+Publiczna gałąź monitor-tk zawiera instrukcję, wynik próby integracyjnej w data/test.json i dziennik przeglądów w data/przeglady.md. Strona i jej historia zmian znajdują się w osobnym repozytorium prywatnej demonstracji Sites. Kopię treści do aktualizacji pobierz z aktualnej wersji Sites. Zachowaj odrębność bieżącej chronologii i strony historia.html.
 
-Plan: zadanie odczytuje instrukcje, bada źródła, zachowuje historię, zapisuje zmiany i wdraża prywatną demonstrację, następnie weryfikuje wynik. Integracja nie jest jeszcze potwierdzona. Publikacja strony dla wszystkich wymaga uprzedniego zatwierdzenia właściciela.
+Po każdym przeglądzie zapisz zakres dat, istotne zmiany lub ich brak i wynik prywatnego wdrożenia. Publikacja dla wszystkich i uruchomienie harmonogramu wymagają osobnej decyzji właściciela.
