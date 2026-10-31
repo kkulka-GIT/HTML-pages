@@ -19,3 +19,5 @@ Dodano skrót wydarzeń od piątku i oba adresy skanów z [wykazu źródeł](htt
 Przegląd wydarzeń z 30–31 października. Paweł Szefernaker zapowiedział początek serii spotkań w Pałacu Prezydenckim na godz. 13.00. Polska 2050 zadeklarowała udział. Według ustaleń prasowych udział planowali także przedstawiciele Razem. Na czas przeglądu brak potwierdzonego wyniku spotkań. Źródła: [PAP, 11:21](https://www.niedziela.pl/artykul/129409/Szefernaker-prezydent-rozpoczyna-serie-spotkan-z-liderami-srodowisk), [Rzeczpospolita, aktualizacja 11:02](https://www.rp.pl/polityka/art45425161-kryzys-w-trybunale-polska-2050-idzie-do-prezydenta-lewica-nie-co-zrobi-psl).
 
 Uzupełniono skrót i istniejący wpis. Zapisana wersja Sites 9, commit 6a69bc2b9ea0ed2057662765dcf01f8e3315fd21. Wersja oczekuje na wdrożenie: wskazany w instrukcji serwis ma już dostęp publiczny, a procedura automatycznie zezwala jedynie na wdrożenie prywatne.
+
+31.10.2026 o godz. 12:58 czasu polskiego, po zgodzie właściciela, opublikowano wersję 9. Sites potwierdził pomyślne wdrożenie pod [publicznym adresem Monitora](https://monitor-tk-2026.kkulka.chatgpt.site).
