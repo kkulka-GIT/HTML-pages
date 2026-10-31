@@ -1,7 +1,12 @@
 {
-  "status": "w toku",
+  "status": "wdrozono; odczyt HTML potwierdzony; wizualna czytelnosc niezweryfikowana",
   "marker": "TEST-TK-20261031-GCQRYE7C",
   "czas_utc": "2026-10-31T10:59:08.506Z",
   "github_base_commit": "63d1c48b4e85e7a34c24a145df714cdc596c5ccc",
-  "site_version": null
+  "github_marker_commit": "04f19ac2dd0038eee938cfef555a31bc80956166",
+  "site_source_commit": "47789097ab7fdb22c86c341257100779284947d6",
+  "site_version": 4,
+  "site_version_id": "appgprj_6ae5bd5f169c8191a0ba73fc8b47d63f~appgver_1bfc18da11b48191a10ad5c655c8d7ec",
+  "site_deployment": "appgdep_6ae5ca5db6908191b6ea9f70ce5cf5ba",
+  "verification": "Wdrożenie succeeded; uwierzytelniony HTTP 200 zawiera znacznik i oznaczenie testu. Przeglądarka bez sesji wyświetliła ekran logowania; nie potwierdzono wizualnej czytelności."
 }
