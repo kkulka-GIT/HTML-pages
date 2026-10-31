@@ -37,3 +37,9 @@ Sites wskazuje dostęp publiczny i wersję 9. Dla źródeł `6a69bc2b9ea0ed20576
 Przegląd wydarzeń 30–31 października. Według rzecznika PiS partia zapowiedziała udział Jarosława Kaczyńskiego i Mariusza Błaszczaka w konsultacjach. To deklaracja udziału. W sprawdzonych materiałach nie potwierdzono wyniku rozmów. [Relacja Rzeczpospolitej, aktualizacja 13:12](https://www.rp.pl/sady-i-trybunaly/art45424861-chaos-wokol-trybunalu-konstytucyjnego-prezydent-zwoluje-konsultacje-relacja-na-zywo). [Oficjalny kalendarz prezydenta](https://www.prezydent.pl/kalendarz).
 
 Uaktualniono dokumentację i dziennik. Bez nowego wdrożenia.
+
+## 31 października 2026, 21:24 czasu polskiego — konsultacje w Pałacu Prezydenckim
+
+Przegląd wydarzeń 30–31 października. Uzupełniono skrót i istniejący wpis o rozpoczęciu rozmów o godz. 13.00. Według DGP prezydent spotkał się z przedstawicielami sześciu ugrupowań. Nie potwierdzono przyjęcia wspólnego planu. [TVP, godz. 15.00](https://wilno.tvp.pl/96234544/w-palacu-prezydenckim-trwaja-rozmowy-z-liderami-srodowisk-parlamentarnych) · [DGP, 31 października](https://edgp.gazetaprawna.pl/kraj/artykuly/11339028,od-deeskalacji-po-zmiane-rzadu-co-politycy-mowili-po-konsultacjach.html).
+
+Zapisana wersja Sites 10, commit `cc1b5aaa696749793571abaf19a3677a94ed9da3`. Oczekuje na zgodę na publikację. Na stronie publicznej działa wersja 9.
