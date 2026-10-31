@@ -1,6 +1,7 @@
 {
-  "status": "przygotowano",
-  "description": "Próba przepływu GitHub → prywatna demonstracja Sites nie została jeszcze wykonana.",
-  "github_commit": null,
+  "status": "w toku",
+  "marker": "TEST-TK-20261031-GCQRYE7C",
+  "czas_utc": "2026-10-31T10:59:08.506Z",
+  "github_base_commit": "63d1c48b4e85e7a34c24a145df714cdc596c5ccc",
   "site_version": null
 }
