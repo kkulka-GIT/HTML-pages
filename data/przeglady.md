@@ -45,3 +45,7 @@ Przegląd wydarzeń 30–31 października. Uzupełniono skrót i istniejący wpi
 Zapisana wersja Sites 10, commit `cc1b5aaa696749793571abaf19a3677a94ed9da3`. Oczekuje na zgodę na publikację. Na stronie publicznej działa wersja 9.
 
 31 października 2026 o godz. 21:26 czasu polskiego, po zgodzie właściciela, opublikowano wersję 10. Sites potwierdził status `succeeded` dla wdrożenia `appgdep_6ae64ef3afec8191be0995c482db6f26`. [Publiczna strona Monitora](https://monitor-tk-2026.kkulka.chatgpt.site).
+
+## 31 października 2026 — publiczna wersja 11
+
+Przy zarządzeniach z 30 października dodano rozwijane oceny ze źródłami. Spis autorów prowadzi do właściwej wypowiedzi. Sprawdzono nawigację i wąski widok. Publikacja potwierdzona przez Sites, wdrożenie `appgdep_6ae655482b50819196f3f4b48f175fe6`.
