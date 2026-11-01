@@ -71,3 +71,5 @@ Przejrzano wydarzenia 30–31 października oraz istniejące zapowiedzi. Dodano 
 Nie ustalono dokładnego czasu i przebiegu spotkania siedmiu sędziów, formalnego upoważnienia Święczkowskiego do reprezentowania grupy ani pełnej sekwencji sobotniej próby wejścia. Wypowiedź dla Polsat News odnotowano za Onetem z 31.10, 17.47. Nie potwierdzono wykonania ani skuteczności prawnej dokumentu o dniach wolnych. Zapowiedź posiedzenia 3 listopada pozostaje przyszłym wydarzeniem. Przegląd nie stanowi gwarancji kompletności relacji.
 
 Sprawdzono unikalność identyfikatorów i odsyłacze wewnętrzne. Wersja 14 zapisana, commit 4ea5a0d0c0cca01c306fed6e92d21bdfc61af065. Oczekuje na odrębną zgodę na publikację. Publiczna wersja 13. Uzupełniono instrukcję o obowiązek sprawdzania dalszego przebiegu zapowiedzi.
+
+1 listopada 2026 o godz. 04:32 czasu polskiego opublikowano wersję 14 po zgodzie właściciela. Sites potwierdził publiczny dostęp oraz status succeeded wdrożenia `appgdep_6ae6b2bbc4148191b0ab3f52d769106d`. [Monitor TK](https://monitor-tk-2026.kkulka.chatgpt.site).
