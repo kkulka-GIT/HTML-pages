@@ -15,4 +15,13 @@ TREŚĆ: zweryfikuj w wiarygodnych źródłach, porównaj z istniejącymi wpisam
 
 ## Zgłoszenia
 
-_Brak zgłoszeń._
+### TK-0001 — Nagranie dotyczące żądania kluczy podczas nocnej wizyty w TK
+- **Data dodania:** 1 listopada 2026
+- **Typ:** TREŚĆ
+- **Status:** oczekuje
+- **Temat:** Możliwe uzupełnienie relacji o nocnej wizycie prezydenta w siedzibie TK (30/31 października 2026) o materiał wideo dotyczący żądania wydania kluczy.
+- **Opis zgłoszenia:** Zgłoszono informację o nagraniu opublikowanym w mediach 1 listopada, na którym osoba przedstawiająca się jako pracownik/asystent prezydenta miała zwrócić się do Macieja Berka o klucze. To twierdzenie do niezależnej weryfikacji; nie ustalono, czy klucze wydano lub przejęto. W udostępnionym tekście strony istnieje już wydarzenie „Prezydent przybył do siedziby Trybunału” z 31 października, ale rozwijane szczegóły wpisu nie były dostępne do porównania.
+- **Źródła/linki:** relacja/nagranie WP z 1 listopada 2026 — dokładnego adresu nie podano; do odszukania i zweryfikowania. Kontekst: https://monitor-tk-2026.kkulka.chatgpt.site/#najnowsze
+- **Oczekiwane sprawdzenie:** Odszukaj oryginalne nagranie i wiarygodne relacje; ustal, kto występuje, czego dotyczy żądanie, co faktycznie potwierdza materiał oraz czy istnieją stanowiska drugiej strony. Porównaj z pełnymi szczegółami obecnego wpisu o nocnej wizycie i pozostałą chronologią. Jeśli materiał wnosi potwierdzony nowy szczegół, zaproponuj rzeczowe uzupełnienie istniejącego wydarzenia, bez duplikowania i bez utożsamiania zarzutów z ustalonymi faktami.
+- **Wynik rozpatrzenia:** oczekuje na weryfikację w Work; decyzja, uzasadnienie i ewentualna wersja — nie podano.
+
