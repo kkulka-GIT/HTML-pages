@@ -32,3 +32,14 @@ TREŚĆ: zweryfikuj w wiarygodnych źródłach, porównaj z istniejącymi wpisam
 
 
 1 listopada 2026 o godz. 07:13 czasu polskiego, po wyraźnej zgodzie właściciela, opublikowano wersję 16. Sites potwierdził status `succeeded` wdrożenia `appgdep_6ae6d889c0688191a626c2ea295b9c89`, wersja `appgprj_6ae5bd5f169c8191a0ba73fc8b47d63f~appgver_f0d886f970508191bff0c5a1418665b8`, commit `348047fbe6eafd8fc7264b30c380f36ab55f85b6`. Zachowano dostęp publiczny. [Monitor TK](https://monitor-tk-2026.kkulka.chatgpt.site). Zgłoszenie TK-0001 uwzględniono w istniejącym wpisie `#nagranie-klucze`. Potwierdzenie pochodzi z rejestru wdrożeń Sites; nie wykonywano dodatkowego testu wizualnego.
+
+
+### TK-0002 — Opinie prawne o sporze w TK
+- **Data dodania:** 1 listopada 2026
+- **Typ:** TREŚĆ
+- **Status:** oczekuje
+- **Temat:** Weryfikacja opinii prawników i konstytucjonalistów dotyczących wydarzeń 30–31 października 2026, oświadczenia czterech byłych prezesów TK, apelu siedmiu obecnych sędziów i zarządzeń Bogdana Święczkowskiego oraz Anny Korwin-Piotrowskiej.
+- **Tropy do sprawdzenia:** Jacek Zaleśny, Mateusz Radajewski, Jerzy Stępień, Ewa Łętowska, Tomasz Zalasiński, Helsińska Fundacja Praw Człowieka. Ustalić dokładne wypowiedzi, daty, źródła i argumenty; poszukać też innych prawników reprezentujących różne oceny.
+- **Dokumenty i źródła:** https://monitorkonstytucyjny.eu/archiwa/35302 ; https://www.rp.pl/polityka/art45425881-sedziowie-tk-zabrali-glos-mowia-o-bezprawnych-dzialaniach-apel-do-wladz-i-politykow ; https://www.rp.pl/sady-i-trybunaly/art45424221-odsuniecie-prezesa-tk-bez-podstawy-prawnej-prawnicy-sa-podzieleni ; https://www.rp.pl/opinie-prawne/art45425551-konstytucjonalista-nie-mozna-zarzadzic-przerwy-w-czynnosciach-prezesa-tk ; https://hfhr.pl/aktualnosci/stanowisko-zarzadu-hfpc-w-sprawie-sytuacji-wokol-tk ; https://wiadomosci.wp.pl/swieczkowski-wydal-zarzadzenie-anulowal-dokument-korwin-piotrowskiej-7345966093789632a . Linki wymagają weryfikacji.
+- **Oczekiwane sprawdzenie:** Porównać z Monitorem, bez duplikatów. Dla każdej opinii wskazać autora, datę, oryginalne źródło, konkretne działanie lub dokument, którego dotyczy, i podstawę prawną. Oddzielnie zbadać legalność odsunięcia prezesa, późniejszych zarządzeń i dni wolnych 3–6 listopada. Nie przypisywać prawnikom poparcia dla oświadczeń, których bezpośrednio nie oceniali. Rozważyć sekcję „Co mówią prawnicy?” z przedstawieniem różnych stanowisk.
+- **Wynik rozpatrzenia:** oczekuje na analizę w Work. Zgłoszenie nie stanowi zgody na publikację.
