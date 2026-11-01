@@ -1,0 +1,52 @@
+{
+  "model_version": "0.1-experiment",
+  "status": "review_required_not_for_import",
+  "snapshot_id": "monitor-2026-11-01",
+  "captured_on": "2026-11-01",
+  "monitor_content_updated_at": "2026-11-01T07:11:00+01:00",
+  "site_source_commit": "e497eb6428fcf0ff9229fc004177f178511a7bf9",
+  "pages": [
+    {
+      "url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+      "source_path": "dist/index.html",
+      "sha256": "1f118572044970f402431c64a109b9d4bda87c43bd97aa77ab15148a9a79f817",
+      "live_matches_source": true
+    },
+    {
+      "url": "https://monitor-tk-2026.kkulka.chatgpt.site/historia",
+      "source_path": "dist/historia.html",
+      "sha256": "3ea6198b281c793f20bf19d800d887e025063213fa777f7c96710578c35aeaa3",
+      "live_matches_source": true
+    }
+  ],
+  "tile_files": [
+    "events.json",
+    "positions.json",
+    "context.json",
+    "entities.json"
+  ],
+  "sources_file": "sources.json",
+  "counts": {
+    "event": 9,
+    "announcement": 2,
+    "position": 10,
+    "opinion": 6,
+    "document": 3,
+    "question": 3,
+    "context": 4,
+    "summary": 1,
+    "methodology": 1,
+    "person": 30,
+    "institution": 8
+  },
+  "tile_count": 77,
+  "source_count": 52,
+  "relation_count": 103,
+  "limitations": [
+    "Transkrypcja Monitora, nie niezależna weryfikacja źródeł ani opinia prawna.",
+    "Daty i godziny publikacji zachowano także w etykietach źródeł; nie wszystkie znormalizowano.",
+    "Nie pobrano treści zewnętrznych dokumentów, PDF ani nagrań.",
+    "Kafelki odpowiadają jednostkom redakcyjnym; nie każdy akapit jest atomowym twierdzeniem.",
+    "Indeks podmiotów nie jest kompletny; relacja mentions nie oznacza udziału w zdarzeniu."
+  ]
+}
