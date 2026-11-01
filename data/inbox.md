@@ -54,3 +54,16 @@ TREŚĆ: zweryfikuj w wiarygodnych źródłach, porównaj z istniejącymi wpisam
 - **Oczekiwane sprawdzenie:** Porównać komunikat Kancelarii Prezydenta z pełnym istniejącym wydarzeniem w Monitorze. Ustalić, które spotkania rzeczywiście się odbyły, z kim, kiedy, czy opublikowano oficjalny wynik, porozumienie, projekt lub zapowiedź dalszych działań. Brak publicznego porozumienia opisywać wyłącznie jako brak potwierdzenia w sprawdzonych źródłach. Sprawdzić ewentualne kolejne oficjalne komunikaty KPRP, a nie tworzyć wydarzeń z samych komentarzy polityków lub dziennikarzy.
 - **Propozycja redakcyjna:** Jeśli wydarzenie już istnieje, uzupełnić je o bezpośredni link do dokumentu prezydenckiego i krótki, rzeczowy wynik konsultacji, bez duplikowania wpisu. Nowy wpis tylko dla istotnego nowego faktu lub dokumentu. Oddzielić fakt spotkań od ocen uczestników.
 - **Wynik rozpatrzenia:** oczekuje na weryfikację podczas aktualizacji w Work. Nie jest to zgoda na publikację.
+
+
+### TK-0004 — Podstawa prawna zabezpieczenia siedziby TK i zasady dostępu
+- **Data dodania:** 1 listopada 2026
+- **Typ:** DOKUMENTY ŹRÓDŁOWE / CHRONOLOGIA
+- **Status:** oczekuje
+- **Temat:** Ustalić podstawę prawną działań Policji przy siedzibie Trybunału Konstytucyjnego 30–31 października 2026 oraz rozróżnić ochronę porządku na zewnątrz od decyzji o dostępie do budynku.
+- **Źródło pierwotne 1 — KSP:** https://ksp.policja.gov.pl/pl/dzialania/aktualnosci/69987,Komunikat-dotyczacy-dzialan-Policji.html — komunikat o działaniach Policji z 30 października; sprawdzić oryginalną treść, datę, wskazane miejsce i zakres zabezpieczenia oraz informację o dwóch pismach skierowanych do KGP (od Prokuratora Generalnego i sędzi TK). Ustalić, czy wskazano konkretne przepisy, autorów poleceń i dokumenty wykonawcze.
+- **Źródło pierwotne 2 — strona TK:** https://trybunal.gov.pl/wiadomosci/uroczystosci-spotkania-wyklady/art/komunikat-sedzi-anny-korwin-piotrowskiej — komunikat Anny Korwin-Piotrowskiej o zasadach dostępu; zweryfikować datę, dokładne brzmienie, osoby objęte ograniczeniami, podstawy prawne i powiązane zarządzenia.
+- **Pytania dokumentacyjne:** Czy publicznie dostępne są oryginały obu pism do KGP z datami, podpisami i uzasadnieniami? Czy istnieje pisemne polecenie KGP dla KSP? Kto odpowiadał za zabezpieczenie wejść? Czy Policja podejmowała decyzje o wpuszczaniu konkretnych osób, czy wyłącznie zabezpieczała porządek na zewnątrz? Czy istnieje oficjalny dokument potwierdzający uznanie przez Policję którejś ze stron sporu za uprawnione kierownictwo TK?
+- **Oczekiwane sprawdzenie:** Porównać dokumenty i ich daty z aktualną chronologią Monitora, odszukać źródła pierwotne i ewentualne załączniki, zweryfikować twierdzenia bez domniemywania. Wyraźnie oddzielić stanowisko KSP od decyzji/stanowiska sędzi TK. Nie utożsamiać ochrony porządku z prawnym uznaniem kierownictwa instytucji.
+- **Propozycja redakcyjna:** Jeżeli brak tych źródeł w Monitorze, rozważyć uzupełnienie istniejących wydarzeń lub osobny wpis „Policja wyjaśnia podstawy zabezpieczenia siedziby TK”, bez duplikatów. Nie publikować tezy „Policja uznała nowe kierownictwo TK” bez bezpośredniego dowodu.
+- **Wynik rozpatrzenia:** oczekuje na analizę w Work; zgłoszenie nie stanowi zgody na publikację.
