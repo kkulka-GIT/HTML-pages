@@ -73,3 +73,9 @@ Nie ustalono dokładnego czasu i przebiegu spotkania siedmiu sędziów, formalne
 Sprawdzono unikalność identyfikatorów i odsyłacze wewnętrzne. Wersja 14 zapisana, commit 4ea5a0d0c0cca01c306fed6e92d21bdfc61af065. Oczekuje na odrębną zgodę na publikację. Publiczna wersja 13. Uzupełniono instrukcję o obowiązek sprawdzania dalszego przebiegu zapowiedzi.
 
 1 listopada 2026 o godz. 04:32 czasu polskiego opublikowano wersję 14 po zgodzie właściciela. Sites potwierdził publiczny dostęp oraz status succeeded wdrożenia `appgdep_6ae6b2bbc4148191b0ab3f52d769106d`. [Monitor TK](https://monitor-tk-2026.kkulka.chatgpt.site).
+
+## 1 listopada 2026, 04:41 — mobilna nawigacja, wersja 15
+
+Na polecenie właściciela wykonano i opublikowano zmianę do końca. Dodano przyklejony pasek z bieżącą sekcją i spisem, krótszy początek z trzema odsyłaczami, rozwijane szczegóły wydarzeń, wybór dnia i zwijane filtry. Mobilnie domyślnie najnowszy dzień mający wpisy. Link do wcześniejszego wydarzenia lub opinii dobiera dzień i otwiera treść. W komputerowym widoku wszystkie wydarzenia rozwinięte. Sprawdzono mobilne przejście do opinii z wcześniejszego dnia, wybór dnia, zamykanie menu, brak przewijania poziomego również z powiększonym tekstem, widok komputerowy z 13 wydarzeniami, składnię JS i wewnętrzne odnośniki. Test w przeglądarce przy mobilnej szerokości, bez testu na fizycznym telefonie.
+
+Sites potwierdził succeeded dla wdrożenia appgdep_6ae6b4c602c881919ddaff9638381a6e. Commit 03fb18a53d21b8b7bdadfe03fc2d159757e20389. [Publiczna strona](https://monitor-tk-2026.kkulka.chatgpt.site).
