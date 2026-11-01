@@ -43,3 +43,14 @@ TREŚĆ: zweryfikuj w wiarygodnych źródłach, porównaj z istniejącymi wpisam
 - **Dokumenty i źródła:** https://monitorkonstytucyjny.eu/archiwa/35302 ; https://www.rp.pl/polityka/art45425881-sedziowie-tk-zabrali-glos-mowia-o-bezprawnych-dzialaniach-apel-do-wladz-i-politykow ; https://www.rp.pl/sady-i-trybunaly/art45424221-odsuniecie-prezesa-tk-bez-podstawy-prawnej-prawnicy-sa-podzieleni ; https://www.rp.pl/opinie-prawne/art45425551-konstytucjonalista-nie-mozna-zarzadzic-przerwy-w-czynnosciach-prezesa-tk ; https://hfhr.pl/aktualnosci/stanowisko-zarzadu-hfpc-w-sprawie-sytuacji-wokol-tk ; https://wiadomosci.wp.pl/swieczkowski-wydal-zarzadzenie-anulowal-dokument-korwin-piotrowskiej-7345966093789632a . Linki wymagają weryfikacji.
 - **Oczekiwane sprawdzenie:** Porównać z Monitorem, bez duplikatów. Dla każdej opinii wskazać autora, datę, oryginalne źródło, konkretne działanie lub dokument, którego dotyczy, i podstawę prawną. Oddzielnie zbadać legalność odsunięcia prezesa, późniejszych zarządzeń i dni wolnych 3–6 listopada. Nie przypisywać prawnikom poparcia dla oświadczeń, których bezpośrednio nie oceniali. Rozważyć sekcję „Co mówią prawnicy?” z przedstawieniem różnych stanowisk.
 - **Wynik rozpatrzenia:** oczekuje na analizę w Work. Zgłoszenie nie stanowi zgody na publikację.
+
+
+### TK-0003 — Oficjalne potwierdzenie konsultacji prezydenta z ugrupowaniami
+- **Data dodania:** 1 listopada 2026
+- **Typ:** TREŚĆ
+- **Status:** oczekuje
+- **Temat:** Sprawdzić, czy istniejący wpis Monitora TK o konsultacjach prezydenta Karola Nawrockiego z przedstawicielami środowisk parlamentarnych 31 października 2026 zawiera oficjalny komunikat Kancelarii Prezydenta i udokumentowany rezultat spotkań.
+- **Źródło urzędowe do otwarcia i weryfikacji:** https://www.prezydent.pl/aktualnosci/wydarzenia/konsultacje-z-liderami-srodowisk-parlamentarnych%2C129330 — „Konsultacje z liderami środowisk parlamentarnych” (zweryfikować datę publikacji, listę spotkań, uczestników, treść i ewentualne aktualizacje).
+- **Oczekiwane sprawdzenie:** Porównać komunikat Kancelarii Prezydenta z pełnym istniejącym wydarzeniem w Monitorze. Ustalić, które spotkania rzeczywiście się odbyły, z kim, kiedy, czy opublikowano oficjalny wynik, porozumienie, projekt lub zapowiedź dalszych działań. Brak publicznego porozumienia opisywać wyłącznie jako brak potwierdzenia w sprawdzonych źródłach. Sprawdzić ewentualne kolejne oficjalne komunikaty KPRP, a nie tworzyć wydarzeń z samych komentarzy polityków lub dziennikarzy.
+- **Propozycja redakcyjna:** Jeśli wydarzenie już istnieje, uzupełnić je o bezpośredni link do dokumentu prezydenckiego i krótki, rzeczowy wynik konsultacji, bez duplikowania wpisu. Nowy wpis tylko dla istotnego nowego faktu lub dokumentu. Oddzielić fakt spotkań od ocen uczestników.
+- **Wynik rozpatrzenia:** oczekuje na weryfikację podczas aktualizacji w Work. Nie jest to zgoda na publikację.
