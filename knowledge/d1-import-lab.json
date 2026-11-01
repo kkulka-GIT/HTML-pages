@@ -1,1 +1,15 @@
-{"schema_version":1,"records":[
+{
+  "schema_version": 1,
+  "records": [
+    {
+      "id": "lab-alpha",
+      "name": "Import Alfa — Actions verified",
+      "status": "archiwalny"
+    },
+    {
+      "id": "lab-beta",
+      "name": "Import Beta",
+      "status": "aktywny"
+    }
+  ]
+}
