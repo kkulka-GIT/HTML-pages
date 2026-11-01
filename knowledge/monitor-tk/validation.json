@@ -1,0 +1,45 @@
+{
+  "result": "passed",
+  "schema_validation": "Draft 2020-12 with date and URI format checks",
+  "tile_count": 77,
+  "source_count": 52,
+  "relation_count": 103,
+  "unique_ids": true,
+  "all_relation_targets_exist": true,
+  "all_source_references_exist": true,
+  "unique_source_urls": true,
+  "nonempty_required_fields": true,
+  "monitor_paragraphs_checked": 62,
+  "monitor_paragraphs_preserved": 55,
+  "paragraphs_not_in_tiles": [
+    {
+      "page": "index",
+      "text": "Spór wokół TK krok po kroku. Chronologia wydarzeń, dokumenty i stanowiska stron."
+    },
+    {
+      "page": "index",
+      "text": "Ostatni przegląd źródeł:1 listopada 2026, 07:11"
+    },
+    {
+      "page": "index",
+      "text": "Ostatnia aktualizacja treści:1 listopada 2026, 07:11"
+    },
+    {
+      "page": "index",
+      "text": "Godziny według czasu polskiego."
+    },
+    {
+      "page": "index",
+      "text": ""
+    },
+    {
+      "page": "index",
+      "text": "Historia sporu od 2015 roku jest dostępna na osobnej stronie."
+    },
+    {
+      "page": "historia",
+      "text": "W 2015 roku spór dotyczył tego, który Sejm mógł wybrać następców pięciu sędziów. W 2026 roku wróciło pytanie o ślubowanie, a następnie o to, kto może kierować pracami Trybunału."
+    }
+  ],
+  "scope": "Local structure and preservation checks; no external-source fact-check and no D1 access."
+}
