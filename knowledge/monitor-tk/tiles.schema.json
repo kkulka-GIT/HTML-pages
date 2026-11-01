@@ -1,0 +1,193 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/monitor-tk/tiles.schema.json",
+  "title": "Eksperymentalny zbiór Kafelków Wiedzy 0.1",
+  "type": "object",
+  "required": [
+    "model_version",
+    "tiles"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "model_version": {
+      "const": "0.1-experiment"
+    },
+    "tiles": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/tile"
+      }
+    }
+  },
+  "$defs": {
+    "tile": {
+      "type": "object",
+      "required": [
+        "id",
+        "type",
+        "title",
+        "epistemic",
+        "content",
+        "dates",
+        "source_ids",
+        "relations",
+        "provenance"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^tk-[a-z0-9-]+$"
+        },
+        "type": {
+          "enum": [
+            "event",
+            "announcement",
+            "context",
+            "opinion",
+            "position",
+            "document",
+            "question",
+            "summary",
+            "methodology",
+            "person",
+            "institution"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "epistemic": {
+          "enum": [
+            "reported_information",
+            "attributed_interpretation",
+            "attributed_claim",
+            "document_description",
+            "open_question",
+            "editorial_synthesis",
+            "entity_index"
+          ]
+        },
+        "content": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "source_label": {
+          "type": "string"
+        },
+        "dates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "role",
+              "value",
+              "precision",
+              "label"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "role": {
+                "enum": [
+                  "monitor_timeline_bucket",
+                  "scheduled_event",
+                  "document_date"
+                ]
+              },
+              "value": {
+                "type": "string",
+                "format": "date"
+              },
+              "precision": {
+                "const": "day"
+              },
+              "label": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "source_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^src-[0-9a-f]{16}$"
+          }
+        },
+        "relations": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "required": [
+              "type",
+              "target_id",
+              "basis"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "type": {
+                "enum": [
+                  "comments_on",
+                  "references",
+                  "mentions",
+                  "same_subject_as"
+                ]
+              },
+              "target_id": {
+                "type": "string",
+                "pattern": "^tk-[a-z0-9-]+$"
+              },
+              "basis": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "provenance": {
+          "type": "object",
+          "required": [
+            "page_url",
+            "selector",
+            "snapshot",
+            "method",
+            "independent_fact_check"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "page_url": {
+              "type": "string",
+              "format": "uri"
+            },
+            "selector": {
+              "type": "string",
+              "minLength": 1
+            },
+            "snapshot": {
+              "const": "monitor-2026-11-01"
+            },
+            "method": {
+              "enum": [
+                "verbatim_paragraphs_from_monitor",
+                "editorial_entity_index"
+              ]
+            },
+            "independent_fact_check": {
+              "const": false
+            }
+          }
+        }
+      }
+    }
+  }
+}
