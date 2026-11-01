@@ -1,0 +1,928 @@
+{
+  "model_version": "0.1-experiment",
+  "tiles": [
+    {
+      "id": "tk-person-anna-korwin-piotrowska",
+      "type": "person",
+      "title": "Anna Korwin-Piotrowska",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-27d0dfe780a5a342",
+        "src-316d92741c54b6f6",
+        "src-53e298b8c0c9666c",
+        "src-64eeb687550f989b",
+        "src-7b8527921a210c5e",
+        "src-b4586a84e2d9655c",
+        "src-b57399da28d45f1f",
+        "src-c181c14a2e803947",
+        "src-d46a7fb59c85c8b5",
+        "src-df3b47a45c144654"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-person-bogdan-swieczkowski",
+      "type": "person",
+      "title": "Bogdan Święczkowski",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-14e6311a0bebe8b5",
+        "src-1cf32f789a155bf1",
+        "src-354ea5067496a9db",
+        "src-5486521b8c6335dc",
+        "src-5f1a755a2b3daae0",
+        "src-60702c33cef83dcd",
+        "src-633d8b4162cfcee2",
+        "src-6978647f842cddac",
+        "src-7442472d2fd22229",
+        "src-a360019f34a6ddcb",
+        "src-b57399da28d45f1f",
+        "src-b70785e6e6330be5",
+        "src-d7b16c6be7024f36",
+        "src-fb483c72397f9b4b"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-person-bartlomiej-sochanski",
+      "type": "person",
+      "title": "Bartłomiej Sochański",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-14e6311a0bebe8b5",
+        "src-5f1a755a2b3daae0",
+        "src-633d8b4162cfcee2",
+        "src-6978647f842cddac",
+        "src-b57399da28d45f1f",
+        "src-b70785e6e6330be5"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-person-donald-tusk",
+      "type": "person",
+      "title": "Donald Tusk",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-0cf6740e592b7fb6"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-person-karol-nawrocki",
+      "type": "person",
+      "title": "Karol Nawrocki",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-1523911d991ac3a3",
+        "src-2f20f6bcb4a9bd05",
+        "src-62239db661ed88ef",
+        "src-73111050605ff18f",
+        "src-93223712ed0836d9",
+        "src-ac719e040f6e8c14",
+        "src-bbc754a92999ee86",
+        "src-f68509ad8e4606f5"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-person-kamil-zaradkiewicz",
+      "type": "person",
+      "title": "Kamil Zaradkiewicz",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-5f1a755a2b3daae0",
+        "src-633d8b4162cfcee2"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-person-stanislaw-piotrowicz",
+      "type": "person",
+      "title": "Stanisław Piotrowicz",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-5f1a755a2b3daae0",
+        "src-633d8b4162cfcee2"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-person-jakub-stelina",
+      "type": "person",
+      "title": "Jakub Stelina",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-5f1a755a2b3daae0",
+        "src-633d8b4162cfcee2"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-person-wojciech-sych",
+      "type": "person",
+      "title": "Wojciech Sych",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-5f1a755a2b3daae0",
+        "src-633d8b4162cfcee2"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-person-rafal-wojciechowski",
+      "type": "person",
+      "title": "Rafał Wojciechowski",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-5f1a755a2b3daae0",
+        "src-633d8b4162cfcee2"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-person-jaroslaw-wyrembak",
+      "type": "person",
+      "title": "Jarosław Wyrembak",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-5f1a755a2b3daae0",
+        "src-633d8b4162cfcee2"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-person-marcin-matczak",
+      "type": "person",
+      "title": "Marcin Matczak",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-702fade7effee114"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-person-jerzy-stepien",
+      "type": "person",
+      "title": "Jerzy Stępień",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-53e298b8c0c9666c",
+        "src-e9049d7d4e8288f8"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-person-jacek-zalesny",
+      "type": "person",
+      "title": "Jacek Zaleśny",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-53e298b8c0c9666c"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-person-mateusz-radajewski",
+      "type": "person",
+      "title": "Mateusz Radajewski",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-a360019f34a6ddcb"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-person-marek-safjan",
+      "type": "person",
+      "title": "Marek Safjan",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-e9049d7d4e8288f8"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-person-bohdan-zdziennicki",
+      "type": "person",
+      "title": "Bohdan Zdziennicki",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-e9049d7d4e8288f8"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-person-andrzej-zoll",
+      "type": "person",
+      "title": "Andrzej Zoll",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-e9049d7d4e8288f8"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-person-michael-mcgrath",
+      "type": "person",
+      "title": "Michael McGrath",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-e8b9e725bbe55b55"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-person-maciej-berek",
+      "type": "person",
+      "title": "Maciej Berek",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-6c259c7baf836951"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-person-rafal-leskiewicz",
+      "type": "person",
+      "title": "Rafał Leśkiewicz",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-6c259c7baf836951"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-person-jacek-chlebny",
+      "type": "person",
+      "title": "Jacek Chlebny",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-33d12ab5d5ebd858"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-person-waldemar-zurek",
+      "type": "person",
+      "title": "Waldemar Żurek",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-354ea5067496a9db",
+        "src-fbc7f00e7c80fdf0"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-person-pawel-szefernaker",
+      "type": "person",
+      "title": "Paweł Szefernaker",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-1523911d991ac3a3",
+        "src-2f20f6bcb4a9bd05",
+        "src-62239db661ed88ef",
+        "src-73111050605ff18f",
+        "src-93223712ed0836d9",
+        "src-ac719e040f6e8c14",
+        "src-bbc754a92999ee86",
+        "src-f68509ad8e4606f5"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-person-szymon-holownia",
+      "type": "person",
+      "title": "Szymon Hołownia",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-1523911d991ac3a3",
+        "src-2f20f6bcb4a9bd05",
+        "src-62239db661ed88ef",
+        "src-73111050605ff18f",
+        "src-93223712ed0836d9",
+        "src-ac719e040f6e8c14",
+        "src-bbc754a92999ee86",
+        "src-f68509ad8e4606f5"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-person-wladyslaw-kosiniak-kamysz",
+      "type": "person",
+      "title": "Władysław Kosiniak-Kamysz",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-1523911d991ac3a3",
+        "src-2f20f6bcb4a9bd05",
+        "src-62239db661ed88ef",
+        "src-73111050605ff18f",
+        "src-93223712ed0836d9",
+        "src-ac719e040f6e8c14",
+        "src-bbc754a92999ee86",
+        "src-f68509ad8e4606f5"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-person-piotr-zgorzelski",
+      "type": "person",
+      "title": "Piotr Zgorzelski",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-1523911d991ac3a3",
+        "src-2f20f6bcb4a9bd05",
+        "src-62239db661ed88ef",
+        "src-73111050605ff18f",
+        "src-93223712ed0836d9",
+        "src-ac719e040f6e8c14",
+        "src-bbc754a92999ee86",
+        "src-f68509ad8e4606f5"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-person-jacek-wisniewski",
+      "type": "person",
+      "title": "Jacek Wiśniewski",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-37bf3a795f4c84c5",
+        "src-43fe12cba54608ed",
+        "src-8f4e0488f0286bb0"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-person-magdalena-bentkowska",
+      "type": "person",
+      "title": "Magdalena Bentkowska",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-21f88109b122d751",
+        "src-3677c0592b53d6b5",
+        "src-c4b0a8753e2eb6e3"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-person-dariusz-szostek",
+      "type": "person",
+      "title": "Dariusz Szostek",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-21f88109b122d751",
+        "src-3677c0592b53d6b5",
+        "src-c4b0a8753e2eb6e3"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-institution-trybunal-konstytucyjny",
+      "type": "institution",
+      "title": "Trybunał Konstytucyjny",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-0cf6740e592b7fb6",
+        "src-14e6311a0bebe8b5",
+        "src-1523911d991ac3a3",
+        "src-21f88109b122d751",
+        "src-239e4d0fc7746cf2",
+        "src-27d0dfe780a5a342",
+        "src-2f20f6bcb4a9bd05",
+        "src-33d12ab5d5ebd858",
+        "src-354ea5067496a9db",
+        "src-3677c0592b53d6b5",
+        "src-37bf3a795f4c84c5",
+        "src-43fe12cba54608ed",
+        "src-4421e66caa9c8769",
+        "src-4f290b280fbc0d5d",
+        "src-53e298b8c0c9666c",
+        "src-5486521b8c6335dc",
+        "src-60702c33cef83dcd",
+        "src-62239db661ed88ef",
+        "src-64eeb687550f989b",
+        "src-6978647f842cddac",
+        "src-73111050605ff18f",
+        "src-7442472d2fd22229",
+        "src-7b8527921a210c5e",
+        "src-8a1fb560e7154fa4",
+        "src-8f4e0488f0286bb0",
+        "src-91f77ff193e537d4",
+        "src-93223712ed0836d9",
+        "src-a360019f34a6ddcb",
+        "src-ac719e040f6e8c14",
+        "src-b4586a84e2d9655c",
+        "src-b57399da28d45f1f",
+        "src-b70785e6e6330be5",
+        "src-bbc754a92999ee86",
+        "src-bf61112da76ce90f",
+        "src-c181c14a2e803947",
+        "src-c4b0a8753e2eb6e3",
+        "src-d46a7fb59c85c8b5",
+        "src-d7b16c6be7024f36",
+        "src-e00eeff4efaae3b4",
+        "src-e8b9e725bbe55b55",
+        "src-e9049d7d4e8288f8",
+        "src-f68509ad8e4606f5",
+        "src-fb483c72397f9b4b"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-institution-sejm",
+      "type": "institution",
+      "title": "Sejm",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-21f88109b122d751",
+        "src-3677c0592b53d6b5",
+        "src-4f290b280fbc0d5d",
+        "src-76d4ff4a27c3e4e2",
+        "src-c4b0a8753e2eb6e3",
+        "src-e8b9e725bbe55b55"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-institution-komenda-stoleczna-policji",
+      "type": "institution",
+      "title": "Komenda Stołeczna Policji",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-37bf3a795f4c84c5",
+        "src-43fe12cba54608ed",
+        "src-8f4e0488f0286bb0"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-institution-komisja-europejska",
+      "type": "institution",
+      "title": "Komisja Europejska",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-e8b9e725bbe55b55"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-institution-europejski-trybunal-praw-czlowieka",
+      "type": "institution",
+      "title": "Europejski Trybunał Praw Człowieka",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-4421e66caa9c8769"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-institution-naczelny-sad-administracyjny",
+      "type": "institution",
+      "title": "Naczelny Sąd Administracyjny",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-33d12ab5d5ebd858"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-institution-trybunal-sprawiedliwosci-unii-europejskiej",
+      "type": "institution",
+      "title": "Trybunał Sprawiedliwości Unii Europejskiej",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-e8b9e725bbe55b55"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-institution-komisja-wenecka",
+      "type": "institution",
+      "title": "Komisja Wenecka",
+      "epistemic": "entity_index",
+      "content": [
+        "Indeks podmiotu wymienionego w Monitorze TK. Kafelek nie ustala statusu prawnego, funkcji ani odpowiedzialności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-e8b9e725bbe55b55"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "main",
+        "snapshot": "monitor-2026-11-01",
+        "method": "editorial_entity_index",
+        "independent_fact_check": false
+      }
+    }
+  ]
+}
