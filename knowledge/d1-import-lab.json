@@ -3,17 +3,12 @@
   "records": [
     {
       "id": "lab-alpha",
-      "name": "Import Alfa v2",
+      "name": "Import Alfa v3",
       "status": "archiwalny"
     },
     {
       "id": "lab-beta",
       "name": "Import Beta",
-      "status": "aktywny"
-    },
-    {
-      "id": "lab-gamma",
-      "name": "Import Gamma v2",
       "status": "aktywny"
     }
   ]
