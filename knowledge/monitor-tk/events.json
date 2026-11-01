@@ -1,0 +1,687 @@
+{
+  "model_version": "0.1-experiment",
+  "tiles": [
+    {
+      "id": "tk-oredzie-premiera",
+      "type": "event",
+      "title": "Premier przedstawił stanowisko w orędziu",
+      "epistemic": "reported_information",
+      "content": [
+        "KPRM opublikowała orędzie Donalda Tuska dotyczące sytuacji wokół TK. Premier uznał działania nowych sędziów za wykonywanie obowiązków i deklarował zapewnienie Trybunałowi bezpieczeństwa oraz warunków do pracy."
+      ],
+      "dates": [
+        {
+          "role": "monitor_timeline_bucket",
+          "value": "2026-10-31",
+          "precision": "day",
+          "label": "31 października 2026Wieczór",
+          "note": "Grupowanie wpisu w Monitorze; nie oznacza daty każdego opisanego zdarzenia ani godziny publikacji."
+        }
+      ],
+      "source_ids": [
+        "src-0cf6740e592b7fb6",
+        "src-239e4d0fc7746cf2"
+      ],
+      "relations": [
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-trybunal-konstytucyjny",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#oredzie-premiera",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      },
+      "source_label": "Wystąpienie · stanowisko premiera"
+    },
+    {
+      "id": "tk-apel-siedmiu",
+      "type": "event",
+      "title": "Wspólne oświadczenie siedmiu sędziów",
+      "epistemic": "reported_information",
+      "content": [
+        "Siedmiu sędziów podpisało oświadczenie dotyczące wydarzeń z 30 października. Dokument opublikował w mediach społecznościowych Kamil Zaradkiewicz. Podpisali go Bogdan Święczkowski, Bartłomiej Sochański, Stanisław Piotrowicz, Jakub Stelina, Wojciech Sych, Rafał Wojciechowski i Jarosław Wyrembak. Jest to potwierdzony wspólny dokument. Dostępne relacje nie ustalają dokładnego czasu ani przebiegu zapowiadanego wcześniej spotkania."
+      ],
+      "dates": [
+        {
+          "role": "monitor_timeline_bucket",
+          "value": "2026-10-31",
+          "precision": "day",
+          "label": "31 października 2026Relacja opublikowana o 17.29",
+          "note": "Grupowanie wpisu w Monitorze; nie oznacza daty każdego opisanego zdarzenia ani godziny publikacji."
+        }
+      ],
+      "source_ids": [
+        "src-5f1a755a2b3daae0",
+        "src-633d8b4162cfcee2"
+      ],
+      "relations": [
+        {
+          "type": "mentions",
+          "target_id": "tk-person-bogdan-swieczkowski",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-bartlomiej-sochanski",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-kamil-zaradkiewicz",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-stanislaw-piotrowicz",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-jakub-stelina",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-wojciech-sych",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-rafal-wojciechowski",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-jaroslaw-wyrembak",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#apel-siedmiu",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      },
+      "source_label": "Relacja o wydarzeniu"
+    },
+    {
+      "id": "tk-dni-wolne",
+      "type": "event",
+      "title": "Święczkowski ogłosił dni wolne dla pracowników TK",
+      "epistemic": "reported_information",
+      "content": [
+        "Według WP i Gazeta.pl Bogdan Święczkowski wydał dokument ustanawiający 3–6 listopada dniami wolnymi dla pracowników TK z zachowaniem wynagrodzenia. Równocześnie kwestionował skuteczność zarządzenia Anny Korwin-Piotrowskiej dotyczącego organizacji pracy. Opis dotyczy treści dokumentu i stanowiska jego autora. Jego skuteczności prawnej ani wykonania nie potwierdzono."
+      ],
+      "dates": [
+        {
+          "role": "monitor_timeline_bucket",
+          "value": "2026-10-31",
+          "precision": "day",
+          "label": "31 października 2026Relacja WP opublikowana o 13.19",
+          "note": "Grupowanie wpisu w Monitorze; nie oznacza daty każdego opisanego zdarzenia ani godziny publikacji."
+        }
+      ],
+      "source_ids": [
+        "src-fb483c72397f9b4b",
+        "src-60702c33cef83dcd"
+      ],
+      "relations": [
+        {
+          "type": "mentions",
+          "target_id": "tk-person-bogdan-swieczkowski",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-trybunal-konstytucyjny",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#dni-wolne",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      },
+      "source_label": "Relacja o wydarzeniu"
+    },
+    {
+      "id": "tk-oswiadczenie-31",
+      "type": "event",
+      "title": "Korwin-Piotrowska ogłasza decyzje dotyczące pracy TK",
+      "epistemic": "reported_information",
+      "content": [
+        "Według Onetu w oświadczeniu opublikowanym na stronie TK Anna Korwin-Piotrowska stwierdziła, że kieruje jego pracami. Jej uprawnienia i skutki decyzji są kwestionowane.",
+        "Korwin-Piotrowska zaleciła sędziom pracę poza siedzibą. Według opublikowanej relacji zarządzenie przewidywało zawieszenie pracy biura podawczego oraz zwolnienie pracowników z obowiązków z zachowaniem wynagrodzenia, z wyjątkiem osób wezwanych do pracy. Źródła opisują treść decyzji. Zakres jej wykonania pozostaje do ustalenia.",
+        "Doprecyzowanie z sobotniego wieczoru. Według PAP Anna Korwin-Piotrowska przekazała, że Święczkowski i Sochański nie są uprawnieni do wstępu do budynku. Ich wejście w związku z postępowaniami ma być ustalane odrębnie. Pozostali sędziowie mają wcześniej uzgadniać termin i warunki wejścia. Komunikat przekazano PAP 31 października wieczorem, relację opublikowano 1 listopada o 01.02. To opis stanowiska sędzi i treści ograniczeń, których skuteczność pozostaje sporna. PAP / Onet · 1.11, 01.02"
+      ],
+      "dates": [
+        {
+          "role": "monitor_timeline_bucket",
+          "value": "2026-10-31",
+          "precision": "day",
+          "label": "31 października 2026Godzina oświadczenia nieustalona",
+          "note": "Grupowanie wpisu w Monitorze; nie oznacza daty każdego opisanego zdarzenia ani godziny publikacji."
+        }
+      ],
+      "source_ids": [
+        "src-64eeb687550f989b",
+        "src-c181c14a2e803947",
+        "src-d46a7fb59c85c8b5",
+        "src-7b8527921a210c5e",
+        "src-27d0dfe780a5a342"
+      ],
+      "relations": [
+        {
+          "type": "mentions",
+          "target_id": "tk-person-anna-korwin-piotrowska",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-trybunal-konstytucyjny",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#oswiadczenie-31",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      },
+      "source_label": "Oświadczenie · skuteczność sporna"
+    },
+    {
+      "id": "tk-zapowiedz-swieczkowski",
+      "type": "announcement",
+      "title": "Święczkowski — zapowiedź spotkania i dalszy przebieg",
+      "epistemic": "reported_information",
+      "content": [
+        "Według Euronews Bogdan Święczkowski zapowiedział spotkanie siedmiorga sędziów oraz próbę wejścia do siedziby. Przedstawił działania drugiej strony jako bezprawne. Była to poranna zapowiedź. Poniżej uzupełniamy ją o późniejsze doniesienia.",
+        "Uzupełnienie przebiegu. Po południu Święczkowski ponownie pojawił się przed TK. W relacji Onetu z 17.47, przytaczającej jego wypowiedź dla Polsat News, opisano niewpuszczenie go na teren instytucji i jego zapowiedź konsekwencji prawnych wobec funkcjonariuszy. Dokładnej godziny próby oraz pełnego przebiegu zajścia nie ustalono. Onet za Polsat News · 31.10, 17.47",
+        "Osobno opublikowano wspólny apel siedmiu sędziów. Wcześniejszą, piątkową próbę wejścia opisuje wpis o otwarciu furtki."
+      ],
+      "dates": [
+        {
+          "role": "monitor_timeline_bucket",
+          "value": "2026-10-31",
+          "precision": "day",
+          "label": "31 października 2026Rano; godzina wypowiedzi nieustalona",
+          "note": "Grupowanie wpisu w Monitorze; nie oznacza daty każdego opisanego zdarzenia ani godziny publikacji."
+        }
+      ],
+      "source_ids": [
+        "src-354ea5067496a9db",
+        "src-d7b16c6be7024f36"
+      ],
+      "relations": [
+        {
+          "type": "references",
+          "target_id": "tk-apel-siedmiu",
+          "basis": "explicit_monitor_link"
+        },
+        {
+          "type": "references",
+          "target_id": "tk-furtka-30",
+          "basis": "explicit_monitor_link"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-bogdan-swieczkowski",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-trybunal-konstytucyjny",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#zapowiedz-swieczkowski",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      },
+      "source_label": "Zapowiedź · stanowisko strony"
+    },
+    {
+      "id": "tk-zgromadzenie",
+      "type": "announcement",
+      "title": "Zapowiedziano Zgromadzenie Ogólne",
+      "epistemic": "reported_information",
+      "content": [
+        "W zarządzeniu nr 1/2026 datowanym na 30 października Korwin-Piotrowska wyznaczyła posiedzenie Zgromadzenia Ogólnego na 3 listopada, m.in. w sprawie projektu budżetu TK na 2027 rok. Uprawnienie do zwołania zgromadzenia w tym trybie pozostaje sporne; nie przesądzamy jego przebiegu."
+      ],
+      "dates": [
+        {
+          "role": "monitor_timeline_bucket",
+          "value": "2026-10-31",
+          "precision": "day",
+          "label": "31 października 2026Data publikacji relacji",
+          "note": "Grupowanie wpisu w Monitorze; nie oznacza daty każdego opisanego zdarzenia ani godziny publikacji."
+        },
+        {
+          "role": "scheduled_event",
+          "value": "2026-11-03",
+          "precision": "day",
+          "label": "Zapowiedziane posiedzenie; odbycie niepotwierdzone w snapshot."
+        },
+        {
+          "role": "document_date",
+          "value": "2026-10-30",
+          "precision": "day",
+          "label": "Zarządzenie nr 1/2026"
+        }
+      ],
+      "source_ids": [
+        "src-bf61112da76ce90f",
+        "src-354ea5067496a9db"
+      ],
+      "relations": [
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-trybunal-konstytucyjny",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#zgromadzenie",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      },
+      "source_label": "Zapowiedź · 3 listopada"
+    },
+    {
+      "id": "tk-wizyta-prezydenta",
+      "type": "event",
+      "title": "Prezydent przybył do siedziby Trybunału",
+      "epistemic": "reported_information",
+      "content": [
+        "Według relacji TVP Polonia i Onetu prezydent Karol Nawrocki po powrocie do kraju wszedł w nocy do budynku TK, gdzie przebywał przez kilka godzin. Wizyta nastąpiła po ogłoszeniu zarządzeń, których skuteczność jest przedmiotem sporu.",
+        "W oświadczeniu z 31 października prezydent poinformował, że rozmawiał z pierwszym prezesem Sądu Najwyższego i umożliwił Bartłomiejowi Sochańskiemu wejście do TK. Ocenił wydarzenia jako naruszenie porządku konstytucyjnego i zwołał na sobotę konsultacje z przedstawicielami sił parlamentarnych.",
+        "Plan konsultacji na 31 października. Paweł Szefernaker zapowiedział początek spotkań w Pałacu Prezydenckim na godz. 13.00. Szymon Hołownia zadeklarował udział Polski 2050. Według ustaleń „Rzeczpospolitej” udział planowali też przedstawiciele Razem. O godz. 12:55 były to zapowiedzi. PAP · 31.10, 11.21 · Rzeczpospolita · 31.10, aktualizacja 11.02.",
+        "Przebieg konsultacji 31 października. Rozmowy rozpoczęły się o godz. 13.00. Według TVP, powołującej się na rzecznika prezydenta, PSL reprezentowali Władysław Kosiniak-Kamysz i Piotr Zgorzelski. „Dziennik Gazeta Prawna” podał, że prezydent spotkał się z przedstawicielami PSL, Polski 2050, PiS, Razem, Rozwoju Plus i Konfederacji. W wieczornej relacji dziennik odnotował, że uczestnicy nie przedstawili wspólnego planu zakończenia sporu. TVP · 31.10, 15.00 · Dziennik Gazeta Prawna · 31.10",
+        "Uzupełnienie 1 listopada — nagranie dotyczące kluczy. WP opisała film z nocnej wizyty 31 października: mężczyzna przedstawiający się jako asystent prezydenta zwraca się do Macieja Berka o klucze, powołując się na prośbę prezydenta. Berek odmawia. Publikacja WP pochodzi z 1 listopada, godz. 01:22; nie jest to czas zdarzenia. Nie potwierdziliśmy przekazania kluczy, niezależnie tożsamości rozmówcy ani pełnego przebiegu zajścia. Opis opiera się na relacji prasowej o nagraniu, a nie na samodzielnej analizie oryginalnego filmu. WP · opis i nagranie · 1.11, 01:22"
+      ],
+      "dates": [
+        {
+          "role": "monitor_timeline_bucket",
+          "value": "2026-10-31",
+          "precision": "day",
+          "label": "31 października 2026W nocy; dokładna godzina nieustalona",
+          "note": "Grupowanie wpisu w Monitorze; nie oznacza daty każdego opisanego zdarzenia ani godziny publikacji."
+        }
+      ],
+      "source_ids": [
+        "src-93223712ed0836d9",
+        "src-62239db661ed88ef",
+        "src-73111050605ff18f",
+        "src-2f20f6bcb4a9bd05",
+        "src-f68509ad8e4606f5",
+        "src-bbc754a92999ee86",
+        "src-1523911d991ac3a3",
+        "src-ac719e040f6e8c14"
+      ],
+      "relations": [
+        {
+          "type": "mentions",
+          "target_id": "tk-person-karol-nawrocki",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-pawel-szefernaker",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-szymon-holownia",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-wladyslaw-kosiniak-kamysz",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-piotr-zgorzelski",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-trybunal-konstytucyjny",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#wizyta-prezydenta",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      },
+      "source_label": "Wydarzenie · dodano 31 października, ok. 11:36"
+    },
+    {
+      "id": "tk-furtka-30",
+      "type": "event",
+      "title": "Otwarcie furtki i wejście Święczkowskiego na teren TK",
+      "epistemic": "reported_information",
+      "content": [
+        "Według relacji WP i Onetu przecięto zabezpieczenie furtki, po czym Bogdan Święczkowski wszedł na teren posesji i stanął przed kordonem policji, domagając się dostępu do budynku. WP przytoczyła jego wypowiedź, że otwarcie furtki nastąpiło na jego polecenie. Wejście na teren posesji jest potwierdzone w tych relacjach; wejścia do samego budynku na tym etapie nie potwierdzono."
+      ],
+      "dates": [
+        {
+          "role": "monitor_timeline_bucket",
+          "value": "2026-10-30",
+          "precision": "day",
+          "label": "30 października 2026Wieczór; dokładna godzina nieustalona",
+          "note": "Grupowanie wpisu w Monitorze; nie oznacza daty każdego opisanego zdarzenia ani godziny publikacji."
+        }
+      ],
+      "source_ids": [
+        "src-5486521b8c6335dc",
+        "src-7442472d2fd22229"
+      ],
+      "relations": [
+        {
+          "type": "mentions",
+          "target_id": "tk-person-bogdan-swieczkowski",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-trybunal-konstytucyjny",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#furtka-30",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      },
+      "source_label": "Relacja o wydarzeniu"
+    },
+    {
+      "id": "tk-wnioski-immunitet",
+      "type": "event",
+      "title": "Wnioski dotyczące immunitetów",
+      "epistemic": "reported_information",
+      "content": [
+        "Według relacji Euronews prokurator generalny Waldemar Żurek poinformował o skierowaniu pięciu wniosków dotyczących uchylenia immunitetów: czterech wobec Święczkowskiego i jednego wobec Sochańskiego. Samo złożenie wniosku nie przesądza o winie ani o uchyleniu immunitetu."
+      ],
+      "dates": [
+        {
+          "role": "monitor_timeline_bucket",
+          "value": "2026-10-30",
+          "precision": "day",
+          "label": "30 października 2026Godzina zdarzenia nieustalona",
+          "note": "Grupowanie wpisu w Monitorze; nie oznacza daty każdego opisanego zdarzenia ani godziny publikacji."
+        }
+      ],
+      "source_ids": [
+        "src-fbc7f00e7c80fdf0",
+        "src-354ea5067496a9db"
+      ],
+      "relations": [
+        {
+          "type": "mentions",
+          "target_id": "tk-person-waldemar-zurek",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#wnioski-immunitet",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      },
+      "source_label": "Postępowanie · informacja prokuratora generalnego"
+    },
+    {
+      "id": "tk-zarzadzenia",
+      "type": "event",
+      "title": "Zarządzenia o przerwie w czynnościach",
+      "epistemic": "reported_information",
+      "content": [
+        "Anna Korwin-Piotrowska potwierdziła wydanie zarządzeń dotyczących Bogdana Święczkowskiego i Bartłomieja Sochańskiego. Według relacji prasowych przerwa miała trwać miesiąc. Skuteczność zarządzeń jest kwestionowana."
+      ],
+      "dates": [
+        {
+          "role": "monitor_timeline_bucket",
+          "value": "2026-10-30",
+          "precision": "day",
+          "label": "30 października 2026Około 18:00: informacja na stronie TK",
+          "note": "Grupowanie wpisu w Monitorze; nie oznacza daty każdego opisanego zdarzenia ani godziny publikacji."
+        }
+      ],
+      "source_ids": [
+        "src-316d92741c54b6f6",
+        "src-b57399da28d45f1f"
+      ],
+      "relations": [
+        {
+          "type": "references",
+          "target_id": "tk-dokumenty-przerwa-w-czynnosciach",
+          "basis": "explicit_monitor_link"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-anna-korwin-piotrowska",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#zarzadzenia",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      },
+      "source_label": "Decyzja · skuteczność sporna"
+    },
+    {
+      "id": "tk-policja",
+      "type": "event",
+      "title": "Czynności policji w związku ze zgłoszeniem",
+      "epistemic": "reported_information",
+      "content": [
+        "Według relacji Rzeczpospolitej policja wskazała na zgłoszenie możliwego zagrożenia bezpieczeństwa i zakłócenia porządku. W późniejszym komunikacie, przytoczonym w relacji, sprecyzowała zakres działań na zewnątrz.",
+        "Komenda Stołeczna Policji podała, że do Komendy Głównej wpłynęły osobne pisma od prokuratora generalnego i sędzi TK. Według KSP policjanci zabezpieczali teren zewnętrzny oraz aleję Szucha. Komenda zaprzeczyła, by interweniowali wobec Straży Trybunalskiej. Poinformowała też o zatrzymaniu trzech osób, które przeszły przez ogrodzenie.",
+        "Sobota po południu. Polskie Radio opisało wzrost liczby demonstrantów i policjantów oraz zamknięcie alei Szucha. Rzecznik KSP Jacek Wiśniewski uzasadniał zwiększenie liczby funkcjonariuszy zapewnieniem bezpieczeństwa zgromadzonym. Polskie Radio · 31.10, 15.39"
+      ],
+      "dates": [
+        {
+          "role": "monitor_timeline_bucket",
+          "value": "2026-10-30",
+          "precision": "day",
+          "label": "30 października 2026Wieczorem",
+          "note": "Grupowanie wpisu w Monitorze; nie oznacza daty każdego opisanego zdarzenia ani godziny publikacji."
+        }
+      ],
+      "source_ids": [
+        "src-37bf3a795f4c84c5",
+        "src-43fe12cba54608ed",
+        "src-8f4e0488f0286bb0"
+      ],
+      "relations": [
+        {
+          "type": "mentions",
+          "target_id": "tk-person-jacek-wisniewski",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-trybunal-konstytucyjny",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-komenda-stoleczna-policji",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#policja",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      },
+      "source_label": "Wydarzenie"
+    },
+    {
+      "id": "tk-historia-2015",
+      "type": "context",
+      "title": "2015 · Pięć miejsc i dwie kadencje Sejmu",
+      "epistemic": "editorial_synthesis",
+      "content": [
+        "Ustępujący Sejm wybrał pięciu sędziów. Trzy miejsca zwalniały się jeszcze podczas jego kadencji, a dwa dopiero w grudniu, już po rozpoczęciu kolejnej. 3 grudnia TK orzekł, że przepis pozwalający na wybór był zgodny z Konstytucją w odniesieniu do trzech listopadowych miejsc. W odniesieniu do dwóch grudniowych uznał go za niekonstytucyjny. To rozróżnienie ma znaczenie dla oceny późniejszych wyborów na te same miejsca."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-4f290b280fbc0d5d"
+      ],
+      "relations": [
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-trybunal-konstytucyjny",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-sejm",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/historia",
+        "selector": "main > section:nth-of-type(1)",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-historia-2021",
+      "type": "context",
+      "title": "2021 · Co skład Trybunału oznaczał dla skarżącego?",
+      "epistemic": "editorial_synthesis",
+      "content": [
+        "7 maja Europejski Trybunał Praw Człowieka wydał wyrok w sprawie Xero Flor przeciwko Polsce. W składzie TK rozpoznającym skargę spółki zasiadała osoba wybrana na wcześniej obsadzone miejsce. ETPC stwierdził naruszenie prawa spółki do sądu ustanowionego ustawą."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-4421e66caa9c8769"
+      ],
+      "relations": [
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-trybunal-konstytucyjny",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-europejski-trybunal-praw-czlowieka",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/historia",
+        "selector": "main > section:nth-of-type(2)",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-historia-2026-slubowanie",
+      "type": "context",
+      "title": "Marzec i kwiecień 2026 · Wybór i ślubowanie",
+      "epistemic": "editorial_synthesis",
+      "content": [
+        "13 marca Sejm wybrał sześć osób do TK. 1 kwietnia Magdalena Bentkowska i Dariusz Szostek złożyli ślubowanie przed prezydentem. 9 kwietnia odbyła się uroczystość w Sejmie. Marszałek uznał złożone tam ślubowania za skuteczne. Kancelaria Prezydenta stała na stanowisku, że wymagana jest obecność prezydenta. Rozbieżność dotyczyła możliwości podjęcia obowiązków przez pozostałą czwórkę."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-3677c0592b53d6b5",
+        "src-c4b0a8753e2eb6e3",
+        "src-21f88109b122d751"
+      ],
+      "relations": [
+        {
+          "type": "mentions",
+          "target_id": "tk-person-magdalena-bentkowska",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-dariusz-szostek",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-trybunal-konstytucyjny",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-sejm",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/historia",
+        "selector": "main > section:nth-of-type(3)",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-historia-2026-kierownictwo",
+      "type": "context",
+      "title": "Październik 2026 · Kto kieruje pracami TK?",
+      "epistemic": "editorial_synthesis",
+      "content": [
+        "Anna Korwin-Piotrowska, jedna z osób wybranych w marcu, ogłosiła przerwę w czynnościach Bogdana Święczkowskiego i Bartłomieja Sochańskiego. Na profilu TK zakwestionowano zarówno jej status, jak i skuteczność decyzji. Spór o objęcie stanowisk przełożył się w ten sposób na konkretne pytania o obsadę kierownictwa i pracę kancelarii."
+      ],
+      "dates": [],
+      "source_ids": [],
+      "relations": [
+        {
+          "type": "mentions",
+          "target_id": "tk-person-anna-korwin-piotrowska",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-trybunal-konstytucyjny",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/historia",
+        "selector": "main > section:nth-of-type(4)",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      }
+    }
+  ]
+}
