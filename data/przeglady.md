@@ -63,3 +63,11 @@ Zakres 30 października–1 listopada. Dodano [orędzie premiera](https://redakc
 Zapisana wersja 13, commit 0b869a6f2b61d7663d16d45ba8ca6378312e5d10. Wdrożenie oczekuje na odrębną zgodę zgodnie z AGENTS.md. Publicznie działa wersja 12.
 
 1 listopada 2026 o godz. 04:22 czasu polskiego opublikowano wersję 13 po zgodzie właściciela. Sites potwierdził publiczny dostęp oraz pomyślne wdrożenie `appgdep_6ae6b073d8f881918b8467842e9aeed5`. [Monitor TK](https://monitor-tk-2026.kkulka.chatgpt.site).
+
+## 1 listopada 2026 — uzupełnienie przebiegu działań Święczkowskiego
+
+Przejrzano wydarzenia 30–31 października oraz istniejące zapowiedzi. Dodano trzy wpisy: wspólne oświadczenie siedmiu sędziów ([Rz/PAP](https://www.rp.pl/polityka/art45425881-sedziowie-tk-zabrali-glos-mowia-o-bezprawnych-dzialaniach-apel-do-wladz-i-politykow), [300polityka](https://300polityka.pl/pl/live/2026-10-31/calkowicie-bezprawne-jest-oswiadczenie-7-sedziow-tk)), piątkowe otwarcie furtki ([WP](https://wiadomosci.wp.pl/swieczkowski-przeszedl-na-teren-tk-przecieto-zabezpieczenie-7345728429181408a)) oraz dokument o dniach wolnych 3–6 listopada ([WP](https://wiadomosci.wp.pl/swieczkowski-wydal-zarzadzenie-anulowal-dokument-korwin-piotrowskiej-7345966093789632a)). Uzupełniono trzy wpisy: późniejsze doniesienia o niewpuszczeniu Święczkowskiego, zapowiedź nieuczestniczenia w zgromadzeniu 3 listopada, sobotnie zwiększenie zabezpieczenia policyjnego. Dodano dwie powiązane wypowiedzi w spisie stanowisk.
+
+Nie ustalono dokładnego czasu i przebiegu spotkania siedmiu sędziów, formalnego upoważnienia Święczkowskiego do reprezentowania grupy ani pełnej sekwencji sobotniej próby wejścia. Wypowiedź dla Polsat News odnotowano za Onetem z 31.10, 17.47. Nie potwierdzono wykonania ani skuteczności prawnej dokumentu o dniach wolnych. Zapowiedź posiedzenia 3 listopada pozostaje przyszłym wydarzeniem. Przegląd nie stanowi gwarancji kompletności relacji.
+
+Sprawdzono unikalność identyfikatorów i odsyłacze wewnętrzne. Wersja 14 zapisana, commit 4ea5a0d0c0cca01c306fed6e92d21bdfc61af065. Oczekuje na odrębną zgodę na publikację. Publiczna wersja 13. Uzupełniono instrukcję o obowiązek sprawdzania dalszego przebiegu zapowiedzi.
