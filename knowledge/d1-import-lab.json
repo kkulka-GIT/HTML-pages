@@ -1,15 +1,1 @@
-{
-  "schema_version": 1,
-  "records": [
-    {
-      "id": "lab-alpha",
-      "name": "Import Alfa — GitHub Actions test",
-      "status": "archiwalny"
-    },
-    {
-      "id": "lab-beta",
-      "name": "Import Beta",
-      "status": "aktywny"
-    }
-  ]
-}
+{"schema_version":1,"records":[
