@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "records": [
+    {
+      "id": "lab-alpha",
+      "name": "Import Alfa v1",
+      "status": "aktywny"
+    },
+    {
+      "id": "lab-beta",
+      "name": "Import Beta",
+      "status": "aktywny"
+    }
+  ]
+}
