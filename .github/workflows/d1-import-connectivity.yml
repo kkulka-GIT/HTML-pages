@@ -30,16 +30,38 @@ jobs:
               config = ["url = " + json.dumps(base + route), "request = " + json.dumps(method), "header = " + json.dumps("Authorization: Bearer " + token)]
               if payload is not None:
                   config += ['header = "Content-Type: application/json"', "data-binary = " + json.dumps(json.dumps(payload))]
+              return retry(lambda: subprocess.run(["curl", "-sS", "--max-time", "40", "--config", "-", "-w", "\\n%{http_code}"], input="\n".join(config)+"\n", capture_output=True, text=True), method)
+          def retry(transport, label, pause=time.sleep):
               for attempt in range(1, 5):
-                  result = subprocess.run(["curl", "-sS", "--max-time", "40", "--config", "-", "-w", "\\n%{http_code}"], input="\n".join(config)+"\n", capture_output=True, text=True)
+                  result = transport()
                   body, _, code = result.stdout.rpartition("\n")
                   status = int(code) if code.isdigit() else 0
-                  print(f"{method} attempt={attempt} HTTP={status}", flush=True)
+                  print(f"{label} attempt={attempt} HTTP={status}", flush=True)
                   if result.returncode == 0 and status in (200, 201):
                       return json.loads(body)
                   if status not in (0, 429, 502, 503, 504) or attempt == 4:
                       raise SystemExit(f"Import request failed: HTTP {status}, curl exit {result.returncode}")
-                  time.sleep(2 ** attempt)
+                  pause(2 ** attempt)
+          # Deterministic transport tests; no artificial errors are injected into Sites.
+          from types import SimpleNamespace
+          def fake(codes):
+              calls = []
+              def transport():
+                  code = codes[min(len(calls), len(codes)-1)]
+                  calls.append(code)
+                  return SimpleNamespace(returncode=0, stdout='{}\n'+str(code))
+              return transport, calls
+          transport, calls = fake([503, 200])
+          assert retry(transport, "SIMULATED transient", lambda _: None) == {} and calls == [503, 200]
+          for codes, count in [([503], 4), ([401], 1)]:
+              transport, calls = fake(codes)
+              try:
+                  retry(transport, "SIMULATED failure", lambda _: None)
+              except SystemExit:
+                  assert len(calls) == count
+              else:
+                  raise SystemExit("Retry test incorrectly masked failure")
+          print("Retry logic tests passed (simulated responses)")
           imported = call("POST", "/api/imports", {"file": path, "commit": sha})
           if imported.get("status") not in ("imported", "already_imported"):
               raise SystemExit("Unexpected import result")
