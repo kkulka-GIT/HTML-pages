@@ -1,0 +1,622 @@
+{
+  "model_version": "0.1-experiment",
+  "tiles": [
+    {
+      "id": "tk-oswiadczenie-profil",
+      "type": "position",
+      "title": "Na profilu TK zakwestionowano zarządzenia",
+      "epistemic": "attributed_claim",
+      "content": [
+        "Na profilu TK w serwisie X ogłoszono, że Święczkowski i Sochański pozostają na stanowiskach, a stronę internetową przejęto bezprawnie. Wpis zawierał także zarzut zamachu stanu. Są to twierdzenia autorów komunikatu, a nie ustalenie odpowiedzialności karnej."
+      ],
+      "dates": [
+        {
+          "role": "monitor_timeline_bucket",
+          "value": "2026-10-30",
+          "precision": "day",
+          "label": "30 października 202618:25 · według relacji",
+          "note": "Grupowanie wpisu w Monitorze; nie oznacza daty każdego opisanego zdarzenia ani godziny publikacji."
+        }
+      ],
+      "source_ids": [
+        "src-91f77ff193e537d4",
+        "src-8a1fb560e7154fa4"
+      ],
+      "relations": [
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-trybunal-konstytucyjny",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#oswiadczenie-profil",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      },
+      "source_label": "Stanowisko strony sporu"
+    },
+    {
+      "id": "tk-opinia-matczak",
+      "type": "opinion",
+      "title": "Matczak kwestionuje podstawę zarządzeń",
+      "epistemic": "attributed_interpretation",
+      "content": [
+        "Profesor podważył możliwość uruchomienia zastępstwa i zastosowania przepisów o przerwie w czynnościach w tej sytuacji. To jego ocena prawna."
+      ],
+      "dates": [
+        {
+          "role": "monitor_timeline_bucket",
+          "value": "2026-10-30",
+          "precision": "day",
+          "label": "30 października 2026Godzina wypowiedzi nieustalona",
+          "note": "Grupowanie wpisu w Monitorze; nie oznacza daty każdego opisanego zdarzenia ani godziny publikacji."
+        }
+      ],
+      "source_ids": [
+        "src-702fade7effee114"
+      ],
+      "relations": [
+        {
+          "type": "same_subject_as",
+          "target_id": "tk-ocena-matczak",
+          "basis": "same_person_source_and_opinion_not_two_independent_confirmations"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#opinia-matczak",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      },
+      "source_label": "Opinia eksperta"
+    },
+    {
+      "id": "tk-ocena-tusk",
+      "type": "position",
+      "title": "Donald Tusk",
+      "epistemic": "attributed_interpretation",
+      "content": [
+        "Premier krytykował działania przeciwników zmian w TK i odrzucał kompromis z tym, co określał jako bezprawie i przemoc. Jest to ocena przedstawiona w jego wystąpieniu."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-0cf6740e592b7fb6"
+      ],
+      "relations": [
+        {
+          "type": "comments_on",
+          "target_id": "tk-oredzie-premiera",
+          "basis": "nested_assessment_in_monitor"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-donald-tusk",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-trybunal-konstytucyjny",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#ocena-tusk",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      },
+      "source_label": "Stanowisko strony"
+    },
+    {
+      "id": "tk-ocena-siedmiu",
+      "type": "position",
+      "title": "Siedmiu sygnatariuszy oświadczenia",
+      "epistemic": "attributed_interpretation",
+      "content": [
+        "Sygnatariusze ocenili piątkowe wydarzenia jako bezprawne i zaapelowali do organów państwa oraz sił politycznych o szybkie rozwiązanie sytuacji z poszanowaniem zasad demokratycznego państwa prawnego."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-5f1a755a2b3daae0"
+      ],
+      "relations": [
+        {
+          "type": "comments_on",
+          "target_id": "tk-apel-siedmiu",
+          "basis": "nested_assessment_in_monitor"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#ocena-siedmiu",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      },
+      "source_label": "Stanowisko strony · 31 października"
+    },
+    {
+      "id": "tk-ocena-korwin-praca",
+      "type": "position",
+      "title": "Anna Korwin-Piotrowska",
+      "epistemic": "attributed_interpretation",
+      "content": [
+        "Sędzia uzasadniała czasowe ograniczenie pracy kancelarii i biura potrzebą zapewnienia bezpieczeństwa. Powołała się na naruszenia porządku i wejście do budynku osób, które uznała za nieuprawnione."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-df3b47a45c144654"
+      ],
+      "relations": [
+        {
+          "type": "comments_on",
+          "target_id": "tk-oswiadczenie-31",
+          "basis": "nested_assessment_in_monitor"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-anna-korwin-piotrowska",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#ocena-korwin-praca",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      },
+      "source_label": "Stanowisko strony"
+    },
+    {
+      "id": "tk-ocena-zgromadzenie-swieczkowski",
+      "type": "position",
+      "title": "Bogdan Święczkowski",
+      "epistemic": "attributed_interpretation",
+      "content": [
+        "Według relacji „Faktu” zapowiedział, że sędziowie, których uznaje za legalnie sprawujących urząd, nie wezmą udziału w zgromadzeniu 3 listopada. Kwestionował status planowanego spotkania. To zapowiedź przyszłego zachowania."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-1cf32f789a155bf1"
+      ],
+      "relations": [
+        {
+          "type": "comments_on",
+          "target_id": "tk-zgromadzenie",
+          "basis": "nested_assessment_in_monitor"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-bogdan-swieczkowski",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#ocena-zgromadzenie-swieczkowski",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      },
+      "source_label": "Stanowisko strony · 31 października"
+    },
+    {
+      "id": "tk-ocena-berek",
+      "type": "position",
+      "title": "Maciej Berek",
+      "epistemic": "attributed_interpretation",
+      "content": [
+        "Berek opublikował nagranie sprzed wejścia i zarzucił prezydentowi fizyczny atak na sędziów."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-6c259c7baf836951"
+      ],
+      "relations": [
+        {
+          "type": "comments_on",
+          "target_id": "tk-wizyta-prezydenta",
+          "basis": "nested_assessment_in_monitor"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-maciej-berek",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#ocena-berek",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      },
+      "source_label": "Relacja uczestnika"
+    },
+    {
+      "id": "tk-ocena-leskiewicz",
+      "type": "position",
+      "title": "Rafał Leśkiewicz",
+      "epistemic": "attributed_interpretation",
+      "content": [
+        "Rzecznik przedstawił odmienną wersję. Według niego osoby stojące w drzwiach próbowały uniemożliwić prezydentowi wejście i naruszyły jego nietykalność."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-6c259c7baf836951"
+      ],
+      "relations": [
+        {
+          "type": "comments_on",
+          "target_id": "tk-wizyta-prezydenta",
+          "basis": "nested_assessment_in_monitor"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-rafal-leskiewicz",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#ocena-leskiewicz",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      },
+      "source_label": "Stanowisko rzecznika prezydenta"
+    },
+    {
+      "id": "tk-ocena-matczak",
+      "type": "opinion",
+      "title": "Prof. Marcin Matczak",
+      "epistemic": "attributed_interpretation",
+      "content": [
+        "Wydział Prawa i Administracji Uniwersytetu Warszawskiego",
+        "Kwestionuje podstawę prawną działań, wskazując na wątpliwości co do zastępstwa prezesa i zastosowania przepisów o odsunięciu od czynności."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-702fade7effee114"
+      ],
+      "relations": [
+        {
+          "type": "comments_on",
+          "target_id": "tk-zarzadzenia",
+          "basis": "nested_assessment_in_monitor"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-marcin-matczak",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#ocena-matczak",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      },
+      "source_label": "Opinia prawna"
+    },
+    {
+      "id": "tk-ocena-korwin",
+      "type": "position",
+      "title": "Anna Korwin-Piotrowska",
+      "epistemic": "attributed_interpretation",
+      "content": [
+        "Sędzia TK; jej uprawnienie do zastępowania prezesa jest kwestionowane.",
+        "Wyjaśniała, że zarządziła przerwę w czynnościach oraz że dalszą oceną powinien zająć się sąd dyscyplinarny. Relacja opisuje stanowisko strony sporu."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-b4586a84e2d9655c"
+      ],
+      "relations": [
+        {
+          "type": "comments_on",
+          "target_id": "tk-zarzadzenia",
+          "basis": "nested_assessment_in_monitor"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-anna-korwin-piotrowska",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-trybunal-konstytucyjny",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#ocena-korwin",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      },
+      "source_label": "Stanowisko strony"
+    },
+    {
+      "id": "tk-ocena-stepien",
+      "type": "opinion",
+      "title": "Jerzy Stępień",
+      "epistemic": "attributed_interpretation",
+      "content": [
+        "Były prezes TK dopuszczał możliwość istnienia podstawy prawnej do zarządzenia przerwy w czynnościach Bogdana Święczkowskiego. Swoją ocenę określił jako teoretyczną."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-53e298b8c0c9666c"
+      ],
+      "relations": [
+        {
+          "type": "comments_on",
+          "target_id": "tk-zarzadzenia",
+          "basis": "nested_assessment_in_monitor"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-jerzy-stepien",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-trybunal-konstytucyjny",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#ocena-stepien",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      },
+      "source_label": "Opinia prawna"
+    },
+    {
+      "id": "tk-ocena-zalesny",
+      "type": "opinion",
+      "title": "Prof. Jacek Zaleśny",
+      "epistemic": "attributed_interpretation",
+      "content": [
+        "Zdaniem konstytucjonalisty przepisy nie przewidują mechanizmu, na który powołała się Anna Korwin-Piotrowska, wydając zarządzenia."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-53e298b8c0c9666c"
+      ],
+      "relations": [
+        {
+          "type": "comments_on",
+          "target_id": "tk-zarzadzenia",
+          "basis": "nested_assessment_in_monitor"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-anna-korwin-piotrowska",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-jacek-zalesny",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#ocena-zalesny",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      },
+      "source_label": "Opinia prawna"
+    },
+    {
+      "id": "tk-ocena-radajewski",
+      "type": "opinion",
+      "title": "Dr Mateusz Radajewski",
+      "epistemic": "attributed_interpretation",
+      "content": [
+        "Autor ocenił, że zarządzenia nie wywołały skutków prawnych i że Bogdan Święczkowski nadal pełni funkcję prezesa TK."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-a360019f34a6ddcb"
+      ],
+      "relations": [
+        {
+          "type": "comments_on",
+          "target_id": "tk-zarzadzenia",
+          "basis": "nested_assessment_in_monitor"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-bogdan-swieczkowski",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-mateusz-radajewski",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-trybunal-konstytucyjny",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#ocena-radajewski",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      },
+      "source_label": "Opinia prawna"
+    },
+    {
+      "id": "tk-ocena-byli-prezesi",
+      "type": "opinion",
+      "title": "Marek Safjan, Jerzy Stępień, Bohdan Zdziennicki i Andrzej Zoll",
+      "epistemic": "attributed_interpretation",
+      "content": [
+        "Czterej byli prezesi TK poparli działania sędziów zmierzające, w ich ocenie, do przywrócenia prawidłowego funkcjonowania Trybunału. Wskazali potrzebę zwołania Zgromadzenia Ogólnego i rozpatrzenia wniosków o uchylenie immunitetów Święczkowskiemu i Sochańskiemu. To stanowisko sygnatariuszy, nie rozstrzygnięcie skuteczności zarządzeń."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-e9049d7d4e8288f8"
+      ],
+      "relations": [
+        {
+          "type": "comments_on",
+          "target_id": "tk-zarzadzenia",
+          "basis": "nested_assessment_in_monitor"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-jerzy-stepien",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-marek-safjan",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-bohdan-zdziennicki",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-andrzej-zoll",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-trybunal-konstytucyjny",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#ocena-byli-prezesi",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      },
+      "source_label": "Wspólna ocena prawna · 31 października"
+    },
+    {
+      "id": "tk-ocena-mcgrath",
+      "type": "position",
+      "title": "Michael McGrath",
+      "epistemic": "attributed_interpretation",
+      "content": [
+        "W oświadczeniu przekazanym PAP komisarz UE ds. praworządności podkreślił, że TK powinien działać zgodnie z polską konstytucją i orzecznictwem TSUE. Zapewnił, że Komisja Europejska śledzi wydarzenia, i odwołał się do stanowiska Komisji Weneckiej o kompetencji Sejmu do wyboru sędziów. Jest to stanowisko komisarza dotyczące kryzysu; nie przesądza legalności poszczególnych zarządzeń."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-e8b9e725bbe55b55"
+      ],
+      "relations": [
+        {
+          "type": "comments_on",
+          "target_id": "tk-zarzadzenia",
+          "basis": "nested_assessment_in_monitor"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-michael-mcgrath",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-trybunal-konstytucyjny",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-sejm",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-komisja-europejska",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-trybunal-sprawiedliwosci-unii-europejskiej",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-komisja-wenecka",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#ocena-mcgrath",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      },
+      "source_label": "Stanowisko komisarza UE · 31 października"
+    },
+    {
+      "id": "tk-ocena-chlebny",
+      "type": "position",
+      "title": "Prof. Jacek Chlebny",
+      "epistemic": "attributed_interpretation",
+      "content": [
+        "Prezes NSA wyraził zastrzeżenia wobec obecności policji wokół TK i uniemożliwienia wejścia jego prezesowi oraz wiceprezesowi. Wezwał do kompromisu i działań zgodnych z konstytucyjnymi zasadami. Krytycznie odniósł się także do niepublikowania orzeczeń TK. Oświadczenie wyraża ocenę prezesa NSA."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-33d12ab5d5ebd858"
+      ],
+      "relations": [
+        {
+          "type": "comments_on",
+          "target_id": "tk-policja",
+          "basis": "nested_assessment_in_monitor"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-jacek-chlebny",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-trybunal-konstytucyjny",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-naczelny-sad-administracyjny",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#ocena-chlebny",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      },
+      "source_label": "Stanowisko prezesa NSA · 31 października"
+    }
+  ]
+}
