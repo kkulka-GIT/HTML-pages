@@ -92,3 +92,22 @@ Schemat nie kontroluje globalnych odwołań — robią to dodatkowe asercje. Nie
 ## Izolacja eksperymentu
 
 Pliki utworzono wyłącznie w `knowledge/monitor-tk/` na `main`. Nie zmieniono `knowledge/d1-import-lab.json`, workflow, gałęzi `monitor-tk`, Sites ani D1. Nie wywołano endpointu importu. Istniejący workflow importu ma filtr wyłącznie na plik testowy; ten katalog nie jest jego wejściem. Publikacja tych plików w GitHub nie jest wdrożeniem modelu do usług.
+
+
+## Plan przyszłych aktualizacji i migracji — notatka robocza (1 listopada 2026)
+
+**Decyzja na obecnym etapie:** Monitor TK pozostaje głównym, redakcyjnie aktualizowanym źródłem opublikowanej treści. Kafelki Wiedzy są eksperymentalnym, pochodnym indeksem wersji Monitora, a nie drugim niezależnym systemem redakcyjnym. Nie zmieniać z tego powodu bieżącego promptu aktualizacji strony, publikacji Sites ani istniejącego importu D1.
+
+**Zadanie do rozważenia po każdej kolejnej aktualizacji Monitora (jeszcze nie automatyzować):**
+- Odczytać konkretną, zakończoną wersję Monitora oraz jej identyfikator/commit, czas aktualizacji i dostępne źródła.
+- Porównać ją z wersją Monitora, na podstawie której powstał poprzedni zestaw JSON. Ustalić, które fragmenty dodano, poprawiono, usunięto lub przeniesiono.
+- Na tej podstawie zaproponować dodanie, zmianę, oznaczenie jako nieaktualne albo zachowanie kafelków. Nie wykonywać ponownego niezależnego researchu w celu „uzupełnienia” JSON-ów. Każde nowe twierdzenie musi wynikać z określonego fragmentu wersji Monitora; brakujące informacje oznaczać jako brak, a nie zgadywać.
+- Zachować stabilne ID, źródłowe lokalizatory fragmentów, identyfikator snapshotu, historię zmian i powiązania. Przy podziale/scaleniu zapisać jawne następstwo identyfikatorów; nie usuwać po cichu historii korekt.
+- Wygenerować raport różnic: dodane/zmienione/wycofane kafelki, zmiany relacji i źródeł, nieodwzorowane fragmenty strony, miejsca niejednoznaczne wymagające review. Uruchomić walidację schematu i odwołań oraz kontrolę zgodności z opublikowaną wersją Monitora.
+- Dopiero po review zdecydować, czy przyjąć nową wersję JSON. Samo opublikowanie Monitora nie oznacza zatwierdzenia nowych kafelków.
+
+**Granica zgodności:** nie oczekujemy identycznego brzmienia narracji i pól strukturalnych, ale wymagamy identyfikowalnego pochodzenia każdego twierdzenia z konkretnej wersji Monitora. Nie można zagwarantować zgodności semantycznej samą walidacją JSON; potrzebna jest kontrola merytoryczna. Indeks nie powinien zawierać informacji wykraczających poza treść i źródła przypisane do tej wersji Monitora.
+
+**Przygotowanie do ewentualnej migracji:** zachować manifesty wersji, mapę identyfikatorów, historię zmian, reguły ekstrakcji, wyniki walidacji i listę nierozstrzygniętych problemów. Nie zakładać dziś, że JSON stanie się źródłem strony lub że jego schemat odpowiada przyszłemu D1. Przed migracją wykonać próbę na jednej aktualizacji i sprawdzić odtwarzalność, kompletność oraz zgodność. Migracja wymaga odrębnej decyzji i planu, nie wynika automatycznie z tej notatki.
+
+**Status:** propozycja procesu do przetestowania; bez zmian w Actions, Sites, D1 i bieżącym procesie publikacji.
