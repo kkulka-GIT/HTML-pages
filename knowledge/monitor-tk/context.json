@@ -1,0 +1,261 @@
+{
+  "model_version": "0.1-experiment",
+  "tiles": [
+    {
+      "id": "tk-dokumenty-wybor-sedziego-tk",
+      "type": "document",
+      "title": "Wybór sędziego TK",
+      "epistemic": "document_description",
+      "content": [
+        "Akt urzędowy dostępny w ISAP, materiał kontekstowy poprzedzający monitoring."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-e00eeff4efaae3b4"
+      ],
+      "relations": [
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-trybunal-konstytucyjny",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#dokumenty article:nth-of-type(1)",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      },
+      "source_label": "Uchwała Sejmu · 13 marca 2026"
+    },
+    {
+      "id": "tk-dokumenty-slubowanie-w-sejmie",
+      "type": "document",
+      "title": "Ślubowanie w Sejmie",
+      "epistemic": "document_description",
+      "content": [
+        "Oficjalny opis uroczystości. Znaczenie prawne sposobu ślubowania pozostaje sporne."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-76d4ff4a27c3e4e2"
+      ],
+      "relations": [
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-sejm",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#dokumenty article:nth-of-type(2)",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      },
+      "source_label": "Komunikat Sejmu · 9 kwietnia 2026"
+    },
+    {
+      "id": "tk-dokumenty-przerwa-w-czynnosciach",
+      "type": "document",
+      "title": "Przerwa w czynnościach",
+      "epistemic": "document_description",
+      "content": [
+        "Adresy skanów wskazuje wykaz źródeł serwisu „Trybunał wyjaśniony”. Przy tym przeglądzie nie potwierdziliśmy bezpośredniego odczytu plików z serwera TK.",
+        "Bogdan Święczkowski · skan zarządzenia (PDF)Bartłomiej Sochański · skan zarządzenia (PDF)"
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-6978647f842cddac",
+        "src-14e6311a0bebe8b5",
+        "src-b70785e6e6330be5",
+        "src-b57399da28d45f1f"
+      ],
+      "relations": [
+        {
+          "type": "mentions",
+          "target_id": "tk-person-bogdan-swieczkowski",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-bartlomiej-sochanski",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-trybunal-konstytucyjny",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#dokumenty article:nth-of-type(3)",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      },
+      "source_label": "Zarządzenia · 30 października 2026"
+    },
+    {
+      "id": "tk-spor-slubowanie-i-status",
+      "type": "question",
+      "title": "Ślubowanie i status",
+      "epistemic": "open_question",
+      "content": [
+        "Jakie skutki prawne ma ślubowanie złożone w Sejmie bez odebrania go przez prezydenta? Strony odmiennie oceniają status wybranych osób."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-76d4ff4a27c3e4e2"
+      ],
+      "relations": [
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-sejm",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#spor article:nth-of-type(1)",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-spor-zastepstwo-i-zarzadzenia",
+      "type": "question",
+      "title": "Zastępstwo i zarządzenia",
+      "epistemic": "open_question",
+      "content": [
+        "Spór obejmuje uprawnienie do zastępowania prezesa oraz możliwość zastosowania art. 130 Prawa o ustroju sądów powszechnych przez odesłania ustawowe. To przedstawiana podstawa, której zastosowanie jest kwestionowane."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-43fe12cba54608ed"
+      ],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#spor article:nth-of-type(2)",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-spor-skutki-dla-dzialania-tk",
+      "type": "question",
+      "title": "Skutki dla działania TK",
+      "epistemic": "open_question",
+      "content": [
+        "Otwarte pozostaje, jak spór o uprawnienia do kierowania Trybunałem wpłynie na jego bieżącą pracę i postępowania."
+      ],
+      "dates": [],
+      "source_ids": [
+        "src-b4586a84e2d9655c"
+      ],
+      "relations": [
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-trybunal-konstytucyjny",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#spor article:nth-of-type(3)",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      }
+    },
+    {
+      "id": "tk-najnowsze",
+      "type": "summary",
+      "title": "Stan na 1 listopada w skrócie",
+      "epistemic": "editorial_synthesis",
+      "content": [
+        "W piątek 30 października Anna Korwin-Piotrowska ogłosiła miesięczną przerwę w czynnościach Bogdana Święczkowskiego i Bartłomieja Sochańskiego. Na profilu TK zakwestionowano jej uprawnienia. Policja zabezpieczała teren wokół siedziby.",
+        "W nocy do Trybunału przybył prezydent Karol Nawrocki. Rano Korwin-Piotrowska ogłosiła decyzje o organizacji pracy sędziów i kancelarii. O godz. 13.00 rozpoczęły się konsultacje w Pałacu Prezydenckim. Według „Dziennika Gazety Prawnej” prezydent rozmawiał z przedstawicielami sześciu ugrupowań.",
+        "Zmiany od ostatniej aktualizacji: uzupełniono nocną wizytę o relację dotyczącą kluczy (zgłoszenie TK-0001), dodano stanowisko Michaela McGratha i wspólne oświadczenie czterech byłych prezesów TK. Materiały dotyczą 31 października; nie są nowymi zdarzeniami z 1 listopada."
+      ],
+      "dates": [],
+      "source_ids": [],
+      "relations": [
+        {
+          "type": "references",
+          "target_id": "tk-zarzadzenia",
+          "basis": "explicit_monitor_link"
+        },
+        {
+          "type": "references",
+          "target_id": "tk-wizyta-prezydenta",
+          "basis": "explicit_monitor_link"
+        },
+        {
+          "type": "references",
+          "target_id": "tk-oswiadczenie-31",
+          "basis": "explicit_monitor_link"
+        },
+        {
+          "type": "references",
+          "target_id": "tk-apel-siedmiu",
+          "basis": "explicit_monitor_link"
+        },
+        {
+          "type": "references",
+          "target_id": "tk-oredzie-premiera",
+          "basis": "explicit_monitor_link"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-anna-korwin-piotrowska",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-person-karol-nawrocki",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        },
+        {
+          "type": "mentions",
+          "target_id": "tk-institution-trybunal-konstytucyjny",
+          "basis": "explicit_name_or_abbreviation_in_text"
+        }
+      ],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#najnowsze",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      },
+      "source_label": "Od piątku wieczorem do soboty wieczorem"
+    },
+    {
+      "id": "tk-metodologia",
+      "type": "methodology",
+      "title": "Jak czytać ten serwis?",
+      "epistemic": "editorial_synthesis",
+      "content": [
+        "Oddzielamy relację o zdarzeniu od opinii i oceny prawnej. Priorytet mają źródła pierwotne; tam, gdzie nie udało się ich bezpośrednio potwierdzić, wskazujemy relację prasową. Godzina publikacji nie jest automatycznie godziną zdarzenia.",
+        "Biblioteka zawiera wybrane dokumenty. Przy każdym wpisie można sprawdzić źródła jego ustaleń."
+      ],
+      "dates": [],
+      "source_ids": [],
+      "relations": [],
+      "provenance": {
+        "page_url": "https://monitor-tk-2026.kkulka.chatgpt.site/",
+        "selector": "#metodologia",
+        "snapshot": "monitor-2026-11-01",
+        "method": "verbatim_paragraphs_from_monitor",
+        "independent_fact_check": false
+      }
+    }
+  ]
+}
