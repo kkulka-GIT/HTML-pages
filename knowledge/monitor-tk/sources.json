@@ -1,0 +1,428 @@
+{
+  "model_version": "0.1-experiment",
+  "sources": [
+    {
+      "id": "src-0cf6740e592b7fb6",
+      "url": "https://redakcja.www.gov.pl/web/premier/oredzie-premiera-donalda-tuska2",
+      "labels": [
+        "KPRM · 31.10",
+        "Pełna treść orędzia · KPRM · 31.10"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-239e4d0fc7746cf2",
+      "url": "https://www.rp.pl/polityka/art45426091-oredzie-donalda-tuska-w-pewnych-sprawach-nie-moze-byc-kompromisu",
+      "labels": [
+        "Rzeczpospolita · 31.10, 20.01"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-5f1a755a2b3daae0",
+      "url": "https://www.rp.pl/polityka/art45425881-sedziowie-tk-zabrali-glos-mowia-o-bezprawnych-dzialaniach-apel-do-wladz-i-politykow",
+      "labels": [
+        "Rzeczpospolita / PAP · 31.10, 17.29",
+        "Treść i lista sygnatariuszy w relacji PAP"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-633d8b4162cfcee2",
+      "url": "https://300polityka.pl/pl/live/2026-10-31/calkowicie-bezprawne-jest-oswiadczenie-7-sedziow-tk",
+      "labels": [
+        "300polityka · 31.10"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-fb483c72397f9b4b",
+      "url": "https://wiadomosci.wp.pl/swieczkowski-wydal-zarzadzenie-anulowal-dokument-korwin-piotrowskiej-7345966093789632a",
+      "labels": [
+        "WP · 31.10, 13.19"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-60702c33cef83dcd",
+      "url": "https://wiadomosci.gazeta.pl/polityka/7,198012,33109478,swieczkowski-odpowiada-po-odsunieciu-od-obowiazkow-wydal-zarzadzenie.html",
+      "labels": [
+        "Gazeta.pl · 31.10, 14.46"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-64eeb687550f989b",
+      "url": "https://trybunal.gov.pl/wiadomosci/uroczystosci-spotkania-wyklady/art/zarzadzenie-dot-organizacji-pracy-tk",
+      "labels": [
+        "Zarządzenie dotyczące organizacji pracy TK"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-c181c14a2e803947",
+      "url": "https://www.rmf24.pl/fakty/polska/news-wykonywanie-zadan-poza-siedziba-trybunalu-anna-korwin-piotro,nIdn,1024205",
+      "labels": [
+        "RMF24 · 31.10, 11:10"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-d46a7fb59c85c8b5",
+      "url": "https://wiadomosci.gazeta.pl/polska/7,198072,33109323,jest-nowe-oswiadczenie-sedzi-korwin-piotrowskiej-zawieszam.html",
+      "labels": [
+        "Gazeta.pl · 31.10, 11:17"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-7b8527921a210c5e",
+      "url": "https://wiadomosci.onet.pl/kraj/nowe-oswiadczenie-na-stronie-trybunalu-konstytucyjnego-kieruje-pracami-tk/v1162wl",
+      "labels": [
+        "Onet · 31.10, 11:01 ↗"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-27d0dfe780a5a342",
+      "url": "https://wiadomosci.onet.pl/kraj/swieczkowski-z-zakazem-wstepu-do-tk-komunikat-zastepujacej-prezesa-tk/mlshgrj",
+      "labels": [
+        "PAP / Onet · 1.11, 01.02"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-354ea5067496a9db",
+      "url": "https://pl.euronews.com/2026/10/31/konflikt-o-trybunal-konstytucyjny-o-co-chodzi-w-sporze",
+      "labels": [
+        "Euronews · 31.10, 10:01 ↗"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-d7b16c6be7024f36",
+      "url": "https://www.onet.pl/informacje/onetwiadomosci/swieczkowski-ostrzega-funkcjonariuszy-poniosa-bardzo-surowa-odpowiedzialnosc/sg6l02w,79cfc278",
+      "labels": [
+        "Onet za Polsat News · 31.10, 17.47"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-bf61112da76ce90f",
+      "url": "https://trybunal.gov.pl/fileadmin/content/uroczystosci_spotkania_wizyty/2026/2026_10_30/zarzadzenie_1_2026.pdf",
+      "labels": [
+        "Zarządzenie nr 1/2026 z 30.10 · PDF"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-93223712ed0836d9",
+      "url": "https://www.niedziela.pl/artykul/129409/Szefernaker-prezydent-rozpoczyna-serie-spotkan-z-liderami-srodowisk",
+      "labels": [
+        "PAP · 31.10, 11.21"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-62239db661ed88ef",
+      "url": "https://www.rp.pl/polityka/art45425161-kryzys-w-trybunale-polska-2050-idzie-do-prezydenta-lewica-nie-co-zrobi-psl",
+      "labels": [
+        "Rzeczpospolita · 31.10, aktualizacja 11.02"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-73111050605ff18f",
+      "url": "https://wilno.tvp.pl/96234544/w-palacu-prezydenckim-trwaja-rozmowy-z-liderami-srodowisk-parlamentarnych",
+      "labels": [
+        "TVP · 31.10, 15.00"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-2f20f6bcb4a9bd05",
+      "url": "https://edgp.gazetaprawna.pl/kraj/artykuly/11339028,od-deeskalacji-po-zmiane-rzadu-co-politycy-mowili-po-konsultacjach.html",
+      "labels": [
+        "Dziennik Gazeta Prawna · 31.10"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-f68509ad8e4606f5",
+      "url": "https://www.prezydent.pl/aktualnosci/wypowiedzi-prezydenta-rp/wystapienia/oswiadczenie-prezydenta-rzeczypospolitej-polskiej-karola-nawrockiego,129314",
+      "labels": [
+        "Oświadczenie prezydenta · 31.10"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-bbc754a92999ee86",
+      "url": "https://polonia.tvp.pl/polska/sytuacja-wokol-trybunalu-konstytucyjnego%2C96230774",
+      "labels": [
+        "TVP Polonia / IAR · 31.10, 04:39 ↗"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-1523911d991ac3a3",
+      "url": "https://wiadomosci.onet.pl/kraj/o-co-chodzi-z-protestem-przed-trybunalem-konstytucyjnym-wyjasniamy/9tnl4qc",
+      "labels": [
+        "Onet · 31.10, 06:01 ↗"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-ac719e040f6e8c14",
+      "url": "https://wiadomosci.wp.pl/prezydent-prosi-o-klucze-nowe-wideo-z-trybunalu-konstytucyjnego-7346139325565376a",
+      "labels": [
+        "WP · opis i nagranie · 1.11, 01:22"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-5486521b8c6335dc",
+      "url": "https://wiadomosci.wp.pl/swieczkowski-przeszedl-na-teren-tk-przecieto-zabezpieczenie-7345728429181408a",
+      "labels": [
+        "WP · 30.10, 21.09"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-7442472d2fd22229",
+      "url": "https://www.onet.pl/informacje/onetwiadomosci/bogdan-swieczkowski-przed-siedziba-trybunalu-konstytucyjnego-nie-zostal-wpuszczony-do/1lflg5y,79cfc278",
+      "labels": [
+        "Onet · aktualizacja 30.10, 20.52"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-91f77ff193e537d4",
+      "url": "https://www.konstytucjarp.pl/na-profilu-tk-gov-pl-w-serwisie-x-zamieszczono-wpis-o-bezprawnym-przejeciu-strony-internetowej-tk-2026-10-30/",
+      "labels": [
+        "Konstytucja RP · 30.10 ↗"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-8a1fb560e7154fa4",
+      "url": "https://www.rp.pl/sady-i-trybunaly/art45423901-bezprawne-przejecie-strony-internetowej-tk-trybunal-z-nowym-prezesem",
+      "labels": [
+        "Rzeczpospolita · 30.10, aktualizacja 31.10 ↗"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-fbc7f00e7c80fdf0",
+      "url": "https://trybunal.gov.pl/fileadmin/content/uroczystosci_spotkania_wizyty/2026/2026_10_30/komunikat.pdf",
+      "labels": [
+        "Komunikat o wpływie wniosków · 31.10 · PDF"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-702fade7effee114",
+      "url": "https://www.rmf24.pl/fakty/polska/news-burza-wokol-trybunalu-konstytucyjnego-prof-marcin-matczak-ni%2CnIdn%2C1024178",
+      "labels": [
+        "RMF24 · publikacja 30.10, 23:10 ↗",
+        "Rozmowa w RMF24 ↗"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-316d92741c54b6f6",
+      "url": "https://polskieradio24.pl/polska/korwin-piotrowska-wydalam-decyzje-o-zawieszeniu-swieczkowskiego-i-sochanskiego",
+      "labels": [
+        "Polskie Radio 24 · 30.10, 20:38 ↗"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-b57399da28d45f1f",
+      "url": "https://www.rp.pl/sady-i-trybunaly/art45423931-co-dzieje-sie-w-trybunale-konstytucyjnym-interwencja-policji-i-zamach-stanu-krok-po-kroku",
+      "labels": [
+        "Rzeczpospolita · 30.10, 19:59; aktualizacja 31.10 ↗",
+        "Relacja Rzeczpospolitej ↗"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-37bf3a795f4c84c5",
+      "url": "https://ksp.policja.gov.pl/pl/dzialania/aktualnosci/69987,Komunikat-dotyczacy-dzialan-Policji.html",
+      "labels": [
+        "Komunikat KSP · 30.10"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-43fe12cba54608ed",
+      "url": "https://www.rp.pl/sady-i-trybunaly/art45423951-premier-komentuje-sytuacje-w-tk-prezydent-wrocil-do-kraju-zgromadzenie-ogolne-sedziow-3-listopada",
+      "labels": [
+        "Rzeczpospolita · 30.10, 19:08; aktualizacja 31.10 ↗",
+        "Relacja z argumentami ↗"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-8f4e0488f0286bb0",
+      "url": "https://www.polskieradio.pl/399/7975/Artykul/3747987,kryzys-wokol-trybunalu-konstytucyjnego-o-co-chodzi-w-sporze-ktory-trwa-od-lat-explainer",
+      "labels": [
+        "Polskie Radio · 31.10, 15.39"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-df3b47a45c144654",
+      "url": "https://www.rp.pl/sady-i-trybunaly/art45425341-sedzia-anna-korwin-piotrowska-zawiesila-wykonywanie-obowiazkow-pracownikom-i-zamknela-wstep-do-tk",
+      "labels": [
+        "Komunikat przytoczony przez „Rzeczpospolitą” · 31.10 ↗"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-1cf32f789a155bf1",
+      "url": "https://www.fakt.pl/polityka/bogdan-swieczkowski-przed-tk-padly-zagadkowe-slowa/et337p6",
+      "labels": [
+        "Fakt · 31.10"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-6c259c7baf836951",
+      "url": "https://wiadomosci.radiozet.pl/polska/goraco-w-tk-wg-macieja-berka-prezydent-nawrocki-zaatakowal-fizycznie-sedziow",
+      "labels": [
+        "Radio ZET · 31.10 ↗"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-b4586a84e2d9655c",
+      "url": "https://www.rp.pl/polityka/art45424161-anna-korwin-piotrowska-wyjasnia-co-dalej-z-wladzami-tk-decyzje-podejmie-sad-dyscyplinarny",
+      "labels": [
+        "Rzeczpospolita / PAP · 30.10, 19:53; akt. 31.10 ↗",
+        "Relacja o dalszej procedurze ↗"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-53e298b8c0c9666c",
+      "url": "https://www.rp.pl/sady-i-trybunaly/art45424221-odsuniecie-prezesa-tk-bez-podstawy-prawnej-prawnicy-sa-podzieleni",
+      "labels": [
+        "Rozmowa z „Rzeczpospolitą” · 30.10 ↗"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-a360019f34a6ddcb",
+      "url": "https://www.rp.pl/opinie-prawne/art45425551-konstytucjonalista-nie-mozna-zarzadzic-przerwy-w-czynnosciach-prezesa-tk",
+      "labels": [
+        "Tekst autora w „Rzeczpospolitej” · 31.10 ↗"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-e9049d7d4e8288f8",
+      "url": "https://monitorkonstytucyjny.eu/archiwa/35302",
+      "labels": [
+        "Pełne oświadczenie · Monitor Konstytucyjny · 31.10"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-e8b9e725bbe55b55",
+      "url": "https://powiempolsce.pl/articles/article?id=79815&slug=komisarz-mcgrath-dla-pap-tk-musi-miec-mozliwosc-funkcjonowania-zgodnie-z-konstytucja-i-orzecznictwem-tsue",
+      "labels": [
+        "PAP / Powiem Polsce · 31.10, 23:00"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-33d12ab5d5ebd858",
+      "url": "https://www.nsa.gov.pl/aktualnosci/wydarzenia/oswiadczenie-prezesa-nsa-w-zwiazku-z-wydarzeniami-w-dniu-30-pazdziernika-2026-r-w-trybunale-konstytucyjnym/",
+      "labels": [
+        "Oświadczenie na stronie NSA · 31.10"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-e00eeff4efaae3b4",
+      "url": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WMP20260000302",
+      "labels": [
+        "Otwórz akt w ISAP ↗"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-76d4ff4a27c3e4e2",
+      "url": "https://www.sejm.gov.pl/sejm10.nsf/komunikat.xsp?documentId=9D046A3DC4944B36C1258DD4003CB412",
+      "labels": [
+        "Otwórz komunikat Sejmu ↗",
+        "Komunikat Sejmu ↗"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-6978647f842cddac",
+      "url": "https://trybunal.gov.pl/fileadmin/content/uroczystosci_spotkania_wizyty/2026/2026_10_30/Z2.pdf",
+      "labels": [
+        "Bogdan Święczkowski · skan zarządzenia (PDF)"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-14e6311a0bebe8b5",
+      "url": "https://trybunal.gov.pl/fileadmin/content/uroczystosci_spotkania_wizyty/2026/2026_10_30/Z1.pdf",
+      "labels": [
+        "Bartłomiej Sochański · skan zarządzenia (PDF)"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-b70785e6e6330be5",
+      "url": "https://trybunal.net/pazdziernik-2026/?poziom=2",
+      "labels": [
+        "Wykaz źródeł i opis obu zarządzeń"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-4f290b280fbc0d5d",
+      "url": "https://eli.gov.pl/eli/DU/2015/2129/ogl",
+      "labels": [
+        "Wyrok TK K 34/15 w Dzienniku Ustaw"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-4421e66caa9c8769",
+      "url": "https://hudoc.echr.coe.int/eng/?i=001-210065",
+      "labels": [
+        "Wyrok ETPC w sprawie Xero Flor, skarga 4907/18"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-3677c0592b53d6b5",
+      "url": "https://www.prezydent.pl/aktualnosci/nominacje/slubowanie-sedziow-trybunalu-konstytucyjnego,118012",
+      "labels": [
+        "Ślubowanie 1 kwietnia"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-c4b0a8753e2eb6e3",
+      "url": "https://www.sejm.gov.pl/sejm10.nsf/komunikat.xsp?documentId=6B3DF195E108B7FFC1258DD400430C99",
+      "labels": [
+        "Stanowisko strony sejmowej"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    },
+    {
+      "id": "src-21f88109b122d751",
+      "url": "https://www.prezydent.pl/kancelaria/aktywnosc-ministrow/zbigniew-bogucki-prezydent-sklada-wniosek-do-tk-o-rozstrzygniecie-sporu-kompetencyjnego,118358",
+      "labels": [
+        "Stanowisko Kancelarii Prezydenta"
+      ],
+      "verification": "link_preserved_from_monitor_not_independently_verified"
+    }
+  ]
+}
