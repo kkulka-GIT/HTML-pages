@@ -45,6 +45,9 @@ TREŚĆ: zweryfikuj w wiarygodnych źródłach, porównaj z istniejącymi wpisam
 - **Wynik rozpatrzenia:** oczekuje na analizę w Work. Zgłoszenie nie stanowi zgody na publikację.
 
 
+
+- **Przegląd 1 listopada 2026, 17:14 CET:** Porównano pełną treść wersji 19. Stępień, Zaleśny, Radajewski i czterej byli prezesi są już uwzględnieni; zweryfikowano podane źródła. W wersji 20 dodano [Łętowską, WP 30.10, 23:42](https://wiadomosci.wp.pl/prof-letowska-boje-sie-ze-trybunal-nie-odzyska-juz-autorytetu-7345760130017760a), [HFPC za PAP, 31.10, 21:53](https://wiadomosci.onet.pl/kraj/hfpc-kwestionuje-odsuniecie-wladz-tk-wzywa-do-resetu-konstytucyjnego/zhf679q) oraz [Włodzimierza Wróbla, 31.10](https://monitorkonstytucyjny.eu/archiwa/35300). Uzupełniono argument Radajewskiego o art. 130 p.u.s.p. i art. 12 ust. 4 ustawy o organizacji TK. Bezpośredni odczyt HFPC zwrócił 403, jawnie zastosowano relację PAP porównaną z innymi relacjami. Trop Zalasińskiego prowadzi do materiału opublikowanego 30.10 o 08:17, przed wieczornymi zarządzeniami; nie przypisano mu ich oceny. Nie ustalono odrębnej, zweryfikowanej opinii o skuteczności dokumentu Święczkowskiego dotyczącego 3–6 listopada. Status: oczekuje — częściowo opracowane w wersji 20, publikacja wymaga zgody; dalsze badanie wskazanych luk.
+
 ### TK-0003 — Oficjalne potwierdzenie konsultacji prezydenta z ugrupowaniami
 - **Data dodania:** 1 listopada 2026
 - **Typ:** TREŚĆ
@@ -55,6 +58,9 @@ TREŚĆ: zweryfikuj w wiarygodnych źródłach, porównaj z istniejącymi wpisam
 - **Propozycja redakcyjna:** Jeśli wydarzenie już istnieje, uzupełnić je o bezpośredni link do dokumentu prezydenckiego i krótki, rzeczowy wynik konsultacji, bez duplikowania wpisu. Nowy wpis tylko dla istotnego nowego faktu lub dokumentu. Oddzielić fakt spotkań od ocen uczestników.
 - **Wynik rozpatrzenia:** oczekuje na weryfikację podczas aktualizacji w Work. Nie jest to zgoda na publikację.
 
+
+
+- **Przegląd 1 listopada 2026, 17:14 CET:** Odczytano [oficjalny komunikat KPRP z 31.10](https://www.prezydent.pl/aktualnosci/wydarzenia/konsultacje-z-liderami-srodowisk-parlamentarnych,129330). Potwierdza osiem spotkań: PSL, Szymon Hołownia, PiS, Razem, Rozwój Plus, Konfederacja, Demokracja Bezpośrednia i Konfederacja Korony Polskiej. Wersja 19 opisywała sześć środowisk za DGP. W wersji 20 przygotowano widoczne sprostowanie zakresu oraz link urzędowy, w istniejącym wydarzeniu, fragment #wynik-konsultacji. Komunikat nie zawiera wspólnego porozumienia ani uzgodnionego planu. Odczytane nowe stanowiska KPRP z 1.11 także nie potwierdzają takiego wyniku. Status: oczekuje — gotowe w zapisanej wersji 20, do oznaczenia jako uwzględnione po potwierdzonym wdrożeniu.
 
 ### TK-0004 — Podstawa prawna zabezpieczenia siedziby TK i zasady dostępu
 - **Data dodania:** 1 listopada 2026
@@ -67,3 +73,6 @@ TREŚĆ: zweryfikuj w wiarygodnych źródłach, porównaj z istniejącymi wpisam
 - **Oczekiwane sprawdzenie:** Porównać dokumenty i ich daty z aktualną chronologią Monitora, odszukać źródła pierwotne i ewentualne załączniki, zweryfikować twierdzenia bez domniemywania. Wyraźnie oddzielić stanowisko KSP od decyzji/stanowiska sędzi TK. Nie utożsamiać ochrony porządku z prawnym uznaniem kierownictwa instytucji.
 - **Propozycja redakcyjna:** Jeżeli brak tych źródeł w Monitorze, rozważyć uzupełnienie istniejących wydarzeń lub osobny wpis „Policja wyjaśnia podstawy zabezpieczenia siedziby TK”, bez duplikatów. Nie publikować tezy „Policja uznała nowe kierownictwo TK” bez bezpośredniego dowodu.
 - **Wynik rozpatrzenia:** oczekuje na analizę w Work; zgłoszenie nie stanowi zgody na publikację.
+
+
+- **Przegląd 1 listopada 2026, 17:14 CET:** Odczytano [KSP, 30.10](https://ksp.policja.gov.pl/pl/dzialania/aktualnosci/69987,Komunikat-dotyczacy-dzialan-Policji.html). Dokument opisuje dwie korespondencje do KGP, przekazanie informacji do KSP z poleceniem działań i zabezpieczenie terenu zewnętrznego. Nie załącza pism ani polecenia; nie podaje nazwiska sędzi ani konkretnego przepisu jako podstawy zabezpieczenia. Art. 193 k.k. dotyczy wyłącznie czynności wobec zatrzymanych. Nie wyprowadzono z tego prawnego uznania kierownictwa TK. Bezpośredni odczyt komunikatu TK o wejściu był niedostępny; utrzymano opis za PAP. Nie potwierdzono oryginałów pism i pisemnego polecenia ani pełnego podziału odpowiedzialności za wejścia. Dodano osobny wpis o liście Boronia z 1.11 na podstawie Rz i Radia ZET oraz wzmiankę o liście Policyjnej Solidarności za WP, jawnie zaznaczając brak samodzielnego odczytu oryginałów. Stanowisko szefa Policji nie jest niezależnym rozstrzygnięciem prawnym. Status: oczekuje — częściowo opracowane w wersji 20; otwarte pozostają braki dokumentacyjne i publikacja.
