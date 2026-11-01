@@ -111,3 +111,12 @@ Pliki utworzono wyłącznie w `knowledge/monitor-tk/` na `main`. Nie zmieniono `
 **Przygotowanie do ewentualnej migracji:** zachować manifesty wersji, mapę identyfikatorów, historię zmian, reguły ekstrakcji, wyniki walidacji i listę nierozstrzygniętych problemów. Nie zakładać dziś, że JSON stanie się źródłem strony lub że jego schemat odpowiada przyszłemu D1. Przed migracją wykonać próbę na jednej aktualizacji i sprawdzić odtwarzalność, kompletność oraz zgodność. Migracja wymaga odrębnej decyzji i planu, nie wynika automatycznie z tej notatki.
 
 **Status:** propozycja procesu do przetestowania; bez zmian w Actions, Sites, D1 i bieżącym procesie publikacji.
+
+
+## Proces review i przekazywania uwag (1 listopada 2026)
+
+- `REVIEW_GUIDELINES.md` — instrukcja Reviewera: analiza strony, próbne odwzorowanie w JSON, porównania wersji, kontrola semantyczna i techniczna.
+- `REVIEW_LOG.md` — trwały dziennik obserwacji, propozycji, decyzji i wyników kolejnych testów. Zawiera pierwsze uwagi R-001.
+- Reviewer działa na żądanie i nie zmienia automatycznie produkcyjnego Monitora. Obecny aktualizator pozostaje niezależny i działa według dotychczasowych instrukcji.
+- Tylko uwagi zaakceptowane przez użytkownika mogą zostać przekazane do istniejącego inboxu zmian Monitora TK. Po kolejnej aktualizacji Reviewer sprawdza, czy zalecenie pomogło w konwersji do JSON.
+- Zmiany w tych dokumentach nie oznaczają modyfikacji `AGENTS.md`, inboxu, Sites, D1 ani importera. Eksperyment pozostaje odizolowany.
