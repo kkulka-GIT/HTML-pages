@@ -48,6 +48,9 @@ TREŚĆ: zweryfikuj w wiarygodnych źródłach, porównaj z istniejącymi wpisam
 
 - **Przegląd 1 listopada 2026, 17:14 CET:** Porównano pełną treść wersji 19. Stępień, Zaleśny, Radajewski i czterej byli prezesi są już uwzględnieni; zweryfikowano podane źródła. W wersji 20 dodano [Łętowską, WP 30.10, 23:42](https://wiadomosci.wp.pl/prof-letowska-boje-sie-ze-trybunal-nie-odzyska-juz-autorytetu-7345760130017760a), [HFPC za PAP, 31.10, 21:53](https://wiadomosci.onet.pl/kraj/hfpc-kwestionuje-odsuniecie-wladz-tk-wzywa-do-resetu-konstytucyjnego/zhf679q) oraz [Włodzimierza Wróbla, 31.10](https://monitorkonstytucyjny.eu/archiwa/35300). Uzupełniono argument Radajewskiego o art. 130 p.u.s.p. i art. 12 ust. 4 ustawy o organizacji TK. Bezpośredni odczyt HFPC zwrócił 403, jawnie zastosowano relację PAP porównaną z innymi relacjami. Trop Zalasińskiego prowadzi do materiału opublikowanego 30.10 o 08:17, przed wieczornymi zarządzeniami; nie przypisano mu ich oceny. Nie ustalono odrębnej, zweryfikowanej opinii o skuteczności dokumentu Święczkowskiego dotyczącego 3–6 listopada. Status: oczekuje — częściowo opracowane w wersji 20, publikacja wymaga zgody; dalsze badanie wskazanych luk.
 
+
+- **Przegląd 2 listopada 2026, 11:12 CET: w zapisanej wersji 21 uzupełniono argumenty Romanowskiego i Zaleśnego według [Wprost, 2.11, 07:42](https://www.wprost.pl/kraj/12489052/spor-o-odsuniecie-swieczkowskiego-co-z-uchwalami-tk.html), jawnie oznaczając omówienie rozmów DGP jako źródło wtórne. Pełnych rozmów nie odczytano. Brak potwierdzonej odrębnej opinii o dniach wolnych; status oczekuje. Wersja 21 nieopublikowana.**
+
 ### TK-0003 — Oficjalne potwierdzenie konsultacji prezydenta z ugrupowaniami
 - **Data dodania:** 1 listopada 2026
 - **Typ:** TREŚĆ
@@ -79,3 +82,6 @@ TREŚĆ: zweryfikuj w wiarygodnych źródłach, porównaj z istniejącymi wpisam
 
 
 1 listopada 2026 o godz. 17:18:51 czasu polskiego, po wyraźnej zgodzie właściciela, opublikowano **wersję 20**. Sites potwierdził status `succeeded` wdrożenia `appgdep_6ae7665556e88191a347f16859e557f6`, wersja `appgprj_6ae5bd5f169c8191a0ba73fc8b47d63f~appgver_93f56ce8fb948191bce2da79743baccb`, commit `36d715df718315800ca15c7a2247fa5fc4b3e28c`. Zachowano dostęp publiczny. [Monitor TK](https://monitor-tk-2026.kkulka.chatgpt.site). Potwierdzenie pochodzi z rejestru wdrożeń Sites; nie wykonywano dodatkowego testu wizualnego. TK-0003 uwzględniono (#wynik-konsultacji); TK-0002 i TK-0004 pozostają częściowo otwarte z powodu opisanych braków weryfikacyjnych, a przygotowane uzupełnienia są już opublikowane.
+
+
+- **Przegląd 2 listopada 2026, 11:12 CET: ponownie sprawdzono komunikat KSP i nowe relacje. W wersji 21 dodano [wypowiedź Grabca o zgodzie z 30.10 na przejście sędziów przez KPRM](https://wiadomosci.wp.pl/grabiec-wydalem-zgode-na-przejscie-sedziow-tk-przez-kprm-7346609545112032a), porównaną z Onetem. Nie jest to oryginał zgody, korespondencji KGP lub polecenia dla KSP. Komunikat TK nadal niedostępny przez narzędzie. Braki dokumentacyjne pozostają, status oczekuje. Wersja 21 nieopublikowana.**
