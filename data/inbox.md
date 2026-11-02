@@ -85,3 +85,6 @@ TREŚĆ: zweryfikuj w wiarygodnych źródłach, porównaj z istniejącymi wpisam
 
 
 - **Przegląd 2 listopada 2026, 11:12 CET: ponownie sprawdzono komunikat KSP i nowe relacje. W wersji 21 dodano [wypowiedź Grabca o zgodzie z 30.10 na przejście sędziów przez KPRM](https://wiadomosci.wp.pl/grabiec-wydalem-zgode-na-przejscie-sedziow-tk-przez-kprm-7346609545112032a), porównaną z Onetem. Nie jest to oryginał zgody, korespondencji KGP lub polecenia dla KSP. Komunikat TK nadal niedostępny przez narzędzie. Braki dokumentacyjne pozostają, status oczekuje. Wersja 21 nieopublikowana.**
+
+
+2 listopada 2026 o godz. 11:27:30 czasu polskiego, po wyraźnej zgodzie właściciela, opublikowano **wersję 21**. Sites potwierdził status `succeeded` wdrożenia `appgdep_6ae86583e7688191ad02e8158f02e8d5`, wersja `appgprj_6ae5bd5f169c8191a0ba73fc8b47d63f~appgver_ab6da9adc8148191b438437a85e4458f`, commit `d9941443d7df23b4d15efcbac73e5f02de630568`. Zachowano dostęp publiczny. [Monitor TK](https://monitor-tk-2026.kkulka.chatgpt.site). Potwierdzenie pochodzi z rejestru wdrożeń Sites; bez dodatkowego testu wizualnego. Przygotowane uzupełnienia są opublikowane. TK-0002 i TK-0004 pozostają częściowo otwarte z powodu opisanych braków weryfikacyjnych.
