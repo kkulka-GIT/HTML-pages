@@ -202,3 +202,6 @@ Zaktualizowano skrót, indeks opinii i powiązania historycznych wpisów. Sprawd
 
 
 Sites zapisał **wersję 24**, ID appgprj_6ae5bd5f169c8191a0ba73fc8b47d63f~appgver_e7b7fba0970c81918befc4a909698326, commit 9a9dcbbda8f2963d5ce70a70dbee614973aa751b. **Nie wdrożono — odrębna zgoda właściciela na tę wersję wymagana zgodnie z AGENTS.md pkt 6. Publicznie pozostaje wersja 23.**
+
+
+3 listopada 2026 o godz. 08:54:06 czasu polskiego, po wyraźnej zgodzie właściciela w tej rozmowie, opublikowano **wersję 24**. Sites potwierdził status `succeeded` wdrożenia `appgdep_6ae9931221a08191a9749cdc2dc5162a`, wersja `appgprj_6ae5bd5f169c8191a0ba73fc8b47d63f~appgver_e7b7fba0970c81918befc4a909698326`, commit `9a9dcbbda8f2963d5ce70a70dbee614973aa751b`. Zachowano dotychczasowy dostęp publiczny. [Monitor TK](https://monitor-tk-2026.kkulka.chatgpt.site). Dowód: odpowiedź wdrożenia Sites; bez dodatkowego testu wizualnego. Uzupełnienia przeglądu 08:39 są opublikowane. TK-0002 i TK-0004 pozostają częściowo otwarte z powodu opisanych braków weryfikacyjnych, a nie oczekiwania na publikację.
