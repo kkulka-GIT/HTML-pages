@@ -253,3 +253,6 @@ Zachowano wcześniejsze zapowiedzi i opis ograniczeń jako historię, dodając w
 
 
 Sites zapisał **wersję 26**, ID appgprj_6ae5bd5f169c8191a0ba73fc8b47d63f~appgver_93049c2ca00881918fd3beac1fd2a12b, commit 51e565cd55fc3659f55339656fcf6d5243e1e209. **Nie wdrożono — odrębna zgoda właściciela wymagana zgodnie z AGENTS.md pkt 6. Publicznie pozostaje wersja 25.**
+
+
+4 listopada 2026 o godz. 05:25:52 czasu polskiego, po wyraźnej zgodzie właściciela („Opublikuj”), opublikowano **wersję 26**. Sites potwierdził status `succeeded` wdrożenia `appgdep_6aeab3c4ae048191be78c70cf0081a3e`, wersja `appgprj_6ae5bd5f169c8191a0ba73fc8b47d63f~appgver_93049c2ca00881918fd3beac1fd2a12b`, commit `51e565cd55fc3659f55339656fcf6d5243e1e209`. Zachowano dotychczasowy dostęp publiczny. [Monitor TK](https://monitor-tk-2026.kkulka.chatgpt.site). Dowód: odpowiedź wdrożenia Sites; bez dodatkowego testu wizualnego. Opublikowano przygotowaną treść według stanu przeglądu z 4 listopada, godz. 05:22 — publikacja nie jest nowym przeglądem źródeł. TK-0002 i TK-0004 pozostają częściowo otwarte z powodu opisanych braków weryfikacyjnych, a nie oczekiwania na publikację.
