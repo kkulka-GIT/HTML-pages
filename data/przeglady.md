@@ -230,3 +230,6 @@ TK-0002 i TK-0004 nadal częściowo otwarte. README/AGENTS zgodne z procesem, br
 
 
 Sites zapisał **wersję 25**, ID appgprj_6ae5bd5f169c8191a0ba73fc8b47d63f~appgver_7e9987ab78c08191bff3e9fdce48a846, commit 3af304482d7e148bb7ce32f43d2e7305892f1750. **Nie wdrożono — wymagana odrębna zgoda właściciela na tę wersję według AGENTS.md pkt 6. Publicznie pozostaje wersja 24.**
+
+
+4 listopada 2026 o godz. 05:18:17 czasu polskiego, po wyraźnej zgodzie właściciela („Tak, opublikuj”), opublikowano **wersję 25**. Sites potwierdził status `succeeded` wdrożenia `appgdep_6aeab1fb2010819181b690f4920ed1dc`, wersja `appgprj_6ae5bd5f169c8191a0ba73fc8b47d63f~appgver_7e9987ab78c08191bff3e9fdce48a846`, commit `3af304482d7e148bb7ce32f43d2e7305892f1750`. Zachowano dotychczasowy dostęp publiczny. [Monitor TK](https://monitor-tk-2026.kkulka.chatgpt.site). Dowód: odpowiedź wdrożenia Sites; bez dodatkowego testu wizualnego. Opublikowano przygotowaną treść według stanu przeglądu z 3 listopada, godz. 15:49 — publikacja nie jest nowym przeglądem źródeł. TK-0002 i TK-0004 pozostają częściowo otwarte z powodu opisanych braków weryfikacyjnych, a nie oczekiwania na publikację.
