@@ -430,3 +430,6 @@ Bez nowej oceny wizualnej w przeglądarce; zmiana dotyczy treści i istniejącyc
 Źródła i audyt są w repozytorium Sites w research/2026-11-18.json. Przygotowanie, push i pakowanie wykonał helper Sites; zapis wersji 30 potwierdził backend. Nie zmieniono dostępu publicznego, harmonogramów, gałęzi main GitHub, knowledge, eksperymentu D1, API ani sekretów. Przed zapisami dokumentacji odczytano ponownie HEAD monitor-tk i aktualne SHA plików.
 
 **Do decyzji właściciela pozostaje wyłącznie publikacja przygotowanej wersji 30.** Nie opisujemy publicznej wersji 29 jako już uzupełnionej do 18 listopada.
+
+
+18 listopada 2026 o godz. **07:48:48 czasu polskiego**, na polecenie właściciela, opublikowano **wersję 30**. Sites potwierdził status `succeeded` dla wdrożenia `appgdep_6afd4a4415288191807be96b7d885267` i wersji `appgprj_6ae5bd5f169c8191a0ba73fc8b47d63f~appgver_34255ca381c881918e04c74130b09f42`. [Monitor TK](https://monitor-tk-2026.kkulka.chatgpt.site/#najnowsze) ma 71 wpisów i obejmuje przegląd źródeł do godz. 07:40. Statusy TK-0002 i TK-0004 pozostają otwarte z powodu wskazanych braków w źródłach.
