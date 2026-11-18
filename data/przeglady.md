@@ -433,3 +433,14 @@ Bez nowej oceny wizualnej w przeglądarce; zmiana dotyczy treści i istniejącyc
 
 
 18 listopada 2026 o godz. **07:48:48 czasu polskiego**, na polecenie właściciela, opublikowano **wersję 30**. Sites potwierdził status `succeeded` dla wdrożenia `appgdep_6afd4a4415288191807be96b7d885267` i wersji `appgprj_6ae5bd5f169c8191a0ba73fc8b47d63f~appgver_34255ca381c881918e04c74130b09f42`. [Monitor TK](https://monitor-tk-2026.kkulka.chatgpt.site/#najnowsze) ma 71 wpisów i obejmuje przegląd źródeł do godz. 07:40. Statusy TK-0002 i TK-0004 pozostają otwarte z powodu wskazanych braków w źródłach.
+
+
+## 18 listopada 2026 wieczorem
+
+Zakres źródeł 07:40–18:57 czasu polskiego. Ostatnia publikacja przed przeglądem: wersja 30 o 07:48:48. Wersja 31 zapisana w Sites, bez wdrożenia. ID appgprj_6ae5bd5f169c8191a0ba73fc8b47d63f~appgver_d26d721961088191ace88674a46be77f; źródło 73fca4457f70dfb8e1c82a436132f673db2f6490.
+
+Trzy nowe wpisy, trzy uzupełnienia, 74 wpisy ogółem. Ogłoszono treść uchwał podjętych 17 listopada: zgoda na ściganie obu sędziów, odmowa zgody na zatrzymanie i tymczasowe aresztowanie Święczkowskiego. Obaj zawieszeni w czynnościach, wynagrodzenia obniżone odpowiednio o 50 i 25 procent. [RMF24](https://www.rmf24.pl/fakty/polska/news-jest-decyzja-ws-immunitetu-swieczkowskiego-i-sochanskiego-pi,nIdn,1026567) i [Gazeta.pl](https://wiadomosci.gazeta.pl/polityka/7,198012,33138191,wniosek-o-uchylenie-immunitetow-swieczkowskiemu-i-sochanskiemu.html) podają różne liczby spraw Święczkowskiego. Potrzebne pełne uchwały. Wpis o obradach prowadzi do wyniku. W indeksie opinii dodano wypowiedź Zolla sprzed komunikatu ([WP](https://wiadomosci.wp.pl/co-dalej-z-swieczkowskim-prof-zoll-zeby-sledztwo-sie-toczylo-musza-byc-uchylone-immunitety-7352275601045504v)).
+
+Potwierdzono rozpoczęcie konsultacji w KPRP przy Wiejskiej ([relacja](https://www.radiomaryja.pl/informacje/w-kancelarii-prezydenta-kolejne-spotkanie-szefa-kprp-ze-srodowiskami-politycznymi-ws-trybunalu-konstytucyjnego/)). Pozostają do ustalenia wynik rozmów, rozstrzygnięcie SN (III CZP 41/26), przywrócenie płatności NBP oraz przebieg kontroli 19–20 listopada. TK-0002 i TK-0004 pozostają otwarte. Bez nowych oryginałów potrzebnych do zamknięcia zgłoszeń.
+
+Krok 1 planu zakończony. W przeglądarce w widoku 390 px: wszystkie dni domyślnie, zwinięte szczegóły, po wpisach z 18 listopada widoczne wpisy z 17 listopada. Filtr 17 listopada dał 3 wyniki, wyczyszczenie przywróciło 74. Sprawdzono identyfikatory, odsyłacze wewnętrzne i poprawność modułu Workera. Następny krok: początek strony. Publikacja wersji 31 czeka na zgodę właściciela.
