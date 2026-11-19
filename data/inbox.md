@@ -160,3 +160,5 @@ Zmiany: **19 nowych wpisów, 8 uzupełnionych starszych, razem 71.** Wersja **30
 18 listopada 2026 o godz. **07:48:48 czasu polskiego**, na polecenie właściciela, opublikowano **wersję 30**. Sites potwierdził status `succeeded` dla wdrożenia `appgdep_6afd4a4415288191807be96b7d885267` i wersji `appgprj_6ae5bd5f169c8191a0ba73fc8b47d63f~appgver_34255ca381c881918e04c74130b09f42`. [Monitor TK](https://monitor-tk-2026.kkulka.chatgpt.site/#najnowsze) ma 71 wpisów i obejmuje przegląd źródeł do godz. 07:40. Statusy TK-0002 i TK-0004 pozostają otwarte z powodu wskazanych braków w źródłach.
 
 18 listopada, przegląd do 18:57. TK-0002 i TK-0004 pozostają otwarte. Opracowano nową opinię Zolla i początek kolejnej tury konsultacji. [Wynik przeglądu](przeglady.md#18-listopada-2026-wieczorem).
+
+19 listopada do 18:58. TK-0002 i TK-0004 pozostają otwarte. Nowe materiały w sprawie konsultacji, immunitetów i rachunków opisano w [dzienniku](przeglady.md#19-listopada-2026-wieczorem).
