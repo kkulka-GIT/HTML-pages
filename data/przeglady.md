@@ -444,3 +444,17 @@ Trzy nowe wpisy, trzy uzupełnienia, 74 wpisy ogółem. Ogłoszono treść uchwa
 Potwierdzono rozpoczęcie konsultacji w KPRP przy Wiejskiej ([relacja](https://www.radiomaryja.pl/informacje/w-kancelarii-prezydenta-kolejne-spotkanie-szefa-kprp-ze-srodowiskami-politycznymi-ws-trybunalu-konstytucyjnego/)). Pozostają do ustalenia wynik rozmów, rozstrzygnięcie SN (III CZP 41/26), przywrócenie płatności NBP oraz przebieg kontroli 19–20 listopada. TK-0002 i TK-0004 pozostają otwarte. Bez nowych oryginałów potrzebnych do zamknięcia zgłoszeń.
 
 Krok 1 planu zakończony. W przeglądarce w widoku 390 px: wszystkie dni domyślnie, zwinięte szczegóły, po wpisach z 18 listopada widoczne wpisy z 17 listopada. Filtr 17 listopada dał 3 wyniki, wyczyszczenie przywróciło 74. Sprawdzono identyfikatory, odsyłacze wewnętrzne i poprawność modułu Workera. Następny krok: początek strony. Publikacja wersji 31 czeka na zgodę właściciela.
+
+
+## 19 listopada 2026 wieczorem
+
+Przegląd od 18.11 godz. 18:57 do 19.11 godz. 18:58 czasu polskiego. Sites: wersja publiczna 30, ostatnia robocza 31. Wersja 32 zawiera całą wersję 31 i dzisiejsze zmiany. Zapisano bez publikacji, ID appgprj_6ae5bd5f169c8191a0ba73fc8b47d63f~appgver_5a04ad783a18819180152d3aba1c6dfc, commit f7e8c9f9201808faafc722133180908337d11e3c.
+
+Dodano pięć wpisów i uzupełniono pięć starszych, łącznie 79. Wyniki wcześniejszych zapowiedzi:
+
+- Sprawa Święczkowskiego Ds. 9/2026 przeniesiona z 20 na 25 listopada o 12:00 ([komunikat TK](https://trybunal.gov.pl/wiadomosci/uroczystosci-spotkania-wyklady/art/komunikat-z-dnia-19112026)). W sprawie Sochańskiego [RMF24](https://www.rmf24.pl/fakty/polska/news-odroczenie-rozpraw-ws-swieczkowskiego-i-sochanskiego-powod-m,nIdn,1026839) potwierdza odroczenie, nowa data do sprawdzenia.
+- Uzupełniono wynik z 18 listopada, który pominięto poprzednio: trzy izby SN w sprawie III CZP 41/26 zajęły stanowisko o skardze o wznowienie na podstawie niepublikowanego orzeczenia TK. Opisano zakres uchwały według [Rzeczpospolitej](https://www.rp.pl/sady-i-trybunaly/art45508541-trzy-izby-sn-nawet-nieopublikowane-wyroki-trybunalu-konstytucyjnego-obowiazuja) i sprzeciw ministra wobec składu. Oryginału uchwały SN nie odczytano.
+- Druga tura: jeden projekt i około 70 proc. zgodności według Boguckiego. [KPRP](https://k.prezydent.pl/aktualnosci/wydarzenia/kontynuacja-rozmow-o-uzdrowieniu-sytuacji-w-tk,130274) zapowiedziała trzecią turę na 19 listopada o 18:00. Brak potwierdzenia jej wyniku do granicy przeglądu. Osobno przedstawiono prasowy opis projektu zmian.
+- Pełny [komunikat TK](https://trybunal.gov.pl/fileadmin/content/uroczystosci_spotkania_wizyty/2026/2026_11_18/komunikat_18.11.2026.pdf) wyjaśnia sposób pogrupowania czynów dotyczących Święczkowskiego. Dodano oświadczenie Korwin-Piotrowskiej o odmowie aresztu. Przy finansowaniu udokumentowano list i zapowiedź kolejnego pisma. Brak potwierdzenia wznowienia płatności. Zgłoszenia TK-0002 i TK-0004 nadal oczekują na źródła.
+
+Krok 2 zakończony. W przeglądarce w szerokości 390 px sprawdzono kolejność odczytu: godzina, trzy wiadomości, najbliższy termin, rozwijana historia. Zweryfikowano 79 wpisów, kolejność dat, unikalność identyfikatorów, cele odsyłaczy i poprawność modułu Workera. Następny krok 3 dotyczy systematycznego rozliczania zapowiedzi na początku przeglądu. Wersja 32 oczekuje na zgodę na publikację.
