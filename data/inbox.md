@@ -164,3 +164,5 @@ Zmiany: **19 nowych wpisów, 8 uzupełnionych starszych, razem 71.** Wersja **30
 19 listopada do 18:58. TK-0002 i TK-0004 pozostają otwarte. Nowe materiały w sprawie konsultacji, immunitetów i rachunków opisano w [dzienniku](przeglady.md#19-listopada-2026-wieczorem).
 
 20 listopada do 18:59. TK-0002 i TK-0004 nadal oczekują. Wśród sprawdzonych materiałów nie znaleziono brakujących pełnych ekspertyz i dokumentów Policji. [Wynik i źródła](przeglady.md#20-listopada-2026-wieczorem).
+
+21 listopada, 19:01. TK-0002 i TK-0004 nadal oczekują na brakujące ekspertyzy i dokumenty Policji. [Wynik](przeglady.md#21-listopada-2026-wieczorem).
