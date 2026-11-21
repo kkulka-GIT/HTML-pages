@@ -473,3 +473,20 @@ Powrót do zapowiedzi z poprzedniego przeglądu:
 Opinie i relacje: do wpisu o rachunkach dodano uzasadnienie wiceprezesa NBP Przemysława Litwiniuka. Osobno powiązano [relację Marty Gordziewicz o rozmowach z asystentami](https://polskieradio24.pl/polityka/szokujace-wyznania-asystentow-z-tk-gordziewicz-mieli-swiadomosc-ze-pisza-bzdury) z [materiałem o zabezpieczeniu dokumentów dotyczących obsady składów](https://www.rp.pl/sady-i-trybunaly/art45507081-dlaczego-nie-zabezpieczono-zoltych-karteczek-z-tk-eksperci-sa-zaskoczeni). Zarzuty opisano z przypisaniem autorstwa.
 
 Krok 3 wykonany: porównano listę z poprzednim dziennikiem, wskazano wyniki i otwarte terminy oraz dodano odsyłacze w starszych wpisach. Utrwalono kolejność w AGENTS.md. Następny krok 4: praktyczne znaczenie wydarzenia. Zweryfikowano zachowanie 79 wcześniejszych wpisów, 83 wpisy po zmianie, kolejność dat, unikalność identyfikatorów, cele odsyłaczy i moduł Workera. Sites zapisał wersję roboczą 33, appgprj_6ae5bd5f169c8191a0ba73fc8b47d63f~appgver_0a6a0d0f9f6c81919b2a18ac8948a3a5, commit faebfd056847e45070a1dc6afce2e81250c15390. Oczekuje na zgodę na publikację.
+
+## 21 listopada 2026 wieczorem
+
+Od 20.11 godz. 18:59 do 21.11 godz. 19:01 czasu polskiego. Sprawdzono aktualny dziennik i źródła ostatniej wersji Sites. Brak śladu pośredniego przeglądu ręcznego. Witryna publiczna: udane wdrożenie 32. Podstawą aktualizacji była robocza wersja 33.
+
+Weryfikacja zapowiedzi do 19:01:
+
+- [Rachunki TK](https://www.rp.pl/sady-i-trybunaly/art45519991-nbp-napisal-do-swieczkowskiego-i-korwin-piotrowskiej-chce-sadowego-rozstrzygniecia): brak potwierdzenia wniesienia pozwu, nadania kolejnego pisma zapowiedzianego przez Korwin-Piotrowską lub wznowienia płatności. Bank oczekuje informacji o działaniach do 27.11. Wpisy rachunki-19 i rachunki-20.
+- Posiedzenia opisane w terminy-19 i sochanski-20: brak potwierdzonej zmiany. Święczkowski 25.11 o 12:00, Sochański 26.11 o 10:00. Oba terminy przed nami.
+- [Konsultacje KPRP](https://k.prezydent.pl/kancelaria/aktywnosc-ministrow/prace-nad-reforma-trybunalu-konstytucyjnego-deklaracja-otwartosci-i-apel-o-konsensus,130389): nie potwierdzono złożenia zapowiedzianych nowych propozycji klubów ani daty kolejnego spotkania. Do wyniku trzeciej tury dodano odsyłacz do sobotnich ocen [Czarzastego](https://wiadomosci.wp.pl/czarzasty-z-niesmakiem-o-koalicjancie-czuje-jakis-taki-szelest-nieprzyjemny-7353335600232480a) i [Ujazdowskiego](https://www.gazetaprawna.pl/tagi/trybunal-konstytucyjny). W drugim wypadku zweryfikowano zapowiedź wywiadu, bez pełnego tekstu.
+- Nadal poszukiwane: oryginał III CZP 41/26, brakujące ekspertyzy i dokumenty policyjne z TK-0002 i TK-0004. W sprawdzonych źródłach brak podstaw do zamknięcia zgłoszeń.
+
+Dodano komunikat z 20.11 o sposobie wykonywania trzech uchwał. [PAP w Onecie, 20.11 o 20:52](https://www.onet.pl/informacje/onetwiadomosci/nowy-komunikat-trybunalu-konstytucyjnego-dotyczy-pieniedzy-dla-swieczkowskiego/26fse48,79cfc278) przytacza komunikat TK. Godzina dotyczy relacji. Pierwotnego dokumentu nie odczytano. Uzupełniono także wcześniejszą [wypowiedź Święczkowskiego o wezwaniu do prokuratury](https://wiadomosci.gazeta.pl/polityka/7,198012,33141939,swieczkowski-odpowiedzial-zurkowi-nie-nadstawie-drugiego-policzka.html).
+
+Krok 4 zakończony. Przy wpisie wynagrodzenie-20 dodano dwa zdania o faktycznym wymiarze redukcji i odrębności zawieszeń, przypisując wykładnię TK. Oba skutki sprawdzono z przytoczoną treścią komunikatu. Zasadę dodano do AGENTS.md. Plan wyczerpany, kolejne przeglądy według zwykłej procedury.
+
+Sprawdzono 85 wpisów (dwa nowe), kolejność dat, identyfikatory, odsyłacze wewnętrzne, obecność wyjaśnienia i poprawność modułu Workera. Sites zapisał roboczą wersję 34 zawierającą także zmiany z wersji 33. ID appgprj_6ae5bd5f169c8191a0ba73fc8b47d63f~appgver_ffa1042d86ec81919801802fb60964fb, commit f09c46d9474fa6dd6ae646a2b845343ab73feaea. Publikacja oczekuje na odrębną zgodę.
