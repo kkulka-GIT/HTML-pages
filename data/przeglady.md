@@ -490,3 +490,16 @@ Dodano komunikat z 20.11 o sposobie wykonywania trzech uchwał. [PAP w Onecie, 2
 Krok 4 zakończony. Przy wpisie wynagrodzenie-20 dodano dwa zdania o faktycznym wymiarze redukcji i odrębności zawieszeń, przypisując wykładnię TK. Oba skutki sprawdzono z przytoczoną treścią komunikatu. Zasadę dodano do AGENTS.md. Plan wyczerpany, kolejne przeglądy według zwykłej procedury.
 
 Sprawdzono 85 wpisów (dwa nowe), kolejność dat, identyfikatory, odsyłacze wewnętrzne, obecność wyjaśnienia i poprawność modułu Workera. Sites zapisał roboczą wersję 34 zawierającą także zmiany z wersji 33. ID appgprj_6ae5bd5f169c8191a0ba73fc8b47d63f~appgver_ffa1042d86ec81919801802fb60964fb, commit f09c46d9474fa6dd6ae646a2b845343ab73feaea. Publikacja oczekuje na odrębną zgodę.
+
+## 22 listopada 2026 wieczorem
+
+Przegląd od 21.11 godz. 19:01 do 22.11 godz. 19:04 czasu polskiego. Dziennik i źródła Sites wskazują ten sam ostatni przegląd. Nie stwierdzono późniejszej aktualizacji ręcznej. Publiczne wdrożenie wersji 32 ma status succeeded. Punktem wyjścia była wersja robocza 34 (85 wpisów).
+
+Powrót do zapowiedzi, stan na 19:04:
+
+- [Rachunki TK](https://www.money.pl/finanse/nbp-stawia-warunki-ws-pieniedzy-tk-i-wskazuje-termin-7353032161474560a.html) — nie potwierdzono wysłania kolejnego pisma przez Korwin-Piotrowską, złożenia pozwu ani wznowienia płatności. NBP oczekuje informacji do 27 listopada. Wpisy rachunki-19 i rachunki-20.
+- Posiedzenia — ostatnie potwierdzone terminy to 25 listopada o 12:00 w sprawie Święczkowskiego i 26 listopada o 10:00 w sprawie Sochańskiego. [Relacja o terminach](https://www.gazetaprawna.pl/prawnik/artykuly/11348990,trybunal-konstytucyjny-kolejne-przelozone-posiedzenie.html). W niedzielnym [wywiadzie dla Onetu](https://www.onet.pl/informacje/onetwiadomosci/sedzia-trybunalu-konstytucyjnego-ja-juz-sie-czuje-ofiara-tej-sytuacji/hjk1shx,79cfc278) Stelina sam wyjaśnił swoją nieobecność 19 listopada i zakwestionował podstawy wyłonienia składu. Urlop w komunikacie przywołanym przez DGP dotyczył Wojciechowskiego. Godzina 12:03 dotyczy publikacji wywiadu. Połączono terminy-19 i sochanski-20 z nowym wpisem stelina-22. Udział sędziów w przyszłym posiedzeniu wymaga sprawdzenia po terminie.
+- Konsultacje KPRP — nie potwierdzono nowych propozycji przekazanych przez kluby ani terminu kolejnej tury. Wpis kprp-wynik-19. Wyszukiwanie zwracało wcześniejsze relacje, a próba bezpośredniego odczytu dotychczasowego adresu KPRP zwróciła błąd 404.
+- Nie odnaleziono oryginału III CZP 41/26 w wyszukiwaniu SN ani dokumentów potrzebnych do zamknięcia TK-0002 i TK-0004. Bezpośredni odczyt wykazu komunikatów TK zakończył się przekroczeniem czasu odpowiedzi. Nowe stanowisko Steliny zweryfikowano w wywiadzie źródłowym.
+
+Plan obejmuje cztery ukończone kroki. W zwykłym przeglądzie zastosowano już przyjętą zasadę wyjaśniania praktycznego znaczenia wydarzenia. Sprawdzono 86 wpisów, porządek dat, unikalność identyfikatorów, odsyłacze, trzy wiadomości na początku strony i poprawność modułu Workera. Zapisano roboczą wersję 35, appgprj_6ae5bd5f169c8191a0ba73fc8b47d63f~appgver_6f50bca803c88191a2d78368f9068913, commit cfbefe810bda3b36cbcd34bb484430a9201d1a44. Wersja obejmuje także wcześniejsze zmiany z wersji 33 i 34. Oczekuje na zgodę na publikację.
