@@ -516,3 +516,11 @@ Ręczny przegląd od 22 listopada, godz. 19:04, do 23 listopada, godz. 04:44 cza
 Wszystkie cztery kroki planu są zakończone. Sprawdzono zachowanie 86 poprzednich wpisów, kolejność wszystkich 87, identyfikatory, odsyłacze i trzy wiadomości w podsumowaniu. Sprawdzono też odpowiedzi Workera dla strony głównej i historii z uwzględnieniem przekierowania. README i instrukcja nie podają stałego numeru wersji, a statusy zgłoszeń odpowiadają wynikom przeglądu.
 
 Sites zapisał zbiorczą wersję roboczą **36** z archiwum, ID `appgprj_6ae5bd5f169c8191a0ba73fc8b47d63f~appgver_a74795386cbc81919748cbf4317c5953`, commit `9fe120a9bdf3494b779db60490cbce3e159898e9`. Obejmuje wcześniejsze zmiany z wersji 33–35. Oczekuje na osobną zgodę na publikację.
+
+## 23 listopada 2026 — publikacja wersji 36 i zmiana harmonogramu
+
+23 listopada o 04:51 czasu polskiego opublikowano na polecenie właściciela wersję **36**, obejmującą także aktualizacje z wersji 33–35. Sites potwierdził wynik `succeeded` dla wdrożenia `appgdep_6b03b83335248191a8794fd84a1545a7` wersji `appgprj_6ae5bd5f169c8191a0ba73fc8b47d63f~appgver_a74795386cbc81919748cbf4317c5953`, commit treści `9fe120a9bdf3494b779db60490cbce3e159898e9`. Na publicznej stronie sprawdzono godzinę aktualizacji 04:44, nowy wpis o wiecu w Szczecinie i licznik 87 wpisów. Ostatni przegląd źródeł zakończył się o 04:44. [Publiczny Monitor TK](https://monitor-tk-2026.kkulka.chatgpt.site/)
+
+Właściciel udzielił stałej zgody na automatyczną publikację zweryfikowanych aktualizacji przygotowanych podczas codziennego przeglądu. Zmieniono polecenie istniejącego harmonogramu „Monitor TK — codzienny przegląd” i punkt 6 instrukcji procesu. Po publikacji harmonogram zapisuje wynik w dzienniku i podaje numer opublikowanej wersji oraz link. Przy braku zmian odnotowuje wynik. Przy ponowieniu niedokończonej publikacji sprawdza aktualny stan w Sites.
+
+Po zmianie sprawdzono, że zadanie jest aktywne i że następne uruchomienie przypada 23 listopada o 19:00 czasu polskiego. Regułę zapisano również w instrukcji repozytorium źródłowego Sites, commit `fd7d9c3fe9b4621665b09479601585ddf19f52f6`.
