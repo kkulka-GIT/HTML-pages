@@ -168,3 +168,5 @@ Zmiany: **19 nowych wpisów, 8 uzupełnionych starszych, razem 71.** Wersja **30
 21 listopada, 19:01. TK-0002 i TK-0004 nadal oczekują na brakujące ekspertyzy i dokumenty Policji. [Wynik](przeglady.md#21-listopada-2026-wieczorem).
 
 22 listopada, 19:04. TK-0002 i TK-0004 nadal oczekują na brakujące źródła. Opublikowany wywiad ze Steliną dotyczy posiedzenia w sprawie Sochańskiego. [Dziennik](przeglady.md#22-listopada-2026-wieczorem).
+
+23 listopada, godz. 04:44. TK-0002 i TK-0004 nadal oczekują na brakujące ekspertyzy oraz oryginalne dokumenty Policji. Wypowiedzi Boguckiego i Sochańskiego dotyczą niedzielnego wiecu w Szczecinie. [Wynik i źródła](przeglady.md#23-listopada-2026-rano).
