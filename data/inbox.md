@@ -172,3 +172,5 @@ Zmiany: **19 nowych wpisów, 8 uzupełnionych starszych, razem 71.** Wersja **30
 23 listopada, godz. 04:44. TK-0002 i TK-0004 nadal oczekują na brakujące ekspertyzy oraz oryginalne dokumenty Policji. Wypowiedzi Boguckiego i Sochańskiego dotyczą niedzielnego wiecu w Szczecinie. [Wynik i źródła](przeglady.md#23-listopada-2026-rano).
 
 23 listopada, 19:04. Zaproszenie komendanta stołecznego na rozmowy opisano w publicznej wersji 38. TK-0004 pozostaje otwarte do odnalezienia oryginalnych poleceń Policji, a TK-0002 do uzupełnienia brakujących ekspertyz. [Wynik](przeglady.md#23-listopada-2026-wieczorem).
+
+24 listopada, 18:59. TK-0002 i TK-0004 nadal otwarte. Wypowiedź rzeczniczki miasta potwierdza odbiór pisma, ale nie dostarcza poszukiwanych poleceń Policji. [Dziennik](przeglady.md#24-listopada-2026-wieczorem).
