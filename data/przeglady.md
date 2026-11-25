@@ -552,3 +552,17 @@ Zakres od 23.11 godz. 19:04 do 24.11 godz. 18:59 czasu polskiego. Dziennik i pub
 **Spójność.** Zestawiono podsumowanie i trzy wiadomości z chronologią i terminami. Przy wczorajszym zaproszeniu dodano wynik sprawdzenia, w indeksie opinii stanowisko sędziów i komentarz Siedleckiej, w dokumentach prasową relację o wiadomości i oświadczeniu. Sekcja spraw spornych i metodologia uwzględniają nowe ustalenia i ograniczenia. Historia zachowuje odrębny zakres. Sprawdzono kolejność 90 wpisów, unikalność identyfikatorów, cele odsyłaczy i moduł Workera. Wszystkie cztery kroki planu były zakończone przed dzisiejszym przeglądem.
 
 **Publikacja.** Sites potwierdził udane wdrożenie wersji **39** o 19:01 czasu polskiego. ID appgdep_6b05d102e99c8191a2ab76e3308a0aff, commit 2f8dc5a3d40c9f8c438677b68a78cbf7f3cbc71d. Na publicznej stronie sprawdzono obecność obu nowych wpisów, godziny przeglądu i licznika 90 wpisów. [Monitor TK](https://monitor-tk-2026.kkulka.chatgpt.site/).
+
+## 25 listopada 2026 wieczorem
+
+Zakres od 24 listopada, godz. 18:59, do 25 listopada, godz. 19:00 czasu polskiego. Punktem wyjścia była publiczna wersja 39. Nie znaleziono późniejszej ręcznej aktualizacji ani zaległej wersji do publikacji.
+
+- Posiedzenie w sprawie Bogdana Święczkowskiego odbyło się bez rozstrzygnięcia. Obrona wniosła o wyłączenie całego trzyosobowego składu. Kolejny termin 26 listopada o 10:15. Osobno do sprawdzenia posiedzenie w sprawie Bartłomieja Sochańskiego o 10:00 i zapowiedziane spotkanie z asystentami o 12:00. Nadal do potwierdzenia lista asystentów i warunki wejścia. [Relacja z posiedzenia](https://www.rp.pl/sady-i-trybunaly/art45540731-przerwa-w-czynnosciach-prezesa-swieczkowskiego-trwa-posiedzenie-sadu-dyscyplinarnego-tk).
+- Obaj sędziowie złożyli do SN zażalenia na uchylenie immunitetów. Wyniki pozostają otwarte. [Relacja WP](https://wiadomosci.wp.pl/uchylili-im-immunitety-swieczkowski-i-sochanski-skladaja-zazalenia-7354812856789152a).
+- Odnotowano wezwanie do NBP o przywrócenie przelewów. Brak potwierdzenia doręczenia, wznowienia płatności, wniesienia pozwu lub otwarcia nowego rachunku. Powrót do terminu 27 listopada. [Relacja o piśmie](https://wiadomosci.wp.pl/pensje-i-swiadczenia-zagrozone-tk-kieruje-pilne-wezwanie-do-prezesa-nbp-7354852587382880a).
+- Warszawa zakazała kolejnego zgromadzenia zgłoszonego od 30 listopada do 5 stycznia. Dotychczasowe zgromadzenie może trwać do 30 listopada. Nie potwierdzono wniesienia odwołania. [Wypowiedź rzeczniczki miasta](https://www.tokfm.pl/polska/mazowieckie/jedni-spiewaja-drudzy-tancza-trzeci-handluja-nie-ma-zgody-na-zgromadzenie-pod-tk).
+- Brak potwierdzonego nowego terminu lub propozycji KPRP. Zgłoszenia TK-0002 i TK-0004 pozostają otwarte do czasu odnalezienia materiałów źródłowych.
+
+Spójność strony sprawdzona według AGENTS.md. Porównano podsumowanie, najbliższe terminy, chronologię, metodologię, dokumenty, indeks opinii oraz opisy sporów. Zaktualizowano odsyłacze przy wcześniejszych zapowiedziach. Strona historyczna bez zmian. Plan zmian ma cztery ukończone kroki. Kontrola objęła 94 wpisy, kolejność dat, unikalność identyfikatorów, odsyłacze wewnętrzne i kod Workera.
+
+Sites potwierdził publikację wersji 40 o 19:03 czasu polskiego. Commit `0ed93ae5b9214578316068a95377ca014b0a73d9`, wdrożenie `appgdep_6b0722f60898819188e123bada840e7c`, status `succeeded`. Na [stronie publicznej](https://monitor-tk-2026.kkulka.chatgpt.site/) potwierdzono cztery nowe wpisy, licznik 94 i godzinę przeglądu 19:00.
