@@ -176,3 +176,5 @@ Zmiany: **19 nowych wpisów, 8 uzupełnionych starszych, razem 71.** Wersja **30
 24 listopada, 18:59. TK-0002 i TK-0004 nadal otwarte. Wypowiedź rzeczniczki miasta potwierdza odbiór pisma, ale nie dostarcza poszukiwanych poleceń Policji. [Dziennik](przeglady.md#24-listopada-2026-wieczorem).
 
 25 listopada 2026, godz. 19:00 — ponownie sprawdzono TK-0002 (materiały ekspertów KPRP) i TK-0004 (oryginały poleceń dotyczących policji). Oba zgłoszenia pozostają otwarte. [Wynik przeglądu](przeglady.md#25-listopada-2026-wieczorem).
+
+26 listopada, 19:04. TK-0002 i TK-0004 oczekują na brakujące ekspertyzy i oryginały pism oraz polecenia dla Policji. Odwołanie od zakazu zgromadzenia nie uzupełnia tych dokumentów. [dziennik](przeglady.md#26-listopada-2026-wieczorem).
