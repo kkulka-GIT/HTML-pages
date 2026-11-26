@@ -579,3 +579,19 @@ Sprawdzono w Chromium liczniki w obu miesiącach, wybór daty klawiaturą, ręcz
 Uzupełniono [plan małych zmian](plan-zmian.md) o cztery otwarte etapy, od 5 do 8. Kolejny krok to widoczne aktywne filtry chronologii. Istniejące codzienne zadanie już odczytuje plan i realizuje po jednym kroku. Sprawdzono spójność instrukcji, README, skrzynki i dziennika.
 
 Sites potwierdził publikację wersji **41** o 16:57:22 czasu polskiego. Status `succeeded`, wdrożenie `appgdep_6b0856de2af48191a67e7ca9899ddb61`, commit `ad412d7168531e65a1e12da101b37d64b1536e41`. Potwierdzono dostęp publiczny. Na [Monitorze TK](https://monitor-tk-2026.kkulka.chatgpt.site/) sprawdzono filtr dla 25 listopada, przywrócenie pełnej listy i obecność sekcji „Ostatni przegląd”. Obie publiczne strony odpowiadają plikom wdrożonej wersji.
+
+## 26 listopada 2026 wieczorem
+
+Zakres od 25 listopada 19:00 do 26 listopada 19:04 czasu polskiego. Publiczna wersja 41 z 16:57 wprowadziła kalendarz i sekcję ostatniego przeglądu. Ręczna zmiana dotyczyła interfejsu. Ostatni przegląd źródeł odbył się wczoraj o 19:00. Brak zaległej publikacji.
+
+- [Święczkowski](https://web.rdc.pl/aktualnosci/polska/tk-bogdan-swieczkowski-zostal-zawieszony-na-12-miesiecy_hljV8WEjOqAwgZ3eHCz0) — po wznowieniu posiedzenia orzeczono zawieszenie w czynnościach sędziego na 12 miesięcy. W sekcji stanowisk uwzględniono argumentację Magdaleny Bentkowskiej. W osobnej sprawie immunitetowej nadal brak wyniku zażaleń do SN. [Korneluk](https://www.bankier.pl/wiadomosc/Swieczkowski-i-Sochanski-stana-przed-prokuratorem-jako-podejrzani-Korneluk-zapowiada-wezwania-na-przesluchanie-9235233.html) potwierdził otrzymanie uchwał i zapowiedział wezwania po wpłynięciu akt. Termin przesłuchań niepotwierdzony.
+- [Sochański](https://polskieradio24.pl/polska/nagly-zwrot-w-sprawie-bartlomieja-sochanskiego-tk-odwolal-posiedzenie) — posiedzenie odwołane z powodu urlopu członka składu. O 19:04 nowego terminu nie potwierdzono.
+- [Asystenci](https://wiadomosci.onet.pl/kraj/nowi-sedziowie-robia-porzadki-w-tk-pierwszy-sygnal-przyszedl-od-asystentow/4dr9s8y) — spotkanie odbyło się, frekwencję podajemy za Onetem. Do potwierdzenia formalne przydziały i przekazanie żądanych wykazów spraw.
+- [BGK](https://www.money.pl/banki/tak-zbajpasuja-glapinskiego-nowy-rachunek-tk-7355195341600928a.html) — prasowa zapowiedź rachunku najpóźniej 27 listopada. Do sprawdzenia uruchomienie, przelewy, pozew i odpowiedź na pisma NBP do 27 listopada.
+- [Zgromadzenie](https://wiadomosci.wp.pl/ratusz-zakazal-protestu-pod-tk-sprawa-trafila-do-sadu-7355123767666784a) — wniesiono odwołanie od zakazu kolejnego zgromadzenia. Do 19:04 nie potwierdzono rozstrzygnięcia, spotkania miasta z Policją ani zmiany dostępu od al. Szucha. Bez nowej potwierdzonej daty konsultacji KPRP i pełnych ekspertyz. TK-0002 i TK-0004 otwarte.
+
+Pięć nowych wpisów, sześć uzupełnień. Porównano podsumowanie, terminy, chronologię, indeks opinii, dokumenty, opisy sporów, metodologię i sekcję ostatniego przeglądu. Osobna historia zachowana. Sprawdzono zgodność instrukcji, README, skrzynki i dziennika. Kontrola: 99 wpisów w kolejności dat, poprawne identyfikatory i odsyłacze, pięć wpisów na 26 listopada w kalendarzu, poprawny moduł Workera.
+
+Krok 5 wykonany. Przy liczniku wyników widać wybrane filtry z osobnymi przyciskami usuwania. W przeglądarce także przy szerokości 360 px sprawdzono datę 26 listopada, tekst i rodzaj „Decyzje” (jeden wynik), tekst bez dopasowania (zero), zamknięcie panelu i usuwanie filtrów Enterem (kolejno 1, 5 i 99 wyników). Następny krok 6 to powrót z końca listy do kalendarza.
+
+Sites potwierdził publikację wersji 42 o 19:08:41, status `succeeded`, wdrożenie `appgdep_6b0875a4d1508191ade894e0dacc309b`, commit `daf1bbb487f1b79ffa45306ecb5d9b14a48166ce`. HTML pobrany z [publicznej strony](https://monitor-tk-2026.kkulka.chatgpt.site/) zgodny bajt w bajt ze sprawdzoną wersją.
