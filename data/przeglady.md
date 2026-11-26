@@ -566,3 +566,16 @@ Zakres od 24 listopada, godz. 18:59, do 25 listopada, godz. 19:00 czasu polskieg
 Spójność strony sprawdzona według AGENTS.md. Porównano podsumowanie, najbliższe terminy, chronologię, metodologię, dokumenty, indeks opinii oraz opisy sporów. Zaktualizowano odsyłacze przy wcześniejszych zapowiedziach. Strona historyczna bez zmian. Plan zmian ma cztery ukończone kroki. Kontrola objęła 94 wpisy, kolejność dat, unikalność identyfikatorów, odsyłacze wewnętrzne i kod Workera.
 
 Sites potwierdził publikację wersji 40 o 19:03 czasu polskiego. Commit `0ed93ae5b9214578316068a95377ca014b0a73d9`, wdrożenie `appgdep_6b0722f60898819188e123bada840e7c`, status `succeeded`. Na [stronie publicznej](https://monitor-tk-2026.kkulka.chatgpt.site/) potwierdzono cztery nowe wpisy, licznik 94 i godzinę przeglądu 19:00.
+
+
+## 26 listopada 2026 — kalendarz chronologii i ostatni przegląd
+
+Ręczna aktualizacja interfejsu na podstawie publicznej wersji 40. Pełna chronologia zachowuje kolejność 94 wpisów. Kalendarz pokazuje jeden miesiąc, domyślnie najnowszy z wpisami. Liczniki wynikają z dat w chronologii i pokazują sumę dla dnia przed zastosowaniem filtrów tekstu i rodzaju. Dni z wpisami filtrują listę, „Wszystkie dni” zeruje wybór daty, a pole daty pozwala wpisać ją ręcznie.
+
+Stałe zasady zostały w „Jak czytać ten serwis?”. Zakres, ograniczenia i wynik ostatniego przeglądu źródeł przeniesiono do nowej sekcji z odsyłaczem z góry strony. Granicą kolejnego przeglądu pozostaje 25 listopada, 19:00 czasu polskiego. Aktualizacja dotyczyła interfejsu, bez nowego przeglądu źródeł. Na stronie rozróżniono jej czas od ostatniego sprawdzenia źródeł.
+
+Sprawdzono w Chromium liczniki w obu miesiącach, wybór daty klawiaturą, ręczne pole daty, łączenie i czyszczenie filtrów oraz powrót do 94 wpisów. Widoki 320 i 390 px sprawdzono również po powiększeniu tekstu, bez przewijania w poziomie. Sprawdzono unikalność identyfikatorów, lokalne odsyłacze na obu stronach i moduł Workera.
+
+Uzupełniono [plan małych zmian](plan-zmian.md) o cztery otwarte etapy, od 5 do 8. Kolejny krok to widoczne aktywne filtry chronologii. Istniejące codzienne zadanie już odczytuje plan i realizuje po jednym kroku. Sprawdzono spójność instrukcji, README, skrzynki i dziennika.
+
+Sites potwierdził publikację wersji **41** o 16:57:22 czasu polskiego. Status `succeeded`, wdrożenie `appgdep_6b0856de2af48191a67e7ca9899ddb61`, commit `ad412d7168531e65a1e12da101b37d64b1536e41`. Potwierdzono dostęp publiczny. Na [Monitorze TK](https://monitor-tk-2026.kkulka.chatgpt.site/) sprawdzono filtr dla 25 listopada, przywrócenie pełnej listy i obecność sekcji „Ostatni przegląd”. Obie publiczne strony odpowiadają plikom wdrożonej wersji.

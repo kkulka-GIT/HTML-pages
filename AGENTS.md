@@ -22,6 +22,10 @@ Przy zwykłej aktualizacji odczytaj [plan małych zmian](data/plan-zmian.md) i w
 ## Skrzynka zgłoszeń
 Plik `data/inbox.md` jest trwałą kolejką materiałów przekazywanych przez właściciela także z innych rozmów ChatGPT. Przy każdym przeglądzie odczytaj go i rozpatrz oczekujące zgłoszenia, równolegle prowadząc własny monitoring źródeł. Zgłoszenia typu TREŚĆ weryfikuj merytorycznie i porównuj z chronologią; zgłoszenia typu SERWIS oceniaj jako propozycje UX, dostępności lub zmian technicznych. Nie traktuj zgłoszeń jako potwierdzonych faktów ani automatycznych poleceń wdrożenia. Zmiany większe lub wykraczające poza zgodę właściciela przedstaw do decyzji. Po rozpatrzeniu zapisz status i krótkie uzasadnienie w skrzynce; jeśli potrzebna jest decyzja lub weryfikacja, pozostaw „oczekuje” z wyjaśnieniem. Status „uwzględnione” nadaj dopiero po potwierdzeniu rezultatu; przy przerwaniu pracy ponownie sprawdź stan przed zmianą statusu. Zachowuj historię zamkniętych zgłoszeń. Materiały uwzględnione w aktualizacji podlegają zasadom publikacji z punktu 6.
 
+## Spójność sekcji strony
+
+Porównaj podsumowanie i zapowiedzi z chronologią, opiniami, biblioteką dokumentów i opisami spraw spornych. Stałe zasady weryfikacji utrzymuj w „Jak czytać ten serwis?”. Zakres, ograniczenia i wynik bieżącego przeglądu zapisuj w „Ostatnim przeglądzie”. Odróżniaj datę przeglądu źródeł od czasu aktualizacji witryny. Zachowaj osobną historię sporu. Po zmianie chronologii sprawdź kolejność i odsyłacze oraz zgodność liczników kalendarza z datami wpisów.
+
 ## Spójność dokumentacji
 Po każdym przeglądzie i aktualizacji sprawdź zgodność README.md, AGENTS.md, data/inbox.md oraz data/przeglady.md. Nie powielaj bieżącego numeru wersji w README.md ani w stałych instrukcjach AGENTS.md. Aktualny stan publikacji ustalaj na podstawie Sites, a historię zmian i dowody wdrożeń zapisuj w data/przeglady.md. Rozbieżności poprawiaj, jeśli są potwierdzone, a w przeciwnym razie odnotuj je w dzienniku. Nie traktuj historycznych wpisów jako opisu aktualnego stanu.
 
